@@ -9,18 +9,41 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WamiRouteImport } from './routes/wami'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SchoolsYouthRouteImport } from './routes/schools-youth'
+import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as NovaRouteImport } from './routes/nova'
 import { Route as LqRouteImport } from './routes/lq'
+import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as FounderRouteImport } from './routes/founder'
+import { Route as EmotionalIntelligenceRouteImport } from './routes/emotional-intelligence'
 import { Route as CorporateTrainingRouteImport } from './routes/corporate-training'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CommunicationRouteImport } from './routes/communication'
+import { Route as CoachingMentoringRouteImport } from './routes/coaching-mentoring'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WamiRoute = WamiRouteImport.update({
+  id: '/wami',
+  path: '/wami',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SchoolsYouthRoute = SchoolsYouthRouteImport.update({
   id: '/schools-youth',
   path: '/schools-youth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramsRoute = ProgramsRouteImport.update({
@@ -38,14 +61,39 @@ const LqRoute = LqRouteImport.update({
   path: '/lq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LeadershipRoute = LeadershipRouteImport.update({
+  id: '/leadership',
+  path: '/leadership',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FounderRoute = FounderRouteImport.update({
   id: '/founder',
   path: '/founder',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EmotionalIntelligenceRoute = EmotionalIntelligenceRouteImport.update({
+  id: '/emotional-intelligence',
+  path: '/emotional-intelligence',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CorporateTrainingRoute = CorporateTrainingRouteImport.update({
   id: '/corporate-training',
   path: '/corporate-training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunicationRoute = CommunicationRouteImport.update({
+  id: '/communication',
+  path: '/communication',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoachingMentoringRoute = CoachingMentoringRouteImport.update({
+  id: '/coaching-mentoring',
+  path: '/coaching-mentoring',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -62,85 +110,162 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/coaching-mentoring': typeof CoachingMentoringRoute
+  '/communication': typeof CommunicationRoute
+  '/contact': typeof ContactRoute
   '/corporate-training': typeof CorporateTrainingRoute
+  '/emotional-intelligence': typeof EmotionalIntelligenceRoute
   '/founder': typeof FounderRoute
+  '/leadership': typeof LeadershipRoute
   '/lq': typeof LqRoute
   '/nova': typeof NovaRoute
   '/programs': typeof ProgramsRoute
+  '/resources': typeof ResourcesRoute
   '/schools-youth': typeof SchoolsYouthRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wami': typeof WamiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/coaching-mentoring': typeof CoachingMentoringRoute
+  '/communication': typeof CommunicationRoute
+  '/contact': typeof ContactRoute
   '/corporate-training': typeof CorporateTrainingRoute
+  '/emotional-intelligence': typeof EmotionalIntelligenceRoute
   '/founder': typeof FounderRoute
+  '/leadership': typeof LeadershipRoute
   '/lq': typeof LqRoute
   '/nova': typeof NovaRoute
   '/programs': typeof ProgramsRoute
+  '/resources': typeof ResourcesRoute
   '/schools-youth': typeof SchoolsYouthRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wami': typeof WamiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/coaching-mentoring': typeof CoachingMentoringRoute
+  '/communication': typeof CommunicationRoute
+  '/contact': typeof ContactRoute
   '/corporate-training': typeof CorporateTrainingRoute
+  '/emotional-intelligence': typeof EmotionalIntelligenceRoute
   '/founder': typeof FounderRoute
+  '/leadership': typeof LeadershipRoute
   '/lq': typeof LqRoute
   '/nova': typeof NovaRoute
   '/programs': typeof ProgramsRoute
+  '/resources': typeof ResourcesRoute
   '/schools-youth': typeof SchoolsYouthRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wami': typeof WamiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/coaching-mentoring'
+    | '/communication'
+    | '/contact'
     | '/corporate-training'
+    | '/emotional-intelligence'
     | '/founder'
+    | '/leadership'
     | '/lq'
     | '/nova'
     | '/programs'
+    | '/resources'
     | '/schools-youth'
+    | '/sitemap.xml'
+    | '/wami'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/coaching-mentoring'
+    | '/communication'
+    | '/contact'
     | '/corporate-training'
+    | '/emotional-intelligence'
     | '/founder'
+    | '/leadership'
     | '/lq'
     | '/nova'
     | '/programs'
+    | '/resources'
     | '/schools-youth'
+    | '/sitemap.xml'
+    | '/wami'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/coaching-mentoring'
+    | '/communication'
+    | '/contact'
     | '/corporate-training'
+    | '/emotional-intelligence'
     | '/founder'
+    | '/leadership'
     | '/lq'
     | '/nova'
     | '/programs'
+    | '/resources'
     | '/schools-youth'
+    | '/sitemap.xml'
+    | '/wami'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CoachingMentoringRoute: typeof CoachingMentoringRoute
+  CommunicationRoute: typeof CommunicationRoute
+  ContactRoute: typeof ContactRoute
   CorporateTrainingRoute: typeof CorporateTrainingRoute
+  EmotionalIntelligenceRoute: typeof EmotionalIntelligenceRoute
   FounderRoute: typeof FounderRoute
+  LeadershipRoute: typeof LeadershipRoute
   LqRoute: typeof LqRoute
   NovaRoute: typeof NovaRoute
   ProgramsRoute: typeof ProgramsRoute
+  ResourcesRoute: typeof ResourcesRoute
   SchoolsYouthRoute: typeof SchoolsYouthRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  WamiRoute: typeof WamiRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wami': {
+      id: '/wami'
+      path: '/wami'
+      fullPath: '/wami'
+      preLoaderRoute: typeof WamiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/schools-youth': {
       id: '/schools-youth'
       path: '/schools-youth'
       fullPath: '/schools-youth'
       preLoaderRoute: typeof SchoolsYouthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programs': {
@@ -164,6 +289,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/leadership': {
+      id: '/leadership'
+      path: '/leadership'
+      fullPath: '/leadership'
+      preLoaderRoute: typeof LeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/founder': {
       id: '/founder'
       path: '/founder'
@@ -171,11 +303,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FounderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/emotional-intelligence': {
+      id: '/emotional-intelligence'
+      path: '/emotional-intelligence'
+      fullPath: '/emotional-intelligence'
+      preLoaderRoute: typeof EmotionalIntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/corporate-training': {
       id: '/corporate-training'
       path: '/corporate-training'
       fullPath: '/corporate-training'
       preLoaderRoute: typeof CorporateTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/communication': {
+      id: '/communication'
+      path: '/communication'
+      fullPath: '/communication'
+      preLoaderRoute: typeof CommunicationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coaching-mentoring': {
+      id: '/coaching-mentoring'
+      path: '/coaching-mentoring'
+      fullPath: '/coaching-mentoring'
+      preLoaderRoute: typeof CoachingMentoringRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -198,12 +358,20 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CoachingMentoringRoute: CoachingMentoringRoute,
+  CommunicationRoute: CommunicationRoute,
+  ContactRoute: ContactRoute,
   CorporateTrainingRoute: CorporateTrainingRoute,
+  EmotionalIntelligenceRoute: EmotionalIntelligenceRoute,
   FounderRoute: FounderRoute,
+  LeadershipRoute: LeadershipRoute,
   LqRoute: LqRoute,
   NovaRoute: NovaRoute,
   ProgramsRoute: ProgramsRoute,
+  ResourcesRoute: ResourcesRoute,
   SchoolsYouthRoute: SchoolsYouthRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  WamiRoute: WamiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
