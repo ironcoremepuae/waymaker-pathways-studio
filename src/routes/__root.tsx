@@ -88,6 +88,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0F5E63" },
+      { property: "og:title", content: "WayMaker Skills™ — Transforming Potential into Purpose" },
+      { name: "twitter:title", content: "WayMaker Skills™ — Transforming Potential into Purpose" },
+      { name: "description", content: "WayMaker Skills™ is a human development organization empowering individuals and organizations for future success." },
+      { property: "og:description", content: "WayMaker Skills™ is a human development organization empowering individuals and organizations for future success." },
+      { name: "twitter:description", content: "WayMaker Skills™ is a human development organization empowering individuals and organizations for future success." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9f5ad708-0be0-4e7f-85a8-ae723f35e5cd/id-preview-3b204492--5e3eb2e8-3545-4fd6-95d5-05f2f67e8d95.lovable.app-1780758448148.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9f5ad708-0be0-4e7f-85a8-ae723f35e5cd/id-preview-3b204492--5e3eb2e8-3545-4fd6-95d5-05f2f67e8d95.lovable.app-1780758448148.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
