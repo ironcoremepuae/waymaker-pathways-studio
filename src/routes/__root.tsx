@@ -77,19 +77,49 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "WayMaker Skills\u2122 — Transforming Potential into Purpose" },
+      {
+        name: "description",
+        content:
+          "WayMaker Skills\u2122 is a human development and applied intelligence organization helping individuals, educators, leaders, and organizations thrive through future-ready skills.",
+      },
+      { name: "author", content: "WayMaker Skills\u2122" },
+      { property: "og:site_name", content: "WayMaker Skills\u2122" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "theme-color", content: "#0F5E63" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "WayMaker Skills\u2122",
+          url: "/",
+          description:
+            "Human development and applied intelligence organization helping individuals and organizations build future-ready skills.",
+          slogan: "Transforming Potential into Purpose",
+          founder: { "@type": "Person", name: "Sanjo Mathew", url: "https://sanjo.in" },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "WayMaker Skills\u2122",
+          url: "/",
+        }),
       },
     ],
   }),
