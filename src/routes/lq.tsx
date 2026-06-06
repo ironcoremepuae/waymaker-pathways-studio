@@ -8,12 +8,12 @@ import { LQ_DIMENSIONS } from "@/data/site";
 export const Route = createFileRoute("/lq")({
   head: () => ({
     ...pageMeta({
-      title: "LQ\u2122 — Life Intelligence Quotient",
+      title: "LQ™ — Life Intelligence Quotient",
       description:
-        "The LQ\u2122 Framework: five dimensions of applied intelligence — THINK, FEEL, CONNECT, ACT, ADAPT — that help people thrive in life, leadership, and work.",
+        "The LQ™ Framework: five dimensions of applied intelligence — THINK, FEEL, CONNECT, ACT, ADAPT — that help people thrive in life, leadership, and work.",
       path: "/lq",
     }),
-    scripts: [jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "LQ\u2122", path: "/lq" }]))],
+    scripts: [jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "LQ™", path: "/lq" }]))],
   }),
   component: LQPage,
 });
@@ -21,12 +21,12 @@ export const Route = createFileRoute("/lq")({
 function LQPage() {
   return (
     <Layout>
-      <PageHero eyebrow="Framework" title="LQ\u2122 — Life Intelligence Quotient"
+      <PageHero eyebrow="Framework" title="LQ™ — Life Intelligence Quotient"
         subtitle="Knowledge alone does not determine success. The ability to apply intelligence in real-life situations does." />
 
-      <Section title="Why LQ\u2122 matters">
+      <Section title="Why LQ™ matters">
         <p className="max-w-3xl text-lg text-[color:var(--charcoal)] leading-relaxed">
-          LQ\u2122 is WayMaker Skills'\u2122 framework for the intelligences that help people navigate complexity, lead
+          LQ™ is WayMaker Skills'™ framework for the intelligences that help people navigate complexity, lead
           confidently, build relationships, and create meaningful impact. It maps five dimensions that, when developed
           together, make growth durable.
         </p>
@@ -53,9 +53,9 @@ function LQPage() {
       </Section>
 
       <Section className="bg-[color:var(--teal-dark)] text-white" title="" center>
-        <h2 className="text-white text-4xl md:text-5xl">Develop LQ\u2122 across your people.</h2>
+        <h2 className="text-white text-4xl md:text-5xl">Develop LQ™ across your people.</h2>
         <p className="mt-5 max-w-2xl mx-auto text-white/85 text-lg leading-relaxed">
-          LQ\u2122 maps to our programs across leadership, communication, emotional intelligence, future skills, and
+          LQ™ maps to our programs across leadership, communication, emotional intelligence, future skills, and
           well-being — so growth is structured, integrated, and measurable.
         </p>
         <div className="mt-8 flex justify-center gap-3">

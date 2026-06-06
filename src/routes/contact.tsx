@@ -19,12 +19,12 @@ const schema = z.object({
 
 const ENQUIRY_TYPES = [
   "Corporate Training", "School Program", "Student Program",
-  "Coaching & Mentoring", "WAMI\u2122", "Partnership", "General Enquiry",
+  "Coaching & Mentoring", "WAMI™", "Partnership", "General Enquiry",
 ];
 
 const FAQS = [
   { q: "How quickly do you respond?", a: "We typically respond within 2 business days." },
-  { q: "Can we schedule a discovery call?", a: "Yes \u2014 mention it in your message and we'll set one up." },
+  { q: "Can we schedule a discovery call?", a: "Yes — mention it in your message and we'll set one up." },
 ];
 
 export const Route = createFileRoute("/contact")({
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/contact")({
     ...pageMeta({
       title: "Contact",
       description:
-        "Get in touch with WayMaker Skills\u2122 for corporate training, school programs, coaching, WAMI\u2122, and partnership enquiries.",
+        "Get in touch with WayMaker Skills™ for corporate training, school programs, coaching, WAMI™, and partnership enquiries.",
       path: "/contact",
     }),
     scripts: [

@@ -17,9 +17,9 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     ...pageMeta({
-      title: "WayMaker Skills\u2122 — Transforming Potential into Purpose",
+      title: "WayMaker Skills™ — Transforming Potential into Purpose",
       description:
-        "Human development and applied intelligence for individuals, educators, leaders, and organizations. Discover NOVA\u2122, LQ\u2122, and our programs.",
+        "Human development and applied intelligence for individuals, educators, leaders, and organizations. Discover NOVA™, LQ™, and our programs.",
       path: "/",
     }),
     scripts: [jsonLd(faqJsonLd(FAQS_GENERAL))],
@@ -73,11 +73,11 @@ function HomePage() {
             <div className="text-xs tracking-[0.22em] uppercase text-[color:var(--teal-deep)] font-semibold mb-5">{EYEBROW}</div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.02]">
               <span className="text-gradient-teal">WayMaker Skills</span>
-              <span className="text-[color:var(--gold)] align-top text-2xl ml-1">\u2122</span>
+              <span className="text-[color:var(--gold)] align-top text-2xl ml-1">™</span>
             </h1>
             <p className="mt-5 text-2xl md:text-3xl font-display text-[color:var(--teal-dark)] italic">{TAGLINE}</p>
             <p className="mt-6 text-lg text-[color:var(--muted-ink)] leading-relaxed max-w-xl">
-              WayMaker Skills\u2122 helps individuals, learners, educators, leaders, professionals, and organizations
+              WayMaker Skills™ helps individuals, learners, educators, leaders, professionals, and organizations
               develop the intelligence, skills, confidence, and purpose-driven capabilities needed to thrive in life,
               learning, leadership, and work.
             </p>
@@ -145,14 +145,14 @@ function HomePage() {
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-10 items-center">
           <div>
             <div className="text-xs tracking-[0.22em] uppercase text-[color:var(--gold-soft)] font-semibold mb-3">Methodology</div>
-            <h2 className="text-white text-4xl md:text-5xl leading-tight">The NOVA\u2122 Human Development Methodology</h2>
+            <h2 className="text-white text-4xl md:text-5xl leading-tight">The NOVA™ Human Development Methodology</h2>
             <p className="mt-5 text-white/80 text-lg leading-relaxed max-w-2xl">
-              NOVA\u2122 is the evidence-informed methodology used by WayMaker Skills\u2122 to transform awareness into
+              NOVA™ is the evidence-informed methodology used by WayMaker Skills™ to transform awareness into
               action and potential into performance. It integrates psychology, human development, behavioral science,
               leadership principles, future skills, and experiential learning.
             </p>
             <div className="mt-6">
-              <CTAButton to="/nova" variant="gold">Discover NOVA\u2122 <ArrowRight className="h-4 w-4" /></CTAButton>
+              <CTAButton to="/nova" variant="gold">Discover NOVA™ <ArrowRight className="h-4 w-4" /></CTAButton>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -170,7 +170,7 @@ function HomePage() {
       </Section>
 
       {/* LQ */}
-      <Section eyebrow="LQ\u2122 Framework" title="Five dimensions of life intelligence." center
+      <Section eyebrow="LQ™ Framework" title="Five dimensions of life intelligence." center
         subtitle="Knowledge alone does not determine success. The ability to apply intelligence in real-life situations does.">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {LQ_DIMENSIONS.map((d, i) => (
@@ -185,7 +185,7 @@ function HomePage() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <CTAButton to="/lq" variant="secondary">Explore LQ\u2122 Framework</CTAButton>
+          <CTAButton to="/lq" variant="secondary">Explore LQ™ Framework</CTAButton>
         </div>
       </Section>
 
@@ -226,14 +226,14 @@ function HomePage() {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <div className="text-xs tracking-[0.22em] uppercase text-[color:var(--teal-deep)] font-semibold mb-3">For Children</div>
-            <h2 className="text-4xl md:text-5xl">WAMI\u2122 — The Superstar of Skills</h2>
+            <h2 className="text-4xl md:text-5xl">WAMI™ — The Superstar of Skills</h2>
             <p className="mt-5 text-[color:var(--muted-ink)] text-lg leading-relaxed">
-              WAMI\u2122 is the children's learning ecosystem of WayMaker Skills\u2122. Through stories, challenges,
-              activity books, games, and experiential learning, WAMI\u2122 helps children develop confidence,
+              WAMI™ is the children's learning ecosystem of WayMaker Skills™. Through stories, challenges,
+              activity books, games, and experiential learning, WAMI™ helps children develop confidence,
               creativity, communication, character, and future-ready life skills.
             </p>
             <div className="mt-6">
-              <CTAButton to="/wami" variant="gold">Discover WAMI\u2122</CTAButton>
+              <CTAButton to="/wami" variant="gold">Discover WAMI™</CTAButton>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -252,7 +252,7 @@ function HomePage() {
         <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-start">
           <div>
             <p className="text-lg text-[color:var(--charcoal)] leading-relaxed">
-              Founded by <strong>Sanjo Mathew</strong>, WayMaker Skills\u2122 brings together psychology, education,
+              Founded by <strong>Sanjo Mathew</strong>, WayMaker Skills™ brings together psychology, education,
               leadership, mentoring, coaching, and experiential learning to create meaningful human development experiences.
             </p>
             <p className="mt-4 text-[color:var(--muted-ink)]">

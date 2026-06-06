@@ -9,9 +9,9 @@ import { Compass, Eye, Target, HeartHandshake, Sparkles, GraduationCap } from "l
 export const Route = createFileRoute("/about")({
   head: () => ({
     ...pageMeta({
-      title: "About WayMaker Skills\u2122",
+      title: "About WayMaker Skills™",
       description:
-        "Learn about WayMaker Skills\u2122 — our vision, mission, philosophy, and why we exist to develop human potential intentionally.",
+        "Learn about WayMaker Skills™ — our vision, mission, philosophy, and why we exist to develop human potential intentionally.",
       path: "/about",
     }),
     scripts: [jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "About", path: "/about" }]))],
@@ -23,11 +23,11 @@ function AboutPage() {
   return (
     <Layout>
       <PageHero eyebrow="About" title="A human development organization for a changing world."
-        subtitle="WayMaker Skills\u2122 exists because the world needs more than information — it needs developed human beings who can think, feel, connect, act, and adapt with depth." />
+        subtitle="WayMaker Skills™ exists because the world needs more than information — it needs developed human beings who can think, feel, connect, act, and adapt with depth." />
       <Section title="Our story">
         <div className="grid md:grid-cols-2 gap-8 text-[color:var(--charcoal)] leading-relaxed">
           <p>
-            WayMaker Skills\u2122 was created to make human development as intentional as academic achievement. We believe
+            WayMaker Skills™ was created to make human development as intentional as academic achievement. We believe
             that confidence, communication, leadership, emotional intelligence, and adaptability are not soft extras —
             they are the foundations of meaningful lives, capable careers, and healthy organizations.
           </p>
@@ -80,8 +80,8 @@ function AboutPage() {
       <Section className="bg-[color:var(--teal-dark)] text-white" center
         eyebrow="What makes us different" title="Built for depth, not just delivery.">
         <p className="text-white/85 max-w-3xl mx-auto text-lg leading-relaxed">
-          We are not a content provider. We are a human development practice. Our methodology (NOVA\u2122), our framework
-          (LQ\u2122), and our children's ecosystem (WAMI\u2122) come together to create coherent, repeatable, and
+          We are not a content provider. We are a human development practice. Our methodology (NOVA™), our framework
+          (LQ™), and our children's ecosystem (WAMI™) come together to create coherent, repeatable, and
           meaningful growth across every audience we serve.
         </p>
         <div className="mt-8 flex justify-center gap-3">

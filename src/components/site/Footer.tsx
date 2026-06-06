@@ -15,7 +15,7 @@ export function Footer() {
             </div>
           </div>
           <p className="text-white/75 leading-relaxed max-w-md">
-            {TAGLINE}. WayMaker Skills\u2122 helps individuals and organizations build the
+            {TAGLINE}. WayMaker Skills™ helps individuals and organizations build the
             intelligence, skills, and confidence to thrive in life, learning, and leadership.
           </p>
           <div className="mt-6 space-y-2 text-sm text-white/70">

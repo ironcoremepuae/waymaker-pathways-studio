@@ -18,7 +18,7 @@ export const Route = createFileRoute("/programs")({
     ...pageMeta({
       title: "Programs",
       description:
-        "Explore WayMaker Skills\u2122 programs across leadership, communication, emotional intelligence, future skills, well-being, coaching, parents, teachers, and children.",
+        "Explore WayMaker Skills™ programs across leadership, communication, emotional intelligence, future skills, well-being, coaching, parents, teachers, and children.",
       path: "/programs",
     }),
     scripts: [

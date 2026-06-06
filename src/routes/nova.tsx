@@ -10,12 +10,12 @@ import { Brain, Layers, BookOpen, Compass, Sparkles, FlaskConical } from "lucide
 export const Route = createFileRoute("/nova")({
   head: () => ({
     ...pageMeta({
-      title: "NOVA\u2122 Human Development Methodology",
+      title: "NOVA™ Human Development Methodology",
       description:
-        "NOVA\u2122 — the evidence-informed methodology of WayMaker Skills\u2122. Notice, Own, Visualize, Act: turning awareness into action and potential into performance.",
+        "NOVA™ — the evidence-informed methodology of WayMaker Skills™. Notice, Own, Visualize, Act: turning awareness into action and potential into performance.",
       path: "/nova",
     }),
-    scripts: [jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "NOVA\u2122", path: "/nova" }]))],
+    scripts: [jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "NOVA™", path: "/nova" }]))],
   }),
   component: NovaPage,
 });
@@ -32,17 +32,17 @@ const INTEGRATES = [
 function NovaPage() {
   return (
     <Layout>
-      <PageHero eyebrow="Methodology" title="NOVA\u2122 — Human Development Methodology"
+      <PageHero eyebrow="Methodology" title="NOVA™ — Human Development Methodology"
         subtitle="An evidence-informed approach that turns awareness into action and potential into performance." />
 
-      <Section title="What is NOVA\u2122?">
+      <Section title="What is NOVA™?">
         <div className="grid md:grid-cols-2 gap-8 text-[color:var(--charcoal)] leading-relaxed text-lg">
           <p>
-            NOVA\u2122 is the human development methodology behind every WayMaker Skills\u2122 program. It is designed to
+            NOVA™ is the human development methodology behind every WayMaker Skills™ program. It is designed to
             move people from passive understanding to lived capability — from "I know" to "I do" to "I am."
           </p>
           <p>
-            Built for the way humans actually grow, NOVA\u2122 integrates insight, ownership, direction, and action into a
+            Built for the way humans actually grow, NOVA™ integrates insight, ownership, direction, and action into a
             simple, repeatable journey that fits learners, leaders, teams, and organizations alike.
           </p>
         </div>
@@ -75,7 +75,7 @@ function NovaPage() {
         </ol>
       </Section>
 
-      <FinalCTA title="Apply NOVA\u2122 to your people." text="From classrooms to boardrooms, NOVA\u2122 helps your audience move from awareness to capability." />
+      <FinalCTA title="Apply NOVA™ to your people." text="From classrooms to boardrooms, NOVA™ helps your audience move from awareness to capability." />
       <div className="h-16" />
     </Layout>
   );

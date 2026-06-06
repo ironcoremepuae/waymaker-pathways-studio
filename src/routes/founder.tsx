@@ -10,7 +10,7 @@ export const Route = createFileRoute("/founder")({
     ...pageMeta({
       title: "Founder — Sanjo Mathew",
       description:
-        "Sanjo Mathew is the founder of WayMaker Skills\u2122, a human development professional working across psychology, life skills, education, mentoring, training, and personal growth.",
+        "Sanjo Mathew is the founder of WayMaker Skills™, a human development professional working across psychology, life skills, education, mentoring, training, and personal growth.",
       path: "/founder",
     }),
     scripts: [
@@ -18,9 +18,9 @@ export const Route = createFileRoute("/founder")({
         "@context": "https://schema.org",
         "@type": "Person",
         name: "Sanjo Mathew",
-        jobTitle: "Founder, WayMaker Skills\u2122",
+        jobTitle: "Founder, WayMaker Skills™",
         url: "https://sanjo.in",
-        worksFor: { "@type": "Organization", name: "WayMaker Skills\u2122" },
+        worksFor: { "@type": "Organization", name: "WayMaker Skills™" },
       }),
       jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "Founder", path: "/founder" }])),
     ],
@@ -32,13 +32,13 @@ function FounderPage() {
   return (
     <Layout>
       <PageHero eyebrow="Founder" title="Sanjo Mathew"
-        subtitle="Founder of WayMaker Skills\u2122. Human development practitioner working across psychology, life skills, education, mentoring, training, and personal growth." />
+        subtitle="Founder of WayMaker Skills™. Human development practitioner working across psychology, life skills, education, mentoring, training, and personal growth." />
 
       <Section>
         <div className="grid lg:grid-cols-[1.4fr_1fr] gap-12 items-start">
           <div className="space-y-5 text-[color:var(--charcoal)] leading-relaxed text-lg">
             <p>
-              Sanjo Mathew is the founder of WayMaker Skills\u2122 and a human development professional with
+              Sanjo Mathew is the founder of WayMaker Skills™ and a human development professional with
               experience across psychology, life skills, education, mentoring, training, and personal growth.
             </p>
             <p>
@@ -46,8 +46,8 @@ function FounderPage() {
               confidence, emotional intelligence, leadership, and purpose — that make outer success sustainable.
             </p>
             <p>
-              Through WayMaker Skills\u2122, Sanjo brings together a methodology (NOVA\u2122), a framework (LQ\u2122),
-              and a children's ecosystem (WAMI\u2122) to create coherent human development experiences for students,
+              Through WayMaker Skills™, Sanjo brings together a methodology (NOVA™), a framework (LQ™),
+              and a children's ecosystem (WAMI™) to create coherent human development experiences for students,
               educators, professionals, leaders, families, and institutions.
             </p>
 
@@ -74,7 +74,7 @@ function FounderPage() {
         </div>
       </Section>
 
-      <Section className="bg-[color:var(--ivory)]" title="Where Sanjo works through WayMaker Skills\u2122" center>
+      <Section className="bg-[color:var(--ivory)]" title="Where Sanjo works through WayMaker Skills™" center>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {["Schools & Educators","Students & Youth","Professionals","Leaders & Teams","Parents & Families","Coaching & Mentoring","Speaking & Training","Program Design"].map((t) => (
             <div key={t} className="rounded-2xl bg-white border border-[color:var(--border)] p-5 text-center shadow-soft card-lift">
@@ -83,7 +83,7 @@ function FounderPage() {
           ))}
         </div>
         <div className="text-center mt-10">
-          <CTAButton to="/contact">Invite Sanjo / WayMaker Skills\u2122</CTAButton>
+          <CTAButton to="/contact">Invite Sanjo / WayMaker Skills™</CTAButton>
         </div>
       </Section>
 

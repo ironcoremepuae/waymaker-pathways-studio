@@ -12,17 +12,17 @@ const CATEGORIES = [
 
 const ARTICLES = [
   { title: "Why Human Development Matters More Than Ever", cat: "Human Development",
-    excerpt: "Why developing people \u2014 not just teaching them \u2014 is the work of our time." },
+    excerpt: "Why developing people — not just teaching them — is the work of our time." },
   { title: "The Role of Emotional Intelligence in Future Success", cat: "Emotional Intelligence",
     excerpt: "How EI quietly shapes careers, relationships, and well-being." },
   { title: "Helping Children Build Confidence Through Life Skills", cat: "Parenting",
     excerpt: "Practical ways parents and schools can grow confident, capable children." },
   { title: "Communication Skills for Leadership and Life", cat: "Communication",
-    excerpt: "Clarity, listening, and influence \u2014 the most underrated leadership skills." },
+    excerpt: "Clarity, listening, and influence — the most underrated leadership skills." },
   { title: "From Knowledge to Capability: The WayMaker Approach", cat: "Human Development",
-    excerpt: "How NOVA\u2122 and LQ\u2122 turn information into lived capability." },
+    excerpt: "How NOVA™ and LQ™ turn information into lived capability." },
   { title: "Building Resilience in a Changing World", cat: "Well-being",
-    excerpt: "Resilience isn't toughness \u2014 it's adaptive strength built on awareness." },
+    excerpt: "Resilience isn't toughness — it's adaptive strength built on awareness." },
 ];
 
 export const Route = createFileRoute("/resources")({
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/resources")({
     ...pageMeta({
       title: "Resources & Insights",
       description:
-        "Articles and insights from WayMaker Skills\u2122 on human development, leadership, emotional intelligence, communication, parenting, and future skills.",
+        "Articles and insights from WayMaker Skills™ on human development, leadership, emotional intelligence, communication, parenting, and future skills.",
       path: "/resources",
     }),
     scripts: [jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "Resources", path: "/resources" }]))],

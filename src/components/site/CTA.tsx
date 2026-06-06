@@ -30,7 +30,7 @@ export function CTAButton({
 
 export function FinalCTA({
   title = "Ready to Transform Potential into Purpose?",
-  text = "Partner with WayMaker Skills\u2122 to build confident learners, capable professionals, responsible leaders, and future-ready communities.",
+  text = "Partner with WayMaker Skills™ to build confident learners, capable professionals, responsible leaders, and future-ready communities.",
 }: { title?: string; text?: string }) {
   return (
     <section className="relative overflow-hidden">

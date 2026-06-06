@@ -18,21 +18,21 @@ const SECTIONS = [
 ];
 
 const FAQS = [
-  { q: "Who is WAMI\u2122 for?", a: "Children and the schools, parents, and educators who shape their growth." },
-  { q: "How is WAMI\u2122 delivered?", a: "Through stories, activity books, games, challenges, and experiential learning experiences." },
+  { q: "Who is WAMI™ for?", a: "Children and the schools, parents, and educators who shape their growth." },
+  { q: "How is WAMI™ delivered?", a: "Through stories, activity books, games, challenges, and experiential learning experiences." },
 ];
 
 export const Route = createFileRoute("/wami")({
   head: () => ({
     ...pageMeta({
-      title: "WAMI\u2122 — The Superstar of Skills",
+      title: "WAMI™ — The Superstar of Skills",
       description:
-        "WAMI\u2122 is the children's learning ecosystem of WayMaker Skills\u2122 — building confidence, creativity, communication, and character through experiential learning.",
+        "WAMI™ is the children's learning ecosystem of WayMaker Skills™ — building confidence, creativity, communication, and character through experiential learning.",
       path: "/wami",
     }),
     scripts: [
-      jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "WAMI\u2122", path: "/wami" }])),
-      jsonLd(serviceLd("WAMI\u2122 Children's Learning Ecosystem", "Stories, games, challenges, and activity-based learning for children.", "/wami")),
+      jsonLd(breadcrumbLd([{ name: "Home", path: "/" }, { name: "WAMI™", path: "/wami" }])),
+      jsonLd(serviceLd("WAMI™ Children's Learning Ecosystem", "Stories, games, challenges, and activity-based learning for children.", "/wami")),
       jsonLd(faqJsonLd(FAQS)),
     ],
   }),
@@ -50,20 +50,20 @@ function Page() {
             <div className="text-xs tracking-[0.22em] uppercase text-[color:var(--teal-deep)] font-semibold mb-4">For Children</div>
             <h1 className="text-5xl md:text-7xl">
               <span className="text-gradient-teal">WAMI</span>
-              <span className="text-[color:var(--gold)] align-top text-2xl ml-1">\u2122</span>
+              <span className="text-[color:var(--gold)] align-top text-2xl ml-1">™</span>
             </h1>
             <p className="mt-4 font-display text-3xl text-[color:var(--teal-dark)] italic">The Superstar of Skills</p>
             <p className="mt-6 text-lg text-[color:var(--muted-ink)] leading-relaxed">
-              WAMI\u2122 is the children's learning ecosystem of WayMaker Skills\u2122. Through stories, challenges,
-              activity books, games, and experiential learning, WAMI\u2122 helps children develop confidence, creativity,
+              WAMI™ is the children's learning ecosystem of WayMaker Skills™. Through stories, challenges,
+              activity books, games, and experiential learning, WAMI™ helps children develop confidence, creativity,
               communication, character, and future-ready life skills.
             </p>
-            <div className="mt-8"><CTAButton to="/contact" variant="gold">Explore WAMI\u2122 Programs</CTAButton></div>
+            <div className="mt-8"><CTAButton to="/contact" variant="gold">Explore WAMI™ Programs</CTAButton></div>
           </div>
         </div>
       </section>
 
-      <Section eyebrow="The WAMI\u2122 world" title="Where skills become superpowers." center>
+      <Section eyebrow="The WAMI™ world" title="Where skills become superpowers." center>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {SECTIONS.map((s) => (
             <div key={s.title} className="card-lift rounded-3xl bg-white border border-[color:var(--border)] p-6 shadow-soft">
@@ -77,11 +77,11 @@ function Page() {
         </div>
       </Section>
 
-      <Section eyebrow="FAQ" title="WAMI\u2122 questions." center>
+      <Section eyebrow="FAQ" title="WAMI™ questions." center>
         <div className="max-w-3xl mx-auto"><FAQList items={FAQS} /></div>
       </Section>
 
-      <FinalCTA title="Bring WAMI\u2122 to your children." text="Schools, parents, and partners — let's grow the next generation together." />
+      <FinalCTA title="Bring WAMI™ to your children." text="Schools, parents, and partners — let's grow the next generation together." />
       <div className="h-16" />
     </Layout>
   );

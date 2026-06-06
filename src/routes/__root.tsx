@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "WayMaker Skills\u2122 — Transforming Potential into Purpose" },
+      { title: "WayMaker Skills™ — Transforming Potential into Purpose" },
       {
         name: "description",
         content:
-          "WayMaker Skills\u2122 is a human development and applied intelligence organization helping individuals, educators, leaders, and organizations thrive through future-ready skills.",
+          "WayMaker Skills™ is a human development and applied intelligence organization helping individuals, educators, leaders, and organizations thrive through future-ready skills.",
       },
-      { name: "author", content: "WayMaker Skills\u2122" },
-      { property: "og:site_name", content: "WayMaker Skills\u2122" },
+      { name: "author", content: "WayMaker Skills™" },
+      { property: "og:site_name", content: "WayMaker Skills™" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0F5E63" },
@@ -104,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "WayMaker Skills\u2122",
+          name: "WayMaker Skills™",
           url: "/",
           description:
             "Human development and applied intelligence organization helping individuals and organizations build future-ready skills.",
@@ -117,7 +117,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "WayMaker Skills\u2122",
+          name: "WayMaker Skills™",
           url: "/",
         }),
       },
