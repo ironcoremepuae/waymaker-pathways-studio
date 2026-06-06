@@ -38,7 +38,7 @@ export const NAV = [
   },
   { to: "/resources", label: "Resources" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 export const PROGRAMS = [
   { slug: "leadership", title: "Leadership Development", desc: "Self-leadership, responsible leadership, decision-making, and team leadership.", best: "Managers, leaders, entrepreneurs" },
@@ -52,7 +52,7 @@ export const PROGRAMS = [
   { slug: "teachers", title: "Teacher Development", desc: "Equipping educators with human development skills for the modern classroom.", best: "Schools and educators" },
   { slug: "wami", title: "WAMI\u2122 Programs", desc: "Children\u2019s learning ecosystem for confidence, creativity, and character.", best: "Children, schools, parents" },
   { slug: "assessments", title: "Assessments & Development Tools", desc: "Insight-led diagnostics that turn awareness into action.", best: "Individuals and organizations" },
-] as const;
+];
 
 export const AUDIENCES = [
   { title: "Schools & Educational Institutions", desc: "Future-ready learners, teachers, and ecosystems." },
@@ -63,7 +63,7 @@ export const AUDIENCES = [
   { title: "Women & Growth Communities", desc: "Spaces for purposeful growth and leadership." },
   { title: "Corporate Teams", desc: "Behavioral and leadership development that sticks." },
   { title: "Leaders & Entrepreneurs", desc: "Self-leadership, vision, and execution." },
-] as const;
+];
 
 export const LQ_DIMENSIONS = [
   { code: "THINK", name: "Thinking Intelligence", skills: ["Critical Thinking", "Decision Making", "Problem Solving", "Strategic Thinking"] },
@@ -71,14 +71,14 @@ export const LQ_DIMENSIONS = [
   { code: "CONNECT", name: "Social Intelligence", skills: ["Communication", "Collaboration", "Empathy", "Influence"] },
   { code: "ACT", name: "Action Intelligence", skills: ["Leadership", "Initiative", "Accountability", "Execution"] },
   { code: "ADAPT", name: "Context Intelligence", skills: ["Adaptability", "Creativity", "Innovation", "Situational Awareness"] },
-] as const;
+];
 
 export const NOVA_STEPS = [
   { code: "N", name: "Notice", desc: "Build awareness of self, others, and situation." },
   { code: "O", name: "Own", desc: "Accept responsibility and develop a growth mindset." },
   { code: "V", name: "Visualize", desc: "Create direction, purpose, and a path forward." },
   { code: "A", name: "Act", desc: "Apply learning in real life with consistent action." },
-] as const;
+];
 
 export const FAQS_GENERAL = [
   { q: "What is WayMaker Skills\u2122?", a: "WayMaker Skills\u2122 is a human development and applied intelligence organization helping individuals, educators, leaders, families, and organizations develop the mindset, skills, and purpose-driven capabilities needed to thrive in a changing world." },
