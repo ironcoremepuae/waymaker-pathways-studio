@@ -8,7 +8,7 @@ export function CTAButton({
   variant = "primary",
   children,
   ...rest
-}: { to: LinkProps["to"]; variant?: "primary" | "secondary" | "gold" | "ghost"; children: ReactNode } & Omit<LinkProps, "to" | "children">) {
+}: { to: string; variant?: "primary" | "secondary" | "gold" | "ghost"; children: ReactNode } & Omit<LinkProps, "to" | "children">) {
   const styles =
     variant === "primary"
       ? "bg-teal-gradient text-white shadow-soft hover:shadow-elegant"
@@ -19,7 +19,7 @@ export function CTAButton({
       : "bg-white text-[color:var(--teal-deep)] border border-[color:var(--border)] hover:border-[color:var(--teal-deep)]";
   return (
     <Link
-      to={to}
+      to={to as any}
       {...rest}
       className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all hover:-translate-y-0.5 ${styles}`}
     >
