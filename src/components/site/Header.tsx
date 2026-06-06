@@ -69,10 +69,10 @@ export function Header() {
             return (
               <Link
                 key={item.to}
-                to={item.to as string}
+                to={item.to as any}
                 className="px-3 py-2 text-sm font-medium text-[color:var(--charcoal)] hover:text-[color:var(--teal-deep)] transition"
                 activeProps={{ className: "px-3 py-2 text-sm font-semibold text-[color:var(--teal-deep)]" }}
-                activeOptions={{ exact: (item.to as string) === "/" }}
+                activeOptions={{ exact: (item.to as any) === "/" }}
               >
                 {item.label}
               </Link>
@@ -125,7 +125,7 @@ export function Header() {
               return (
                 <Link
                   key={item.to}
-                  to={item.to as string}
+                  to={item.to as any}
                   onClick={() => setOpen(false)}
                   className="block px-3 py-2.5 rounded-lg font-medium hover:bg-[color:var(--teal-light)]"
                 >
