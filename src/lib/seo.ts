@@ -1,0 +1,58 @@
+import { BRAND, LOGO } from "@/data/site";
+
+export function pageMeta(opts: {
+  title: string;
+  description: string;
+  path: string;
+  ogImage?: string;
+}) {
+  const fullTitle = opts.title.includes(BRAND) ? opts.title : `${opts.title} — ${BRAND}`;
+  const og = opts.ogImage ?? LOGO;
+  return {
+    meta: [
+      { title: fullTitle },
+      { name: "description", content: opts.description },
+      { property: "og:title", content: fullTitle },
+      { property: "og:description", content: opts.description },
+      { property: "og:url", content: opts.path },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: og },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: fullTitle },
+      { name: "twitter:description", content: opts.description },
+      { name: "twitter:image", content: og },
+    ],
+    links: [{ rel: "canonical", href: opts.path }],
+  };
+}
+
+export function jsonLd(obj: unknown) {
+  return {
+    type: "application/ld+json",
+    children: JSON.stringify(obj),
+  };
+}
+
+export function breadcrumbLd(crumbs: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: c.path,
+    })),
+  };
+}
+
+export function serviceLd(name: string, description: string, url: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url,
+    provider: { "@type": "Organization", name: BRAND, url: "/" },
+  };
+}
