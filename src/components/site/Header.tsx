@@ -88,11 +88,11 @@ export function Header() {
             }
             return (
               <Link
-                key={item.to}
-                to={item.to as any}
+                key={(item as any).to}
+                to={(item as any).to}
                 className="px-3 py-2 text-sm font-medium text-[color:var(--charcoal)] hover:text-[color:var(--teal-deep)] transition relative"
                 activeProps={{ className: "px-3 py-2 text-sm font-semibold text-[color:var(--teal-deep)] relative after:content-[''] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-0.5 after:bg-[color:var(--gold)] after:rounded-full" }}
-                activeOptions={{ exact: (item.to as any) === "/" }}
+                activeOptions={{ exact: (item as any).to === "/" }}
               >
                 {item.label}
               </Link>
@@ -145,8 +145,8 @@ export function Header() {
               }
               return (
                 <Link
-                  key={item.to}
-                  to={item.to as any}
+                  key={(item as any).to}
+                  to={(item as any).to}
                   onClick={() => setOpen(false)}
                   className="block px-4 py-3 rounded-xl font-semibold text-[color:var(--teal-dark)] hover:bg-[color:var(--teal-light)]"
                 >
