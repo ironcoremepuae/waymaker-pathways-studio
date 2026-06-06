@@ -42,7 +42,7 @@ export function Header() {
 
         <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
           {NAV.map((item) => {
-            if ("children" in item && item.children) {
+            if ("children" in item) {
               const isOpen = openMenu === item.label;
               return (
                 <div
@@ -120,7 +120,7 @@ export function Header() {
         <div className="lg:hidden fixed inset-0 top-[72px] bg-white animate-fade-in z-40">
           <div className="container-prose py-6 space-y-1 max-h-[calc(100vh-72px)] overflow-y-auto">
             {NAV.map((item) => {
-              if ("children" in item && item.children) {
+              if ("children" in item) {
                 return (
                   <details key={item.label} className="group rounded-xl border border-[color:var(--border)] overflow-hidden mb-2">
                     <summary className="flex items-center justify-between px-4 py-3 font-semibold cursor-pointer hover:bg-[color:var(--teal-light)]">
