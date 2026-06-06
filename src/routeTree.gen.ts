@@ -9,13 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SchoolsYouthRouteImport } from './routes/schools-youth'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as NovaRouteImport } from './routes/nova'
 import { Route as LqRouteImport } from './routes/lq'
 import { Route as FounderRouteImport } from './routes/founder'
+import { Route as CorporateTrainingRouteImport } from './routes/corporate-training'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SchoolsYouthRoute = SchoolsYouthRouteImport.update({
+  id: '/schools-youth',
+  path: '/schools-youth',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProgramsRoute = ProgramsRouteImport.update({
   id: '/programs',
   path: '/programs',
@@ -36,6 +43,11 @@ const FounderRoute = FounderRouteImport.update({
   path: '/founder',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CorporateTrainingRoute = CorporateTrainingRouteImport.update({
+  id: '/corporate-training',
+  path: '/corporate-training',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -50,47 +62,87 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/corporate-training': typeof CorporateTrainingRoute
   '/founder': typeof FounderRoute
   '/lq': typeof LqRoute
   '/nova': typeof NovaRoute
   '/programs': typeof ProgramsRoute
+  '/schools-youth': typeof SchoolsYouthRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/corporate-training': typeof CorporateTrainingRoute
   '/founder': typeof FounderRoute
   '/lq': typeof LqRoute
   '/nova': typeof NovaRoute
   '/programs': typeof ProgramsRoute
+  '/schools-youth': typeof SchoolsYouthRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/corporate-training': typeof CorporateTrainingRoute
   '/founder': typeof FounderRoute
   '/lq': typeof LqRoute
   '/nova': typeof NovaRoute
   '/programs': typeof ProgramsRoute
+  '/schools-youth': typeof SchoolsYouthRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/founder' | '/lq' | '/nova' | '/programs'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/corporate-training'
+    | '/founder'
+    | '/lq'
+    | '/nova'
+    | '/programs'
+    | '/schools-youth'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/founder' | '/lq' | '/nova' | '/programs'
-  id: '__root__' | '/' | '/about' | '/founder' | '/lq' | '/nova' | '/programs'
+  to:
+    | '/'
+    | '/about'
+    | '/corporate-training'
+    | '/founder'
+    | '/lq'
+    | '/nova'
+    | '/programs'
+    | '/schools-youth'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/corporate-training'
+    | '/founder'
+    | '/lq'
+    | '/nova'
+    | '/programs'
+    | '/schools-youth'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CorporateTrainingRoute: typeof CorporateTrainingRoute
   FounderRoute: typeof FounderRoute
   LqRoute: typeof LqRoute
   NovaRoute: typeof NovaRoute
   ProgramsRoute: typeof ProgramsRoute
+  SchoolsYouthRoute: typeof SchoolsYouthRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/schools-youth': {
+      id: '/schools-youth'
+      path: '/schools-youth'
+      fullPath: '/schools-youth'
+      preLoaderRoute: typeof SchoolsYouthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/programs': {
       id: '/programs'
       path: '/programs'
@@ -119,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FounderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/corporate-training': {
+      id: '/corporate-training'
+      path: '/corporate-training'
+      fullPath: '/corporate-training'
+      preLoaderRoute: typeof CorporateTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -139,10 +198,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CorporateTrainingRoute: CorporateTrainingRoute,
   FounderRoute: FounderRoute,
   LqRoute: LqRoute,
   NovaRoute: NovaRoute,
   ProgramsRoute: ProgramsRoute,
+  SchoolsYouthRoute: SchoolsYouthRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
