@@ -21,7 +21,7 @@ export function CTAButton({
     <Link
       to={to as any}
       {...rest}
-      className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all hover:-translate-y-0.5 ${styles}`}
+      className={`btn-shine inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all hover:-translate-y-0.5 ${styles}`}
     >
       {children}
     </Link>
