@@ -2,10 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { PageHero, Section } from "@/components/site/Section";
 import { FeatureCard } from "@/components/site/Card";
-import { FinalCTA } from "@/components/site/CTA";
+import { FinalCTA, CTAButton } from "@/components/site/CTA";
+import { Timeline, AudienceCards } from "@/components/site/Blocks";
 import { pageMeta, jsonLd, breadcrumbLd } from "@/lib/seo";
 import { NOVA_STEPS } from "@/data/site";
-import { Brain, Layers, BookOpen, Compass, Sparkles, FlaskConical } from "lucide-react";
+import {
+  Brain, Layers, BookOpen, Compass, Sparkles, FlaskConical,
+  GraduationCap, Users, Briefcase, HeartHandshake, UsersRound, School, ArrowRight,
+} from "lucide-react";
 
 export const Route = createFileRoute("/nova")({
   head: () => ({
@@ -29,53 +33,79 @@ const INTEGRATES = [
   { icon: BookOpen, title: "Experiential Learning" },
 ];
 
+const PROGRAM_PROCESS = [
+  { title: "Discover strengths", desc: "Surface awareness, context, and starting capability." },
+  { title: "Develop capabilities", desc: "Build the inner and applied skills the audience needs." },
+  { title: "Practice through experience", desc: "Apply learning in safe, structured experiential settings." },
+  { title: "Reflect and internalize", desc: "Convert insight into identity and durable behavior." },
+  { title: "Apply in real-world situations", desc: "Carry capability into life, work, and leadership." },
+];
+
+const APPLIES = [
+  { icon: GraduationCap, title: "Students", desc: "Confidence, life skills, and direction." },
+  { icon: BookOpen, title: "Educators", desc: "Capability for the modern classroom." },
+  { icon: HeartHandshake, title: "Parents", desc: "Tools to raise capable children." },
+  { icon: Briefcase, title: "Professionals", desc: "Behavior change that builds careers." },
+  { icon: Compass, title: "Leaders", desc: "Self-leadership and team leadership." },
+  { icon: Users, title: "Corporate Teams", desc: "Behavior, culture, and performance." },
+  { icon: UsersRound, title: "Communities", desc: "Purposeful growth at scale." },
+  { icon: School, title: "Institutions", desc: "Whole-ecosystem human development." },
+];
+
 function NovaPage() {
   return (
     <Layout>
-      <PageHero eyebrow="Methodology" title="NOVA™ — Human Development Methodology"
-        subtitle="An evidence-informed approach that turns awareness into action and potential into performance." />
+      <PageHero
+        eyebrow="NOVA™ Methodology"
+        title="From awareness to action. From potential to performance."
+        subtitle="NOVA™ is the human development methodology of WayMaker Skills™ — designed to move people from passive understanding to lived capability."
+        badges={["Notice", "Own", "Visualize", "Act", "Evidence-informed"]}
+      >
+        <CTAButton to="/programs" variant="primary">Explore Programs <ArrowRight className="h-4 w-4" /></CTAButton>
+        <CTAButton to="/contact" variant="secondary">Talk to Us</CTAButton>
+      </PageHero>
 
-      <Section title="What is NOVA™?">
+      <Section eyebrow="What is NOVA™?" title="A repeatable journey for human growth.">
         <div className="grid md:grid-cols-2 gap-8 text-[color:var(--charcoal)] leading-relaxed text-lg">
           <p>
-            NOVA™ is the human development methodology behind every WayMaker Skills™ program. It is designed to
-            move people from passive understanding to lived capability — from "I know" to "I do" to "I am."
+            NOVA™ is the human development methodology behind every WayMaker Skills™ program. It moves people
+            from "I know" to "I do" to "I am" — turning passive understanding into lived capability.
           </p>
           <p>
-            Built for the way humans actually grow, NOVA™ integrates insight, ownership, direction, and action into a
-            simple, repeatable journey that fits learners, leaders, teams, and organizations alike.
+            Built for the way humans actually grow, NOVA™ integrates insight, ownership, direction, and action
+            into a simple, repeatable journey that fits learners, leaders, teams, and organizations alike.
           </p>
         </div>
       </Section>
 
-      <Section className="bg-[color:var(--ivory)]" eyebrow="What it integrates" title="A multidisciplinary foundation." center>
+      <Section className="bg-[color:var(--ivory)]" eyebrow="The journey" title="Notice. Own. Visualize. Act." center>
+        <Timeline
+          steps={NOVA_STEPS.map((s) => ({ code: s.code, title: s.name, desc: s.desc }))}
+        />
+      </Section>
+
+      <Section eyebrow="What it integrates" title="A multidisciplinary foundation." center>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {INTEGRATES.map((c) => (
-            <FeatureCard key={c.title} icon={c.icon} title={c.title}>
-              Insights and practices drawn from {c.title.toLowerCase()} inform how we design every program experience.
+          {INTEGRATES.map((c, i) => (
+            <FeatureCard key={c.title} icon={c.icon} title={c.title} delay={i * 60}>
+              Insights and practices from {c.title.toLowerCase()} inform how every program experience is designed.
             </FeatureCard>
           ))}
         </div>
       </Section>
 
-      <Section eyebrow="The journey" title="Notice. Own. Visualize. Act." center>
-        <ol className="relative max-w-3xl mx-auto border-l-2 border-[color:var(--teal-deep)]/30 pl-8 space-y-10">
-          {NOVA_STEPS.map((s, i) => (
-            <li key={s.code} className="relative">
-              <div className="absolute -left-[2.4rem] top-0 h-12 w-12 rounded-full bg-teal-gradient text-white flex items-center justify-center font-display text-2xl shadow-elegant">
-                {s.code}
-              </div>
-              <div className="ml-2">
-                <div className="text-xs tracking-widest uppercase text-[color:var(--gold)] font-semibold">Step {i + 1}</div>
-                <h3 className="font-display text-3xl text-[color:var(--teal-dark)] mt-1">{s.name}</h3>
-                <p className="mt-2 text-[color:var(--muted-ink)] text-lg leading-relaxed">{s.desc}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+      <Section className="bg-[color:var(--ivory)]" eyebrow="How NOVA™ works in programs" title="A five-stage learning arc." center>
+        <Timeline steps={PROGRAM_PROCESS} />
       </Section>
 
-      <FinalCTA title="Apply NOVA™ to your people." text="From classrooms to boardrooms, NOVA™ helps your audience move from awareness to capability." />
+      <Section eyebrow="Where NOVA™ applies" title="Designed for every life stage." center>
+        <AudienceCards items={APPLIES} />
+      </Section>
+
+      <FinalCTA
+        title="Design a NOVA™-based development experience."
+        text="From classrooms to boardrooms, NOVA™ helps your audience move from awareness to capability."
+      />
       <div className="h-16" />
     </Layout>
   );
