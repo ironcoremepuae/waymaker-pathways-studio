@@ -15,6 +15,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SchoolsYouthRouteImport } from './routes/schools-youth'
 import { Route as SchoolYouthDevelopmentProgramsRouteImport } from './routes/school-youth-development-programs'
 import { Route as SanjoMathewFounderRouteImport } from './routes/sanjo-mathew-founder'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as NovaHumanDevelopmentMethodologyRouteImport } from './routes/nova-human-development-methodology'
@@ -68,6 +69,11 @@ const SchoolYouthDevelopmentProgramsRoute =
 const SanjoMathewFounderRoute = SanjoMathewFounderRouteImport.update({
   id: '/sanjo-mathew-founder',
   path: '/sanjo-mathew-founder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResourcesRoute = ResourcesRouteImport.update({
@@ -216,6 +222,7 @@ export interface FileRoutesByFullPath {
   '/nova-human-development-methodology': typeof NovaHumanDevelopmentMethodologyRoute
   '/programs': typeof ProgramsRoute
   '/resources': typeof ResourcesRouteWithChildren
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sanjo-mathew-founder': typeof SanjoMathewFounderRoute
   '/school-youth-development-programs': typeof SchoolYouthDevelopmentProgramsRoute
   '/schools-youth': typeof SchoolsYouthRoute
@@ -247,6 +254,7 @@ export interface FileRoutesByTo {
   '/nova-human-development-methodology': typeof NovaHumanDevelopmentMethodologyRoute
   '/programs': typeof ProgramsRoute
   '/resources': typeof ResourcesRouteWithChildren
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sanjo-mathew-founder': typeof SanjoMathewFounderRoute
   '/school-youth-development-programs': typeof SchoolYouthDevelopmentProgramsRoute
   '/schools-youth': typeof SchoolsYouthRoute
@@ -279,6 +287,7 @@ export interface FileRoutesById {
   '/nova-human-development-methodology': typeof NovaHumanDevelopmentMethodologyRoute
   '/programs': typeof ProgramsRoute
   '/resources': typeof ResourcesRouteWithChildren
+  '/robots.txt': typeof RobotsDottxtRoute
   '/sanjo-mathew-founder': typeof SanjoMathewFounderRoute
   '/school-youth-development-programs': typeof SchoolYouthDevelopmentProgramsRoute
   '/schools-youth': typeof SchoolsYouthRoute
@@ -312,6 +321,7 @@ export interface FileRouteTypes {
     | '/nova-human-development-methodology'
     | '/programs'
     | '/resources'
+    | '/robots.txt'
     | '/sanjo-mathew-founder'
     | '/school-youth-development-programs'
     | '/schools-youth'
@@ -343,6 +353,7 @@ export interface FileRouteTypes {
     | '/nova-human-development-methodology'
     | '/programs'
     | '/resources'
+    | '/robots.txt'
     | '/sanjo-mathew-founder'
     | '/school-youth-development-programs'
     | '/schools-youth'
@@ -374,6 +385,7 @@ export interface FileRouteTypes {
     | '/nova-human-development-methodology'
     | '/programs'
     | '/resources'
+    | '/robots.txt'
     | '/sanjo-mathew-founder'
     | '/school-youth-development-programs'
     | '/schools-youth'
@@ -406,6 +418,7 @@ export interface RootRouteChildren {
   NovaHumanDevelopmentMethodologyRoute: typeof NovaHumanDevelopmentMethodologyRoute
   ProgramsRoute: typeof ProgramsRoute
   ResourcesRoute: typeof ResourcesRouteWithChildren
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   SanjoMathewFounderRoute: typeof SanjoMathewFounderRoute
   SchoolYouthDevelopmentProgramsRoute: typeof SchoolYouthDevelopmentProgramsRoute
   SchoolsYouthRoute: typeof SchoolsYouthRoute
@@ -456,6 +469,13 @@ declare module '@tanstack/react-router' {
       path: '/sanjo-mathew-founder'
       fullPath: '/sanjo-mathew-founder'
       preLoaderRoute: typeof SanjoMathewFounderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resources': {
@@ -658,6 +678,7 @@ const rootRouteChildren: RootRouteChildren = {
   NovaHumanDevelopmentMethodologyRoute: NovaHumanDevelopmentMethodologyRoute,
   ProgramsRoute: ProgramsRoute,
   ResourcesRoute: ResourcesRouteWithChildren,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   SanjoMathewFounderRoute: SanjoMathewFounderRoute,
   SchoolYouthDevelopmentProgramsRoute: SchoolYouthDevelopmentProgramsRoute,
   SchoolsYouthRoute: SchoolsYouthRoute,

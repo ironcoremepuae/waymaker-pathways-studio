@@ -1,11 +1,26 @@
-import { BRAND, LOGO, SITE_URL } from "@/data/site";
+import { BASE_PATH, BRAND, LOGO, SITE_URL } from "@/data/site";
+
+function withBasePath(path: string) {
+  if (!path || path === "/") {
+    return BASE_PATH;
+  }
+
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  const trimmedBase = BASE_PATH === "/" ? "" : BASE_PATH.replace(/\/$/, "");
+
+  if (!trimmedBase || normalizedPath === trimmedBase || normalizedPath.startsWith(`${trimmedBase}/`)) {
+    return normalizedPath;
+  }
+
+  return `${trimmedBase}${normalizedPath}`;
+}
 
 export function absoluteUrl(path: string) {
   if (/^https?:\/\//.test(path)) {
     return path;
   }
 
-  return new URL(path, SITE_URL).toString();
+  return new URL(withBasePath(path), new URL(SITE_URL).origin).toString();
 }
 
 export function pageMeta(opts: {

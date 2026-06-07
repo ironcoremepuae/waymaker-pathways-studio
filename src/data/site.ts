@@ -1,11 +1,15 @@
 import logo from "@/assets/waymaker-logo.png";
+import { normalizeBasePath, normalizeSiteUrl } from "@/lib/site-config";
 import { ROUTES } from "./routes";
 
 export const BRAND = "WayMaker Skills™";
 export const TAGLINE = "Transforming Potential into Purpose";
 export const EYEBROW = "Human Development • Applied Intelligence • Future Skills";
 export const LOGO = logo;
-export const SITE_URL = "https://waymakerskills.com";
+export const SITE_URL = normalizeSiteUrl(import.meta.env.VITE_SITE_URL);
+export const BASE_PATH = normalizeBasePath(
+  import.meta.env.VITE_BASE_PATH || new URL(`${SITE_URL}/`).pathname,
+);
 
 export const CONTACT = {
   email: "waymakerskills@gmail.com",

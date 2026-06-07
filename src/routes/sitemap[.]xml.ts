@@ -1,23 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { RESOURCE_ARTICLES } from "@/data/resources";
 import { CANONICAL_SITEMAP_ROUTES, ROUTES } from "@/data/routes";
+import { absoluteUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
-      GET: async ({ request }) => {
-        const baseUrl = new URL(request.url).origin;
+      GET: async () => {
         const paths = [
           ...CANONICAL_SITEMAP_ROUTES,
-          "/resources/why-human-development-matters",
-          "/resources/emotional-intelligence-future-success",
-          "/resources/children-confidence-life-skills",
-          "/resources/communication-skills-leadership-life",
-          "/resources/from-knowledge-to-capability",
-          "/resources/building-resilience-changing-world",
+          ...RESOURCE_ARTICLES.map((article) => `/resources/${article.slug}`),
         ];
         const urls = paths.map(
           (p) =>
-            `  <url>\n    <loc>${baseUrl}${p}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${p === ROUTES.home ? "1.0" : "0.8"}</priority>\n  </url>`,
+            `  <url>\n    <loc>${absoluteUrl(p)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${p === ROUTES.home ? "1.0" : "0.8"}</priority>\n  </url>`,
         );
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,
