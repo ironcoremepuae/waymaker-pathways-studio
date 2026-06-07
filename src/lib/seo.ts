@@ -1,4 +1,12 @@
-import { BRAND, LOGO } from "@/data/site";
+import { BRAND, LOGO, SITE_URL } from "@/data/site";
+
+export function absoluteUrl(path: string) {
+  if (/^https?:\/\//.test(path)) {
+    return path;
+  }
+
+  return new URL(path, SITE_URL).toString();
+}
 
 export function pageMeta(opts: {
   title: string;
@@ -6,15 +14,17 @@ export function pageMeta(opts: {
   path: string;
   ogImage?: string;
 }) {
-  const fullTitle = opts.title.includes(BRAND) ? opts.title : `${opts.title} — ${BRAND}`;
-  const og = opts.ogImage ?? LOGO;
+  const fullTitle = opts.title.includes(BRAND) ? opts.title : `${opts.title} | ${BRAND}`;
+  const canonical = absoluteUrl(opts.path);
+  const og = absoluteUrl(opts.ogImage ?? LOGO);
+
   return {
     meta: [
       { title: fullTitle },
       { name: "description", content: opts.description },
       { property: "og:title", content: fullTitle },
       { property: "og:description", content: opts.description },
-      { property: "og:url", content: opts.path },
+      { property: "og:url", content: canonical },
       { property: "og:type", content: "website" },
       { property: "og:image", content: og },
       { name: "twitter:card", content: "summary_large_image" },
@@ -22,7 +32,7 @@ export function pageMeta(opts: {
       { name: "twitter:description", content: opts.description },
       { name: "twitter:image", content: og },
     ],
-    links: [{ rel: "canonical", href: opts.path }],
+    links: [{ rel: "canonical", href: canonical }],
   };
 }
 
@@ -41,7 +51,7 @@ export function breadcrumbLd(crumbs: { name: string; path: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      item: c.path,
+      item: absoluteUrl(c.path),
     })),
   };
 }
@@ -52,7 +62,7 @@ export function serviceLd(name: string, description: string, url: string) {
     "@type": "Service",
     name,
     description,
-    url,
-    provider: { "@type": "Organization", name: BRAND, url: "/" },
+    url: absoluteUrl(url),
+    provider: { "@type": "Organization", name: BRAND, url: SITE_URL },
   };
 }

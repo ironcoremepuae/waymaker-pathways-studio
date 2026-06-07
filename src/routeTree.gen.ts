@@ -9,23 +9,41 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WamiChildrensLifeSkillsRouteImport } from './routes/wami-childrens-life-skills'
 import { Route as WamiRouteImport } from './routes/wami'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SchoolsYouthRouteImport } from './routes/schools-youth'
+import { Route as SchoolYouthDevelopmentProgramsRouteImport } from './routes/school-youth-development-programs'
+import { Route as SanjoMathewFounderRouteImport } from './routes/sanjo-mathew-founder'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ProgramsRouteImport } from './routes/programs'
+import { Route as NovaHumanDevelopmentMethodologyRouteImport } from './routes/nova-human-development-methodology'
 import { Route as NovaRouteImport } from './routes/nova'
+import { Route as LqLifeIntelligenceQuotientFrameworkRouteImport } from './routes/lq-life-intelligence-quotient-framework'
 import { Route as LqRouteImport } from './routes/lq'
+import { Route as LeadershipDevelopmentTrainingRouteImport } from './routes/leadership-development-training'
 import { Route as LeadershipRouteImport } from './routes/leadership'
+import { Route as HumanDevelopmentProgramsRouteImport } from './routes/human-development-programs'
 import { Route as FounderRouteImport } from './routes/founder'
+import { Route as EmotionalIntelligenceTrainingRouteImport } from './routes/emotional-intelligence-training'
 import { Route as EmotionalIntelligenceRouteImport } from './routes/emotional-intelligence'
+import { Route as CorporateTrainingProgramsRouteImport } from './routes/corporate-training-programs'
 import { Route as CorporateTrainingRouteImport } from './routes/corporate-training'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CommunicationSkillsTrainingRouteImport } from './routes/communication-skills-training'
 import { Route as CommunicationRouteImport } from './routes/communication'
 import { Route as CoachingMentoringRouteImport } from './routes/coaching-mentoring'
+import { Route as CoachingAndMentoringRouteImport } from './routes/coaching-and-mentoring'
+import { Route as AboutWaymakerSkillsRouteImport } from './routes/about-waymaker-skills'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ResourcesSlugRouteImport } from './routes/resources.$slug'
 
+const WamiChildrensLifeSkillsRoute = WamiChildrensLifeSkillsRouteImport.update({
+  id: '/wami-childrens-life-skills',
+  path: '/wami-childrens-life-skills',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WamiRoute = WamiRouteImport.update({
   id: '/wami',
   path: '/wami',
@@ -41,6 +59,17 @@ const SchoolsYouthRoute = SchoolsYouthRouteImport.update({
   path: '/schools-youth',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SchoolYouthDevelopmentProgramsRoute =
+  SchoolYouthDevelopmentProgramsRouteImport.update({
+    id: '/school-youth-development-programs',
+    path: '/school-youth-development-programs',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SanjoMathewFounderRoute = SanjoMathewFounderRouteImport.update({
+  id: '/sanjo-mathew-founder',
+  path: '/sanjo-mathew-founder',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResourcesRoute = ResourcesRouteImport.update({
   id: '/resources',
   path: '/resources',
@@ -51,31 +80,67 @@ const ProgramsRoute = ProgramsRouteImport.update({
   path: '/programs',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NovaHumanDevelopmentMethodologyRoute =
+  NovaHumanDevelopmentMethodologyRouteImport.update({
+    id: '/nova-human-development-methodology',
+    path: '/nova-human-development-methodology',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const NovaRoute = NovaRouteImport.update({
   id: '/nova',
   path: '/nova',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LqLifeIntelligenceQuotientFrameworkRoute =
+  LqLifeIntelligenceQuotientFrameworkRouteImport.update({
+    id: '/lq-life-intelligence-quotient-framework',
+    path: '/lq-life-intelligence-quotient-framework',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LqRoute = LqRouteImport.update({
   id: '/lq',
   path: '/lq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LeadershipDevelopmentTrainingRoute =
+  LeadershipDevelopmentTrainingRouteImport.update({
+    id: '/leadership-development-training',
+    path: '/leadership-development-training',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LeadershipRoute = LeadershipRouteImport.update({
   id: '/leadership',
   path: '/leadership',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HumanDevelopmentProgramsRoute =
+  HumanDevelopmentProgramsRouteImport.update({
+    id: '/human-development-programs',
+    path: '/human-development-programs',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const FounderRoute = FounderRouteImport.update({
   id: '/founder',
   path: '/founder',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EmotionalIntelligenceTrainingRoute =
+  EmotionalIntelligenceTrainingRouteImport.update({
+    id: '/emotional-intelligence-training',
+    path: '/emotional-intelligence-training',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const EmotionalIntelligenceRoute = EmotionalIntelligenceRouteImport.update({
   id: '/emotional-intelligence',
   path: '/emotional-intelligence',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CorporateTrainingProgramsRoute =
+  CorporateTrainingProgramsRouteImport.update({
+    id: '/corporate-training-programs',
+    path: '/corporate-training-programs',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CorporateTrainingRoute = CorporateTrainingRouteImport.update({
   id: '/corporate-training',
   path: '/corporate-training',
@@ -86,6 +151,12 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CommunicationSkillsTrainingRoute =
+  CommunicationSkillsTrainingRouteImport.update({
+    id: '/communication-skills-training',
+    path: '/communication-skills-training',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CommunicationRoute = CommunicationRouteImport.update({
   id: '/communication',
   path: '/communication',
@@ -94,6 +165,16 @@ const CommunicationRoute = CommunicationRouteImport.update({
 const CoachingMentoringRoute = CoachingMentoringRouteImport.update({
   id: '/coaching-mentoring',
   path: '/coaching-mentoring',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoachingAndMentoringRoute = CoachingAndMentoringRouteImport.update({
+  id: '/coaching-and-mentoring',
+  path: '/coaching-and-mentoring',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutWaymakerSkillsRoute = AboutWaymakerSkillsRouteImport.update({
+  id: '/about-waymaker-skills',
+  path: '/about-waymaker-skills',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -106,140 +187,242 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResourcesSlugRoute = ResourcesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ResourcesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/about-waymaker-skills': typeof AboutWaymakerSkillsRoute
+  '/coaching-and-mentoring': typeof CoachingAndMentoringRoute
   '/coaching-mentoring': typeof CoachingMentoringRoute
   '/communication': typeof CommunicationRoute
+  '/communication-skills-training': typeof CommunicationSkillsTrainingRoute
   '/contact': typeof ContactRoute
   '/corporate-training': typeof CorporateTrainingRoute
+  '/corporate-training-programs': typeof CorporateTrainingProgramsRoute
   '/emotional-intelligence': typeof EmotionalIntelligenceRoute
+  '/emotional-intelligence-training': typeof EmotionalIntelligenceTrainingRoute
   '/founder': typeof FounderRoute
+  '/human-development-programs': typeof HumanDevelopmentProgramsRoute
   '/leadership': typeof LeadershipRoute
+  '/leadership-development-training': typeof LeadershipDevelopmentTrainingRoute
   '/lq': typeof LqRoute
+  '/lq-life-intelligence-quotient-framework': typeof LqLifeIntelligenceQuotientFrameworkRoute
   '/nova': typeof NovaRoute
+  '/nova-human-development-methodology': typeof NovaHumanDevelopmentMethodologyRoute
   '/programs': typeof ProgramsRoute
-  '/resources': typeof ResourcesRoute
+  '/resources': typeof ResourcesRouteWithChildren
+  '/sanjo-mathew-founder': typeof SanjoMathewFounderRoute
+  '/school-youth-development-programs': typeof SchoolYouthDevelopmentProgramsRoute
   '/schools-youth': typeof SchoolsYouthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/wami': typeof WamiRoute
+  '/wami-childrens-life-skills': typeof WamiChildrensLifeSkillsRoute
+  '/resources/$slug': typeof ResourcesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/about-waymaker-skills': typeof AboutWaymakerSkillsRoute
+  '/coaching-and-mentoring': typeof CoachingAndMentoringRoute
   '/coaching-mentoring': typeof CoachingMentoringRoute
   '/communication': typeof CommunicationRoute
+  '/communication-skills-training': typeof CommunicationSkillsTrainingRoute
   '/contact': typeof ContactRoute
   '/corporate-training': typeof CorporateTrainingRoute
+  '/corporate-training-programs': typeof CorporateTrainingProgramsRoute
   '/emotional-intelligence': typeof EmotionalIntelligenceRoute
+  '/emotional-intelligence-training': typeof EmotionalIntelligenceTrainingRoute
   '/founder': typeof FounderRoute
+  '/human-development-programs': typeof HumanDevelopmentProgramsRoute
   '/leadership': typeof LeadershipRoute
+  '/leadership-development-training': typeof LeadershipDevelopmentTrainingRoute
   '/lq': typeof LqRoute
+  '/lq-life-intelligence-quotient-framework': typeof LqLifeIntelligenceQuotientFrameworkRoute
   '/nova': typeof NovaRoute
+  '/nova-human-development-methodology': typeof NovaHumanDevelopmentMethodologyRoute
   '/programs': typeof ProgramsRoute
-  '/resources': typeof ResourcesRoute
+  '/resources': typeof ResourcesRouteWithChildren
+  '/sanjo-mathew-founder': typeof SanjoMathewFounderRoute
+  '/school-youth-development-programs': typeof SchoolYouthDevelopmentProgramsRoute
   '/schools-youth': typeof SchoolsYouthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/wami': typeof WamiRoute
+  '/wami-childrens-life-skills': typeof WamiChildrensLifeSkillsRoute
+  '/resources/$slug': typeof ResourcesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/about-waymaker-skills': typeof AboutWaymakerSkillsRoute
+  '/coaching-and-mentoring': typeof CoachingAndMentoringRoute
   '/coaching-mentoring': typeof CoachingMentoringRoute
   '/communication': typeof CommunicationRoute
+  '/communication-skills-training': typeof CommunicationSkillsTrainingRoute
   '/contact': typeof ContactRoute
   '/corporate-training': typeof CorporateTrainingRoute
+  '/corporate-training-programs': typeof CorporateTrainingProgramsRoute
   '/emotional-intelligence': typeof EmotionalIntelligenceRoute
+  '/emotional-intelligence-training': typeof EmotionalIntelligenceTrainingRoute
   '/founder': typeof FounderRoute
+  '/human-development-programs': typeof HumanDevelopmentProgramsRoute
   '/leadership': typeof LeadershipRoute
+  '/leadership-development-training': typeof LeadershipDevelopmentTrainingRoute
   '/lq': typeof LqRoute
+  '/lq-life-intelligence-quotient-framework': typeof LqLifeIntelligenceQuotientFrameworkRoute
   '/nova': typeof NovaRoute
+  '/nova-human-development-methodology': typeof NovaHumanDevelopmentMethodologyRoute
   '/programs': typeof ProgramsRoute
-  '/resources': typeof ResourcesRoute
+  '/resources': typeof ResourcesRouteWithChildren
+  '/sanjo-mathew-founder': typeof SanjoMathewFounderRoute
+  '/school-youth-development-programs': typeof SchoolYouthDevelopmentProgramsRoute
   '/schools-youth': typeof SchoolsYouthRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/wami': typeof WamiRoute
+  '/wami-childrens-life-skills': typeof WamiChildrensLifeSkillsRoute
+  '/resources/$slug': typeof ResourcesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
+    | '/about-waymaker-skills'
+    | '/coaching-and-mentoring'
     | '/coaching-mentoring'
     | '/communication'
+    | '/communication-skills-training'
     | '/contact'
     | '/corporate-training'
+    | '/corporate-training-programs'
     | '/emotional-intelligence'
+    | '/emotional-intelligence-training'
     | '/founder'
+    | '/human-development-programs'
     | '/leadership'
+    | '/leadership-development-training'
     | '/lq'
+    | '/lq-life-intelligence-quotient-framework'
     | '/nova'
+    | '/nova-human-development-methodology'
     | '/programs'
     | '/resources'
+    | '/sanjo-mathew-founder'
+    | '/school-youth-development-programs'
     | '/schools-youth'
     | '/sitemap.xml'
     | '/wami'
+    | '/wami-childrens-life-skills'
+    | '/resources/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/about-waymaker-skills'
+    | '/coaching-and-mentoring'
     | '/coaching-mentoring'
     | '/communication'
+    | '/communication-skills-training'
     | '/contact'
     | '/corporate-training'
+    | '/corporate-training-programs'
     | '/emotional-intelligence'
+    | '/emotional-intelligence-training'
     | '/founder'
+    | '/human-development-programs'
     | '/leadership'
+    | '/leadership-development-training'
     | '/lq'
+    | '/lq-life-intelligence-quotient-framework'
     | '/nova'
+    | '/nova-human-development-methodology'
     | '/programs'
     | '/resources'
+    | '/sanjo-mathew-founder'
+    | '/school-youth-development-programs'
     | '/schools-youth'
     | '/sitemap.xml'
     | '/wami'
+    | '/wami-childrens-life-skills'
+    | '/resources/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/about-waymaker-skills'
+    | '/coaching-and-mentoring'
     | '/coaching-mentoring'
     | '/communication'
+    | '/communication-skills-training'
     | '/contact'
     | '/corporate-training'
+    | '/corporate-training-programs'
     | '/emotional-intelligence'
+    | '/emotional-intelligence-training'
     | '/founder'
+    | '/human-development-programs'
     | '/leadership'
+    | '/leadership-development-training'
     | '/lq'
+    | '/lq-life-intelligence-quotient-framework'
     | '/nova'
+    | '/nova-human-development-methodology'
     | '/programs'
     | '/resources'
+    | '/sanjo-mathew-founder'
+    | '/school-youth-development-programs'
     | '/schools-youth'
     | '/sitemap.xml'
     | '/wami'
+    | '/wami-childrens-life-skills'
+    | '/resources/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AboutWaymakerSkillsRoute: typeof AboutWaymakerSkillsRoute
+  CoachingAndMentoringRoute: typeof CoachingAndMentoringRoute
   CoachingMentoringRoute: typeof CoachingMentoringRoute
   CommunicationRoute: typeof CommunicationRoute
+  CommunicationSkillsTrainingRoute: typeof CommunicationSkillsTrainingRoute
   ContactRoute: typeof ContactRoute
   CorporateTrainingRoute: typeof CorporateTrainingRoute
+  CorporateTrainingProgramsRoute: typeof CorporateTrainingProgramsRoute
   EmotionalIntelligenceRoute: typeof EmotionalIntelligenceRoute
+  EmotionalIntelligenceTrainingRoute: typeof EmotionalIntelligenceTrainingRoute
   FounderRoute: typeof FounderRoute
+  HumanDevelopmentProgramsRoute: typeof HumanDevelopmentProgramsRoute
   LeadershipRoute: typeof LeadershipRoute
+  LeadershipDevelopmentTrainingRoute: typeof LeadershipDevelopmentTrainingRoute
   LqRoute: typeof LqRoute
+  LqLifeIntelligenceQuotientFrameworkRoute: typeof LqLifeIntelligenceQuotientFrameworkRoute
   NovaRoute: typeof NovaRoute
+  NovaHumanDevelopmentMethodologyRoute: typeof NovaHumanDevelopmentMethodologyRoute
   ProgramsRoute: typeof ProgramsRoute
-  ResourcesRoute: typeof ResourcesRoute
+  ResourcesRoute: typeof ResourcesRouteWithChildren
+  SanjoMathewFounderRoute: typeof SanjoMathewFounderRoute
+  SchoolYouthDevelopmentProgramsRoute: typeof SchoolYouthDevelopmentProgramsRoute
   SchoolsYouthRoute: typeof SchoolsYouthRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WamiRoute: typeof WamiRoute
+  WamiChildrensLifeSkillsRoute: typeof WamiChildrensLifeSkillsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wami-childrens-life-skills': {
+      id: '/wami-childrens-life-skills'
+      path: '/wami-childrens-life-skills'
+      fullPath: '/wami-childrens-life-skills'
+      preLoaderRoute: typeof WamiChildrensLifeSkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/wami': {
       id: '/wami'
       path: '/wami'
@@ -261,6 +444,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SchoolsYouthRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/school-youth-development-programs': {
+      id: '/school-youth-development-programs'
+      path: '/school-youth-development-programs'
+      fullPath: '/school-youth-development-programs'
+      preLoaderRoute: typeof SchoolYouthDevelopmentProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sanjo-mathew-founder': {
+      id: '/sanjo-mathew-founder'
+      path: '/sanjo-mathew-founder'
+      fullPath: '/sanjo-mathew-founder'
+      preLoaderRoute: typeof SanjoMathewFounderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/resources': {
       id: '/resources'
       path: '/resources'
@@ -275,11 +472,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/nova-human-development-methodology': {
+      id: '/nova-human-development-methodology'
+      path: '/nova-human-development-methodology'
+      fullPath: '/nova-human-development-methodology'
+      preLoaderRoute: typeof NovaHumanDevelopmentMethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nova': {
       id: '/nova'
       path: '/nova'
       fullPath: '/nova'
       preLoaderRoute: typeof NovaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lq-life-intelligence-quotient-framework': {
+      id: '/lq-life-intelligence-quotient-framework'
+      path: '/lq-life-intelligence-quotient-framework'
+      fullPath: '/lq-life-intelligence-quotient-framework'
+      preLoaderRoute: typeof LqLifeIntelligenceQuotientFrameworkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lq': {
@@ -289,11 +500,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/leadership-development-training': {
+      id: '/leadership-development-training'
+      path: '/leadership-development-training'
+      fullPath: '/leadership-development-training'
+      preLoaderRoute: typeof LeadershipDevelopmentTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/leadership': {
       id: '/leadership'
       path: '/leadership'
       fullPath: '/leadership'
       preLoaderRoute: typeof LeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/human-development-programs': {
+      id: '/human-development-programs'
+      path: '/human-development-programs'
+      fullPath: '/human-development-programs'
+      preLoaderRoute: typeof HumanDevelopmentProgramsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/founder': {
@@ -303,11 +528,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FounderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/emotional-intelligence-training': {
+      id: '/emotional-intelligence-training'
+      path: '/emotional-intelligence-training'
+      fullPath: '/emotional-intelligence-training'
+      preLoaderRoute: typeof EmotionalIntelligenceTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/emotional-intelligence': {
       id: '/emotional-intelligence'
       path: '/emotional-intelligence'
       fullPath: '/emotional-intelligence'
       preLoaderRoute: typeof EmotionalIntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corporate-training-programs': {
+      id: '/corporate-training-programs'
+      path: '/corporate-training-programs'
+      fullPath: '/corporate-training-programs'
+      preLoaderRoute: typeof CorporateTrainingProgramsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/corporate-training': {
@@ -324,6 +563,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/communication-skills-training': {
+      id: '/communication-skills-training'
+      path: '/communication-skills-training'
+      fullPath: '/communication-skills-training'
+      preLoaderRoute: typeof CommunicationSkillsTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/communication': {
       id: '/communication'
       path: '/communication'
@@ -336,6 +582,20 @@ declare module '@tanstack/react-router' {
       path: '/coaching-mentoring'
       fullPath: '/coaching-mentoring'
       preLoaderRoute: typeof CoachingMentoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coaching-and-mentoring': {
+      id: '/coaching-and-mentoring'
+      path: '/coaching-and-mentoring'
+      fullPath: '/coaching-and-mentoring'
+      preLoaderRoute: typeof CoachingAndMentoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-waymaker-skills': {
+      id: '/about-waymaker-skills'
+      path: '/about-waymaker-skills'
+      fullPath: '/about-waymaker-skills'
+      preLoaderRoute: typeof AboutWaymakerSkillsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -352,27 +612,69 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resources/$slug': {
+      id: '/resources/$slug'
+      path: '/$slug'
+      fullPath: '/resources/$slug'
+      preLoaderRoute: typeof ResourcesSlugRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
   }
 }
+
+interface ResourcesRouteChildren {
+  ResourcesSlugRoute: typeof ResourcesSlugRoute
+}
+
+const ResourcesRouteChildren: ResourcesRouteChildren = {
+  ResourcesSlugRoute: ResourcesSlugRoute,
+}
+
+const ResourcesRouteWithChildren = ResourcesRoute._addFileChildren(
+  ResourcesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AboutWaymakerSkillsRoute: AboutWaymakerSkillsRoute,
+  CoachingAndMentoringRoute: CoachingAndMentoringRoute,
   CoachingMentoringRoute: CoachingMentoringRoute,
   CommunicationRoute: CommunicationRoute,
+  CommunicationSkillsTrainingRoute: CommunicationSkillsTrainingRoute,
   ContactRoute: ContactRoute,
   CorporateTrainingRoute: CorporateTrainingRoute,
+  CorporateTrainingProgramsRoute: CorporateTrainingProgramsRoute,
   EmotionalIntelligenceRoute: EmotionalIntelligenceRoute,
+  EmotionalIntelligenceTrainingRoute: EmotionalIntelligenceTrainingRoute,
   FounderRoute: FounderRoute,
+  HumanDevelopmentProgramsRoute: HumanDevelopmentProgramsRoute,
   LeadershipRoute: LeadershipRoute,
+  LeadershipDevelopmentTrainingRoute: LeadershipDevelopmentTrainingRoute,
   LqRoute: LqRoute,
+  LqLifeIntelligenceQuotientFrameworkRoute:
+    LqLifeIntelligenceQuotientFrameworkRoute,
   NovaRoute: NovaRoute,
+  NovaHumanDevelopmentMethodologyRoute: NovaHumanDevelopmentMethodologyRoute,
   ProgramsRoute: ProgramsRoute,
-  ResourcesRoute: ResourcesRoute,
+  ResourcesRoute: ResourcesRouteWithChildren,
+  SanjoMathewFounderRoute: SanjoMathewFounderRoute,
+  SchoolYouthDevelopmentProgramsRoute: SchoolYouthDevelopmentProgramsRoute,
   SchoolsYouthRoute: SchoolsYouthRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WamiRoute: WamiRoute,
+  WamiChildrensLifeSkillsRoute: WamiChildrensLifeSkillsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

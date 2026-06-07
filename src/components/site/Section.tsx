@@ -30,7 +30,11 @@ export function Section({
                 </div>
               )}
               {title && <h2 className="text-4xl md:text-5xl leading-[1.1]">{title}</h2>}
-              {subtitle && <p className="mt-5 text-lg text-[color:var(--muted-ink)] leading-relaxed">{subtitle}</p>}
+              {subtitle && (
+                <p className="mt-5 text-lg text-[color:var(--muted-ink)] leading-relaxed">
+                  {subtitle}
+                </p>
+              )}
             </div>
           </Reveal>
         )}
@@ -61,9 +65,18 @@ export function PageHero({
       : "bg-hero";
   return (
     <section className={`relative overflow-hidden ${bg} pt-20 pb-20 md:pt-28 md:pb-28`}>
-      <div className="absolute -top-32 -right-24 w-[28rem] h-[28rem] rounded-full bg-[color:var(--gold)]/25 blur-3xl floaty" aria-hidden />
-      <div className="absolute -bottom-32 -left-24 w-[32rem] h-[32rem] rounded-full bg-[color:var(--teal-deep)]/20 blur-3xl floaty" aria-hidden />
-      <div className="absolute inset-0 dot-pattern opacity-[0.18] pointer-events-none" aria-hidden />
+      <div
+        className="absolute -top-32 -right-24 w-[28rem] h-[28rem] rounded-full bg-[color:var(--gold)]/25 blur-3xl floaty"
+        aria-hidden
+      />
+      <div
+        className="absolute -bottom-32 -left-24 w-[32rem] h-[32rem] rounded-full bg-[color:var(--teal-deep)]/20 blur-3xl floaty"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 dot-pattern opacity-[0.18] pointer-events-none"
+        aria-hidden
+      />
       <div className="container-prose relative">
         <div className="max-w-4xl">
           {eyebrow && (

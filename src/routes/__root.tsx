@@ -8,6 +8,8 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { BRAND, LOGO, SITE_URL } from "@/data/site";
+import { absoluteUrl } from "@/lib/seo";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -37,6 +39,7 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
+
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
@@ -77,24 +80,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "WayMaker Skills™ — Transforming Potential into Purpose" },
+      { title: `${BRAND} | Transforming Potential into Purpose` },
       {
         name: "description",
-        content:
-          "WayMaker Skills™ is a human development and applied intelligence organization helping individuals, educators, leaders, and organizations thrive through future-ready skills.",
+        content: `${BRAND} is a human development and applied intelligence organization helping individuals, educators, leaders, and organizations thrive through future-ready skills.`,
       },
-      { name: "author", content: "WayMaker Skills™" },
-      { property: "og:site_name", content: "WayMaker Skills™" },
+      { name: "author", content: BRAND },
+      { property: "og:site_name", content: BRAND },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0F5E63" },
-      { property: "og:title", content: "WayMaker Skills™ — Transforming Potential into Purpose" },
-      { name: "twitter:title", content: "WayMaker Skills™ — Transforming Potential into Purpose" },
-      { name: "description", content: "WayMaker Skills™ is a human development organization empowering individuals and organizations for future success." },
-      { property: "og:description", content: "WayMaker Skills™ is a human development organization empowering individuals and organizations for future success." },
-      { name: "twitter:description", content: "WayMaker Skills™ is a human development organization empowering individuals and organizations for future success." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9f5ad708-0be0-4e7f-85a8-ae723f35e5cd/id-preview-3b204492--5e3eb2e8-3545-4fd6-95d5-05f2f67e8d95.lovable.app-1780758448148.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9f5ad708-0be0-4e7f-85a8-ae723f35e5cd/id-preview-3b204492--5e3eb2e8-3545-4fd6-95d5-05f2f67e8d95.lovable.app-1780758448148.png" },
+      { property: "og:title", content: `${BRAND} | Transforming Potential into Purpose` },
+      { name: "twitter:title", content: `${BRAND} | Transforming Potential into Purpose` },
+      {
+        property: "og:description",
+        content: `${BRAND} is a human development organization empowering individuals and organizations for future success.`,
+      },
+      {
+        name: "twitter:description",
+        content: `${BRAND} is a human development organization empowering individuals and organizations for future success.`,
+      },
+      { property: "og:image", content: absoluteUrl(LOGO) },
+      { name: "twitter:image", content: absoluteUrl(LOGO) },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -111,12 +119,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "WayMaker Skills™",
-          url: "/",
+          name: BRAND,
+          url: SITE_URL,
           description:
             "Human development and applied intelligence organization helping individuals and organizations build future-ready skills.",
           slogan: "Transforming Potential into Purpose",
           founder: { "@type": "Person", name: "Sanjo Mathew", url: "https://sanjo.in" },
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              email: "waymakerskills@gmail.com",
+              telephone: "+91 96453 43777",
+              areaServed: "IN",
+            },
+          ],
         }),
       },
       {
@@ -124,8 +141,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "WayMaker Skills™",
-          url: "/",
+          name: BRAND,
+          url: SITE_URL,
         }),
       },
     ],
@@ -155,7 +172,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );

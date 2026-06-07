@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ReactNode } from "react";
+import { createElement, useEffect, useRef, type ReactNode } from "react";
 
 export function Reveal({
   children,
@@ -8,7 +8,7 @@ export function Reveal({
 }: {
   children: ReactNode;
   delay?: number;
-  as?: any;
+  as?: keyof React.JSX.IntrinsicElements;
   className?: string;
 }) {
   const ref = useRef<HTMLElement | null>(null);
@@ -30,9 +30,9 @@ export function Reveal({
     io.observe(el);
     return () => io.disconnect();
   }, [delay]);
-  return (
-    <Tag ref={ref as any} className={`reveal-on-scroll ${className}`}>
-      {children}
-    </Tag>
-  );
+  return createElement(Tag, {
+    ref: ref as never,
+    className: `reveal-on-scroll ${className}`,
+    children,
+  });
 }

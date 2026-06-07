@@ -1,15 +1,13 @@
-import type { ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 import { Quote } from "lucide-react";
 
+type LinkTo = ComponentProps<typeof Link>["to"];
+
 /* ---------- Timeline ---------- */
-export function Timeline({
-  steps,
-}: {
-  steps: { code?: string; title: string; desc: string }[];
-}) {
+export function Timeline({ steps }: { steps: { code?: string; title: string; desc: string }[] }) {
   return (
     <ol className="relative max-w-3xl mx-auto border-l-2 border-[color:var(--teal-deep)]/25 pl-8 space-y-10">
       {steps.map((s, i) => (
@@ -127,7 +125,7 @@ export function EcosystemGrid({
       {items.map((e, i) => (
         <Reveal key={e.title} delay={i * 80}>
           <Link
-            to={e.to as any}
+            to={e.to as LinkTo}
             className="gradient-border card-lift block rounded-3xl bg-white border border-[color:var(--border)] p-7 shadow-soft"
           >
             <div className="text-xs tracking-widest uppercase font-semibold text-[color:var(--gold)]">
