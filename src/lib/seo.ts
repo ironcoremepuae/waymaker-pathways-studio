@@ -8,7 +8,11 @@ function withBasePath(path: string) {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const trimmedBase = BASE_PATH === "/" ? "" : BASE_PATH.replace(/\/$/, "");
 
-  if (!trimmedBase || normalizedPath === trimmedBase || normalizedPath.startsWith(`${trimmedBase}/`)) {
+  if (
+    !trimmedBase ||
+    normalizedPath === trimmedBase ||
+    normalizedPath.startsWith(`${trimmedBase}/`)
+  ) {
     return normalizedPath;
   }
 
