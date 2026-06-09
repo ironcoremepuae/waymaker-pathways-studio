@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ComponentProps } from "react";
+import wamiMascot from "@/assets/wami-logo.png";
+import wamiWordmark from "@/assets/wami-text.png";
 import { Layout } from "@/components/site/Layout";
 import { Section } from "@/components/site/Section";
 import { CTAButton, FinalCTA } from "@/components/site/CTA";
@@ -18,7 +20,6 @@ import {
   ENGAGEMENT_STEPS,
   TAGLINE,
   LOGO,
-  BRAND,
 } from "@/data/site";
 import {
   Brain,
@@ -67,13 +68,33 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const HERO_CARDS = [
-  { icon: Compass, label: "Leadership" },
-  { icon: HeartHandshake, label: "Emotional Intelligence" },
-  { icon: MessagesSquare, label: "Communication" },
-  { icon: Sparkles, label: "Future Skills" },
-  { icon: ShieldCheck, label: "Well-being" },
-  { icon: Target, label: "Purpose" },
+const HERO_PHRASES = ["Future Skills", "Leadership", "Emotional Intelligence", "Purpose", "Growth"];
+
+const HERO_BADGES = [
+  { icon: Crown, label: "Leadership", className: "left-[2%] top-[14%] hero-badge-a" },
+  { icon: Rocket, label: "Growth", className: "right-[16%] top-[7%] hero-badge-f" },
+  { icon: HeartHandshake, label: "Emotional IQ", className: "right-[-1%] top-[34%] hero-badge-b" },
+  { icon: Target, label: "Purpose", className: "right-[8%] bottom-[20%] hero-badge-c" },
+  { icon: Sparkles, label: "Future Skills", className: "left-[1%] bottom-[27%] hero-badge-d" },
+  { icon: ShieldCheck, label: "Confidence", className: "left-[22%] bottom-[8%] hero-badge-e" },
+];
+
+const HERO_IMPACT_CARDS = [
+  {
+    title: "Life Skills",
+    text: "Confidence, creativity, and communication",
+    icon: Sparkles,
+  },
+  {
+    title: "Leadership",
+    text: "Purpose-led growth for teams and learners",
+    icon: Crown,
+  },
+  {
+    title: "Future Readiness",
+    text: "Skills for school, work, and life",
+    icon: Rocket,
+  },
 ];
 
 const WHY = [
@@ -156,107 +177,127 @@ function HomePage() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-hero pt-12 pb-24 md:pt-20 md:pb-32">
-        <div
-          className="absolute -top-24 -right-24 w-[36rem] h-[36rem] rounded-full bg-[color:var(--gold)]/25 blur-3xl floaty"
-          aria-hidden
-        />
-        <div
-          className="absolute -bottom-32 -left-24 w-[40rem] h-[40rem] rounded-full bg-[color:var(--teal-deep)]/25 blur-3xl floaty"
-          aria-hidden
-        />
-        <div className="absolute inset-0 dot-pattern opacity-30" aria-hidden />
+      <section className="home-hero relative isolate overflow-hidden pt-12 pb-20 md:pt-18 md:pb-28 lg:min-h-[calc(100vh-5rem)] lg:pt-20">
+        <div className="home-hero-bg" aria-hidden="true" />
+        <div className="home-hero-grid" aria-hidden="true" />
+        <div className="home-hero-wave" aria-hidden="true" />
+        <div className="home-hero-particles" aria-hidden="true">
+          {Array.from({ length: 14 }).map((_, index) => (
+            <span key={index} className={"home-hero-particle home-hero-particle-" + (index + 1)} />
+          ))}
+        </div>
 
-        <div className="container-prose relative grid lg:grid-cols-[1.15fr_1fr] gap-14 items-center">
-          <div className="reveal">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/70 backdrop-blur border border-white/60 px-4 py-1.5 text-[11px] tracking-[0.22em] uppercase text-[color:var(--teal-deep)] font-semibold shadow-soft">
-              <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--gold)]" />
-              Human Development · Applied Intelligence
+        <div className="container-prose relative grid items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(27rem,0.95fr)] lg:gap-12">
+          <div className="home-hero-copy mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
+            <div className="home-hero-kicker inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/76 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--teal-deep)] shadow-glass backdrop-blur-xl">
+              <span className="h-2 w-2 rounded-full bg-[color:var(--gold)] shadow-[0_0_18px_rgba(214,166,56,0.75)]" />
+              Human Development &bull; Applied Intelligence
             </div>
-            <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl leading-[1.02]">
+
+            <h1 className="home-hero-title mt-6 text-5xl leading-[0.98] md:text-6xl lg:text-7xl xl:text-[5.35rem]">
               <span className="text-gradient-teal">WayMaker Skills</span>
-              <span className="text-[color:var(--gold)] align-top text-2xl ml-1">™</span>
+              <span className="ml-1 align-top text-2xl text-[color:var(--gold)] md:text-3xl">
+                &#8482;
+              </span>
             </h1>
-            <div className="mt-5 relative inline-block">
-              <span
-                className="absolute -bottom-1 left-0 right-0 h-3 bg-[color:var(--gold)]/35 -z-10 rounded"
-                aria-hidden
-              />
-              <p className="font-display italic text-2xl md:text-3xl text-[color:var(--teal-dark)]">
+
+            <div className="home-hero-subtitle-wrap relative mt-5 inline-block">
+              <p className="font-display text-2xl italic text-[color:var(--teal-dark)] md:text-3xl">
                 {TAGLINE}
               </p>
+              <span className="home-hero-underline" aria-hidden="true" />
             </div>
-            <p className="mt-6 text-lg text-[color:var(--muted-ink)] leading-relaxed max-w-xl">
-              {BRAND} helps individuals, learners, educators, leaders, professionals, and
-              organizations build the intelligence, skills, confidence, and purpose-driven
+
+            <div className="home-hero-phrase mt-4 inline-flex items-center gap-2 rounded-full border border-[color:var(--teal-deep)]/10 bg-white/72 px-4 py-2 text-sm font-semibold text-[color:var(--teal-dark)] shadow-soft backdrop-blur">
+              <Sparkles className="h-4 w-4 text-[color:var(--gold)]" aria-hidden />
+              <span className="text-[color:var(--muted-ink)]">Building</span>
+              <span className="home-hero-phrase-rotator" aria-hidden="true">
+                {HERO_PHRASES.map((phrase) => (
+                  <span key={phrase}>{phrase}</span>
+                ))}
+              </span>
+              <span className="sr-only">
+                Building future skills, leadership, emotional intelligence, purpose, and growth.
+              </span>
+            </div>
+
+            <p className="home-hero-description mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[color:var(--muted-ink)] lg:mx-0">
+              WayMaker Skills&#8482; helps individuals, learners, educators, leaders, professionals,
+              and organizations build the intelligence, skills, confidence, and purpose-driven
               capabilities needed to thrive.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <CTAButton to={ROUTES.contact} className="btn-shine">
-                Book a Discovery Call <ArrowRight className="h-4 w-4" />
-              </CTAButton>
-              <CTAButton to={ROUTES.programs} variant="secondary">
+
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap lg:justify-start">
+              <Link to={ROUTES.contact} className="home-hero-btn home-hero-btn-primary group">
+                Book a Discovery Call
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+              <Link to={ROUTES.programs} className="home-hero-btn home-hero-btn-secondary">
                 Explore Programs
-              </CTAButton>
+              </Link>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs uppercase tracking-[0.18em] text-[color:var(--muted-ink)] font-semibold">
+
+            <div className="home-hero-impact mt-8 grid gap-3 sm:grid-cols-3">
+              {HERO_IMPACT_CARDS.map(({ icon: Icon, title, text }, index) => (
+                <div
+                  key={title}
+                  className="home-hero-impact-card"
+                  style={{ animationDelay: String(260 + index * 90) + "ms" }}
+                >
+                  <Icon className="h-4 w-4 text-[color:var(--gold)]" aria-hidden />
+                  <div className="mt-2 font-display text-lg leading-tight text-[color:var(--teal-dark)]">
+                    {title}
+                  </div>
+                  <p className="mt-1 text-xs leading-relaxed text-[color:var(--muted-ink)]">
+                    {text}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted-ink)] lg:justify-start">
               <span className="text-[color:var(--teal-deep)]">Built for</span>
-              <span>Schools</span>
-              <span>•</span>
-              <span>Professionals</span>
-              <span>•</span>
-              <span>Leaders</span>
-              <span>•</span>
-              <span>Organizations</span>
+              {["Schools", "Professionals", "Leaders", "Organizations"].map((audience) => (
+                <span key={audience} className="home-hero-audience-chip">
+                  {audience}
+                </span>
+              ))}
             </div>
           </div>
 
-          <div className="relative reveal" style={{ animationDelay: "0.2s" }}>
-            <div className="relative mx-auto max-w-md aspect-square">
-              <div
-                className="absolute inset-6 rounded-full bg-[color:var(--gold)]/35 blur-3xl glow"
-                aria-hidden
-              />
-              <div
-                className="absolute inset-0 rounded-full bg-[color:var(--teal-deep)]/20 blur-3xl"
-                aria-hidden
-              />
+          <div className="home-hero-visual relative mx-auto w-full max-w-[33rem] lg:max-w-[38rem]">
+            <div className="home-hero-orb" aria-hidden="true" />
+            <div className="home-hero-orbit home-hero-orbit-outer" aria-hidden="true" />
+            <div className="home-hero-orbit home-hero-orbit-middle" aria-hidden="true" />
+            <div className="home-hero-orbit home-hero-orbit-inner" aria-hidden="true" />
+
+            <div className="home-hero-logo-card">
+              <div className="home-hero-logo-glow" aria-hidden="true" />
               <img
                 src={LOGO}
                 alt="WayMaker Skills logo"
                 width={480}
                 height={480}
-                className="relative w-full drop-shadow-2xl floaty"
+                className="home-hero-logo"
               />
-
-              {/* Floating cards */}
-              <div className="absolute -top-4 -left-4 glass rounded-2xl px-3 py-2 shadow-glass hidden sm:flex items-center gap-2">
-                <Compass className="h-4 w-4 text-[color:var(--teal-deep)]" />
-                <span className="text-xs font-semibold text-[color:var(--teal-dark)]">
-                  Leadership
-                </span>
-              </div>
-              <div className="absolute top-1/3 -right-6 glass rounded-2xl px-3 py-2 shadow-glass hidden sm:flex items-center gap-2">
-                <HeartHandshake className="h-4 w-4 text-[color:var(--gold)]" />
-                <span className="text-xs font-semibold text-[color:var(--teal-dark)]">
-                  Emotional IQ
-                </span>
-              </div>
-              <div className="absolute -bottom-2 left-6 glass rounded-2xl px-3 py-2 shadow-glass hidden sm:flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-[color:var(--teal-deep)]" />
-                <span className="text-xs font-semibold text-[color:var(--teal-dark)]">
-                  Future Skills
-                </span>
-              </div>
-              <div className="absolute bottom-10 -right-2 glass rounded-2xl px-3 py-2 shadow-glass hidden md:flex items-center gap-2">
-                <Target className="h-4 w-4 text-[color:var(--gold)]" />
-                <span className="text-xs font-semibold text-[color:var(--teal-dark)]">Purpose</span>
-              </div>
             </div>
-            <div className="mt-6 grid grid-cols-3 gap-3 lg:hidden">
-              {HERO_CARDS.slice(0, 6).map(({ icon: Icon, label }) => (
-                <div key={label} className="glass rounded-xl p-3 text-center">
-                  <Icon className="h-5 w-5 mx-auto text-[color:var(--teal-deep)]" />
+
+            <div className="home-hero-shadow" aria-hidden="true" />
+
+            {HERO_BADGES.map(({ icon: Icon, label, className }) => (
+              <div key={label} className={"home-hero-floating-badge " + className}>
+                <Icon className="h-4 w-4 text-[color:var(--teal-deep)]" aria-hidden />
+                <span>{label}</span>
+              </div>
+            ))}
+
+            <div className="mt-7 grid grid-cols-3 gap-2 sm:hidden">
+              {HERO_BADGES.slice(0, 6).map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="rounded-2xl border border-white/75 bg-white/78 p-3 text-center shadow-soft backdrop-blur"
+                >
+                  <Icon className="mx-auto h-4 w-4 text-[color:var(--teal-deep)]" aria-hidden />
                   <div className="mt-1 text-[11px] font-semibold text-[color:var(--teal-dark)]">
                     {label}
                   </div>
@@ -266,10 +307,10 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center text-[color:var(--teal-deep)]/70">
-          <span className="text-[10px] tracking-[0.3em] uppercase mb-1">Scroll</span>
-          <ChevronDown className="h-4 w-4 scroll-hint" />
+        <div className="home-hero-scroll absolute bottom-5 left-1/2 hidden -translate-x-1/2 flex-col items-center text-[color:var(--teal-deep)]/72 md:flex">
+          <span className="mb-1 text-[10px] font-semibold uppercase tracking-[0.3em]">Scroll</span>
+          <span className="home-hero-scroll-dots" aria-hidden="true" />
+          <ChevronDown className="h-4 w-4" aria-hidden />
         </div>
       </section>
 
@@ -653,50 +694,97 @@ function HomePage() {
       </Section>
 
       {/* WAMI */}
-      <Section className="bg-gradient-to-br from-[color:var(--teal-light)] via-[color:var(--ivory)] to-[color:var(--gold-soft)]/20 relative overflow-hidden">
-        <div
-          className="absolute top-10 right-10 w-40 h-40 rounded-full bg-[color:var(--gold)]/15 blur-2xl glow"
-          aria-hidden
+      <Section className="home-wami-section relative overflow-hidden bg-[linear-gradient(135deg,#F3FBFF_0%,#FFF8E6_54%,#FFFFFF_100%)]">
+        <span
+          className="wami-star wami-star--yellow wami-star--md wami-star--float left-[7%] top-[16%]"
+          aria-hidden="true"
         />
-        <div className="grid lg:grid-cols-2 gap-10 items-center relative">
+        <span
+          className="wami-star wami-star--blue wami-star--sm wami-star--twinkle right-[12%] top-[18%]"
+          aria-hidden="true"
+        />
+        <span
+          className="wami-star wami-star--red wami-star--sm wami-star--drift left-[46%] bottom-[16%]"
+          aria-hidden="true"
+        />
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.95fr)] lg:gap-14">
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[11px] tracking-[0.22em] uppercase text-[color:var(--teal-deep)] font-semibold shadow-soft">
-              <Star className="h-3 w-3 text-[color:var(--gold)]" /> For Children
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D7F0FF] bg-white/85 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#064AAD] shadow-soft">
+              <Star className="h-3.5 w-3.5 fill-[#FFD21F] text-[#064AAD]" aria-hidden />
+              Children's Life Skills
             </div>
-            <h2 className="mt-4 text-4xl md:text-5xl">WAMI™ — The Superstar of Skills</h2>
-            <p className="mt-5 text-[color:var(--muted-ink)] text-lg leading-relaxed">
-              WAMI™ is the children's learning ecosystem of WayMaker Skills™. Through stories,
-              challenges, activity books, games, and experiential learning, WAMI™ helps children
-              build confidence, creativity, communication, character, and future-ready life skills.
+            <img
+              src={wamiWordmark}
+              alt="WAMI\u2122 The Way Maker Star"
+              className="mt-5 h-auto w-full max-w-[12rem]"
+            />
+            <h2 className="mt-4 max-w-2xl text-4xl leading-tight text-[#064AAD] md:text-5xl">
+              Meet WAMI&#8482; &mdash; The WayMaker Star for children's life skills
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[color:var(--muted-ink)]">
+              WAMI&#8482; brings stories, games, activities, and joyful challenges together to help
+              children practise confidence, creativity, communication, character, and practical life
+              skills.
             </p>
-            <div className="mt-6">
-              <CTAButton to={ROUTES.wami} variant="gold" className="btn-shine">
-                Explore WAMI™ <ArrowRight className="h-4 w-4" />
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              {["Stories", "Games", "Activities", "Life skills"].map((chip) => (
+                <span
+                  key={chip}
+                  className="rounded-full border border-[#D7F0FF] bg-white/86 px-3.5 py-1.5 text-sm font-semibold text-[#064AAD] shadow-[0_12px_28px_-24px_rgba(6,74,173,0.36)]"
+                >
+                  {chip}
+                </span>
+              ))}
+            </div>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <CTAButton
+                to={ROUTES.wami}
+                className="btn-shine bg-[#064AAD] text-white hover:bg-[#0755C8]"
+              >
+                Explore WAMI&#8482; <ArrowRight className="h-4 w-4" />
+              </CTAButton>
+              <CTAButton to={ROUTES.programs} variant="secondary">
+                View Programs
               </CTAButton>
             </div>
           </Reveal>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {[
-              "Stories",
-              "Challenges",
-              "Activity Books",
-              "Games",
-              "Creativity",
-              "Character",
-              "Confidence",
-              "Communication",
-            ].map((t, i) => (
-              <Reveal key={t} delay={i * 50}>
-                <div className="card-lift rounded-3xl bg-white p-5 shadow-soft border border-white/80 text-center h-full">
-                  <BookOpen className="h-5 w-5 mx-auto text-[color:var(--gold)] mb-2" />
-                  <div className="font-semibold text-[color:var(--teal-dark)] text-sm">{t}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={120}>
+            <div className="relative mx-auto w-full max-w-[28rem]">
+              <div
+                className="absolute inset-x-4 bottom-3 top-10 rounded-[2.5rem] border-2 border-white bg-[linear-gradient(180deg,#FFD21F_0%,#EAF7FF_100%)] shadow-[0_30px_70px_-42px_rgba(6,74,173,0.45)]"
+                aria-hidden
+              />
+              <span
+                className="wami-star wami-star--yellow wami-star--lg wami-star--float left-4 top-3"
+                aria-hidden="true"
+              />
+              <span
+                className="wami-star wami-star--red wami-star--md wami-star--twinkle right-8 top-8"
+                aria-hidden="true"
+              />
+              <span
+                className="wami-star wami-star--white wami-star--md wami-star--drift right-5 bottom-20"
+                aria-hidden="true"
+              />
+              <img
+                src={wamiMascot}
+                alt="WAMI\u2122 star mascot"
+                className="relative z-10 mx-auto h-auto w-full max-w-[24rem] drop-shadow-[0_24px_34px_rgba(6,74,173,0.22)]"
+              />
+              <div className="relative z-20 -mt-4 grid grid-cols-2 gap-2.5 px-4 pb-4 sm:grid-cols-4">
+                {["Confidence", "Creativity", "Communication", "Character"].map((chip) => (
+                  <span
+                    key={chip}
+                    className="rounded-full border border-white/80 bg-white/90 px-3 py-1.5 text-center text-xs font-bold text-[#064AAD] shadow-soft"
+                  >
+                    {chip}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </Section>
-
       {/* FOUNDER */}
       <Section eyebrow="Founder" title="A vision rooted in human potential.">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-stretch">
