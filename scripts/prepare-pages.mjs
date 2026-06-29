@@ -9,6 +9,7 @@ const clientDir = path.join(repoRoot, "dist", "client");
 const defaultSiteUrl = "https://waymakerskills.com";
 const rawSiteUrl = (process.env.VITE_SITE_URL ?? defaultSiteUrl).trim().replace(/\/+$/, "");
 const rawBasePath = (process.env.VITE_BASE_PATH ?? "/").trim();
+const pagesCname = (process.env.VITE_PAGES_CNAME ?? "").trim();
 const basePath =
   !rawBasePath || rawBasePath === "/"
     ? "/"
@@ -66,6 +67,10 @@ async function main() {
   await cp(path.join(clientDir, "index.html"), path.join(clientDir, "404.html"), {
     force: true,
   });
+
+  if (pagesCname) {
+    await writeFile(path.join(clientDir, "CNAME"), `${pagesCname}\n`, "utf8");
+  }
 
   for (const [fromPath, toPath] of Object.entries(legacyRedirects)) {
     const targetDir = path.join(clientDir, fromPath.replace(/^\//, ""));

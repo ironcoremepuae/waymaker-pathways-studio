@@ -35,5 +35,6 @@ This repo is configured for static GitHub Pages deployment through GitHub Action
 
 For the detected project-site URL, use:
 
-- `VITE_SITE_URL=https://ironcoremepuae.github.io/waymaker-pathways-studio`
-- `VITE_BASE_PATH=/waymaker-pathways-studio/`
+- `VITE_SITE_URL=https://waymakerskills.com`
+- `VITE_BASE_PATH=/`
+- `VITE_PAGES_CNAME=waymakerskills.com`

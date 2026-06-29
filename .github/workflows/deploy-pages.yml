@@ -16,8 +16,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  VITE_SITE_URL: https://ironcoremepuae.github.io/waymaker-pathways-studio
-  VITE_BASE_PATH: /waymaker-pathways-studio/
+  VITE_SITE_URL: https://waymakerskills.com
+  VITE_BASE_PATH: /
+  VITE_PAGES_CNAME: waymakerskills.com
   GITHUB_PAGES: true
 
 jobs:

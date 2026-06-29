@@ -24,15 +24,17 @@ Set these in the workflow or repository environment before production deployment
 - `VITE_SITE_URL`
 - `VITE_BASE_PATH`
 
-Detected project-site default for this repo:
+Current production custom-domain defaults for this repo:
 
-- `VITE_SITE_URL=https://ironcoremepuae.github.io/waymaker-pathways-studio`
-- `VITE_BASE_PATH=/waymaker-pathways-studio/`
+- `VITE_SITE_URL=https://waymakerskills.com`
+- `VITE_BASE_PATH=/`
+- `VITE_PAGES_CNAME=waymakerskills.com`
 
 Custom domain setup:
 
 - `VITE_SITE_URL=https://yourdomain.com`
 - `VITE_BASE_PATH=/`
+- `VITE_PAGES_CNAME=yourdomain.com`
 - Configure the custom domain in GitHub Pages.
 - Configure DNS for the domain.
 - Enable HTTPS in GitHub Pages.
@@ -61,7 +63,13 @@ npm run typecheck
 npm run build
 ```
 
-To test the project-site base path locally, build with:
+To test the current custom-domain production setup locally, build with:
+
+```bash
+VITE_SITE_URL=https://waymakerskills.com VITE_BASE_PATH=/ VITE_PAGES_CNAME=waymakerskills.com npm run build
+```
+
+To test the old project-site base path locally, build with:
 
 ```bash
 VITE_SITE_URL=https://ironcoremepuae.github.io/waymaker-pathways-studio VITE_BASE_PATH=/waymaker-pathways-studio/ npm run build
