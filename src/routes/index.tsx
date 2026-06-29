@@ -191,7 +191,7 @@ function HomePage() {
           <div className="home-hero-copy mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
             <div className="home-hero-kicker inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/76 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--teal-deep)] shadow-glass backdrop-blur-xl">
               <span className="h-2 w-2 rounded-full bg-[color:var(--gold)] shadow-[0_0_18px_rgba(214,166,56,0.75)]" />
-              Human Development &bull; Applied Intelligence
+              Human Development &bull; Applied Intelligence &bull; Future Skills
             </div>
 
             <h1 className="home-hero-title mt-6 text-5xl leading-[0.98] md:text-6xl lg:text-7xl xl:text-[5.35rem]">
@@ -222,9 +222,8 @@ function HomePage() {
             </div>
 
             <p className="home-hero-description mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[color:var(--muted-ink)] lg:mx-0">
-              WayMaker Skills&#8482; helps individuals, learners, educators, leaders, professionals,
-              and organizations build the intelligence, skills, confidence, and purpose-driven
-              capabilities needed to thrive.
+              WayMaker Skills&#8482; is a Human Development and Applied Intelligence Organization
+              dedicated to transforming potential into purpose.
             </p>
 
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap lg:justify-start">
