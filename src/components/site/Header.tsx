@@ -35,6 +35,14 @@ export function Header() {
     >
       <div className="container-prose flex items-center justify-between h-18 py-3">
         <Link to="/" className="flex items-center gap-3 group" onClick={() => setOpen(false)}>
+          <div className="leading-tight">
+            <div className="font-display text-xl md:text-2xl text-[color:var(--teal-dark)]">
+              {BRAND}
+            </div>
+            <div className="text-[10px] tracking-[0.22em] uppercase text-[color:var(--muted-ink)] hidden sm:block">
+              Human Development
+            </div>
+          </div>
           <div className="relative">
             <div
               className="absolute inset-0 bg-[color:var(--gold)]/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition"
@@ -47,14 +55,6 @@ export function Header() {
               height={44}
               className="relative h-11 w-11 transition-transform group-hover:scale-105"
             />
-          </div>
-          <div className="leading-tight">
-            <div className="font-display text-xl md:text-2xl text-[color:var(--teal-dark)]">
-              {BRAND}
-            </div>
-            <div className="text-[10px] tracking-[0.22em] uppercase text-[color:var(--muted-ink)] hidden sm:block">
-              Human Development
-            </div>
           </div>
         </Link>
 

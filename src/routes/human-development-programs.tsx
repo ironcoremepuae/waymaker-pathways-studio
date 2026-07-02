@@ -259,7 +259,7 @@ function ProgramsPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="How programs are shaped"
-        title="A clear design process."
+        title="How every WayMaker program is crafted?"
         center
       >
         <Timeline steps={PROCESS} />

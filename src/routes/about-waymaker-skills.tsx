@@ -130,35 +130,35 @@ function AboutPage() {
     <Layout>
       <PageHero
         eyebrow="About WayMaker Skills™"
-        title="A human development organization built for a changing world."
-        subtitle="WayMaker Skills™ helps people transform potential into purposeful action through applied intelligence, meaningful learning, and practical human development."
+        title="Developing Human Capability for a Changing World"
+        subtitle="We help individuals, educators, leaders, and organizations build the thinking, behavioural, and leadership capabilities needed to thrive in an increasingly complex world. Through practical learning experiences and evidence-informed development, we transform potential into measurable growth."
         badges={[
           "Human development",
           "Applied intelligence",
-          "For schools, workplaces, and communities",
-          "Premium, practical, and purposeful",
+          "Schools, Workplaces, Communities",
+          "Practical, Purposeful, Transformative",
         ]}
       >
         <CTAButton to={ROUTES.programs} variant="primary">
           Explore Programs <ArrowRight className="h-4 w-4" />
         </CTAButton>
         <CTAButton to={ROUTES.contact} variant="secondary">
-          Start a Conversation
+          Book a discovery call
         </CTAButton>
       </PageHero>
 
       <Section eyebrow="Who we are" title={`What ${BRAND} is designed to do.`}>
         <div className="grid gap-8 md:grid-cols-2 text-lg leading-relaxed text-[color:var(--charcoal)]">
           <p>
-            {BRAND} exists to help people build the inner and outer capabilities that modern life
-            keeps demanding: self-awareness, communication, emotional intelligence, leadership,
-            resilience, adaptability, and purposeful action. We bring together psychology,
-            education, behavioral insight, and experiential learning to make those capabilities
-            usable in the real world.
+            {BRAND} exists to help people develop the human capabilities that modern life and work
+            demand—self-awareness, communication, emotional intelligence, leadership, resilience,
+            adaptability, and purposeful action. We bring together psychology, education,
+            behavioural science, and experiential learning to help people apply these capabilities
+            with confidence in the real world.
           </p>
           <p>
-            This is the company website for {BRAND}. It represents the organization, its frameworks,
-            and its programs. Sanjo Mathew’s personal brand and profile remain on{" "}
+            This website represents {BRAND} our organization, programs, and learning solutions.
+            Sanjo Mathew's personal profile, thought leadership, and individual work can be found at{" "}
             <a
               className="text-[color:var(--teal-deep)] underline underline-offset-4"
               href={CONTACT.founderSite}
@@ -175,7 +175,7 @@ function AboutPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Human development"
-        title="What we mean by human development."
+        title="We develop human capability through applied intelligence."
       >
         <div className="space-y-5 text-lg leading-relaxed text-[color:var(--charcoal)]">
           <p>

@@ -138,7 +138,7 @@ const WHAT_WE_DO = [
   {
     icon: Sparkles,
     title: "Future Skills",
-    desc: "Adaptability, creativity, lifelong learning.",
+    desc: "Adaptability, innovation, and lifelong learning for a changing world.",
     badge: "Mindset",
     span: "lg:col-span-2",
   },
@@ -157,7 +157,13 @@ const WHAT_WE_DO = [
   {
     icon: Microscope,
     title: "Assessments & Tools",
-    desc: "Diagnostics that turn awareness into action.",
+    desc: "Evidence-based assessments that transform insight into growth.",
+    badge: "Insight",
+  },
+  {
+    icon: Microscope,
+    title: "Applied Intelligence Frameworks",
+    desc: "Practical models that connect thinking, behavior, and performance.",
     badge: "Insight",
   },
 ];
@@ -254,10 +260,10 @@ function HomePage() {
               ))}
             </div>
 
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted-ink)] lg:justify-start">
-              <span className="text-[color:var(--teal-deep)]">Built for</span>
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--muted-ink)] md:flex-nowrap md:whitespace-nowrap lg:justify-start">
+              <span className="shrink-0 text-[color:var(--teal-deep)]">Built for</span>
               {["Schools", "Professionals", "Leaders", "Organizations"].map((audience) => (
-                <span key={audience} className="home-hero-audience-chip">
+                <span key={audience} className="home-hero-audience-chip shrink-0">
                   {audience}
                 </span>
               ))}
@@ -351,9 +357,9 @@ function HomePage() {
       {/* WHY */}
       <Section
         className="bg-gradient-to-b from-[color:var(--ivory)] to-white relative overflow-hidden"
-        eyebrow="Why Human Development Matters"
-        title="Success today asks for more than knowledge."
-        subtitle="The world is changing faster than curricula and corporate playbooks. People need deeper capabilities to navigate it."
+        eyebrow="WHY HUMAN DEVELOPMENT IS THE FUTURE"
+        title="Success Today Demands More Than Knowledge."
+        subtitle="People need the human skills to adapt, lead, collaborate, and thrive."
         center
       >
         <div className="absolute top-0 right-0 w-96 h-96 dot-pattern opacity-30" aria-hidden />
@@ -382,7 +388,7 @@ function HomePage() {
       <Section
         className="bg-gradient-to-b from-white to-[color:var(--teal-light)]"
         eyebrow="What We Do"
-        title="A complete human development practice."
+        title="A Complete Human Development Ecosystem."
         center
       >
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[180px]">
@@ -467,9 +473,13 @@ function HomePage() {
             <h2 className="text-white text-4xl md:text-5xl leading-tight">
               The NOVA™ Human Development Methodology
             </h2>
+            <p className="mt-5 text-white/80 text-2xl leading-relaxed">
+              From awareness to meaningful growth.
+            </p>
             <p className="mt-5 text-white/80 text-lg leading-relaxed">
-              NOVA™ is the evidence-informed methodology used by WayMaker Skills™ to transform
-              awareness into action and potential into performance.
+              NOVA™ is the human development methodology behind WayMaker Skills™ programs, helping
+              individuals, teams, and organizations build clarity, resilience, confidence, and
+              intentional action.
             </p>
             <div className="mt-6">
               <CTAButton to={ROUTES.nova} variant="gold" className="btn-shine">
@@ -798,15 +808,16 @@ function HomePage() {
                   Founder's Note
                 </div>
                 <p className="font-display text-2xl md:text-3xl leading-snug">
-                  "Human potential develops best when we work on the whole person — mind, heart, and
-                  action."
+                  "Human potential flourishes when the mind finds clarity, the heart finds purpose,
+                  and our actions create meaningful impact. True success is measured not only by
+                  what we achieve, but by who we become."
                 </p>
                 <div className="mt-8 flex items-center gap-4 border-t border-white/20 pt-6">
                   <div className="h-14 w-14 rounded-full bg-white/15 border border-white/30 flex items-center justify-center font-display text-xl text-white">
                     SM
                   </div>
                   <div>
-                    <div className="font-semibold text-white">Sanjo Mathew</div>
+                    <div className="font-semibold text-white">Dr. Sanjo Cine Mathew</div>
                     <div className="text-xs text-white/70">Founder · WayMaker Skills™</div>
                   </div>
                 </div>

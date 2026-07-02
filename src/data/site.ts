@@ -173,6 +173,13 @@ export const PROGRAMS = [
     best: "Individuals and organizations",
     tag: "Corporate",
   },
+  {
+    slug: "assessments",
+    title: "Productivity & Personal Effectiveness",
+    desc: "Build habits, focus, time management, decision-making, and execution for sustained success.",
+    best: "Students, professionals, leaders",
+    tag: "Personal Growth",
+  },
 ];
 
 export const AUDIENCES = [
@@ -193,6 +200,12 @@ export const AUDIENCES = [
     desc: "Tools to raise emotionally intelligent children.",
     cta: "Support Child Growth",
     to: ROUTES.wami,
+  },
+  {
+    title: "Educators",
+    desc: "Empowering teachers with practical tools for impactful learning.",
+    cta: "Empower Educators",
+    to: ROUTES.schoolsYouth,
   },
   {
     title: "Teachers & Educators",
@@ -275,8 +288,8 @@ export const FAQS_GENERAL = [
     a: "Yes. Every program can be tailored to the audience, context, and learning outcomes you care about.",
   },
   {
-    q: "What is the NOVA™ methodology?",
-    a: "NOVA™ is our evidence-informed human development methodology — Notice, Own, Visualize, Act — that turns awareness into action.",
+    q: "What NOVA™ is?",
+    a: "The human development methodology behind WayMaker Skills™.",
   },
   {
     q: "What is the LQ™ Framework?",
@@ -318,6 +331,11 @@ export const GROWTH_PATHS = [
   {
     title: "For Schools",
     outcome: "Build future-ready students, teachers, and ecosystems.",
+    to: ROUTES.schoolsYouth,
+  },
+  {
+    title: "For Educators",
+    outcome: "Empowering teachers with practical tools for impactful learning.",
     to: ROUTES.schoolsYouth,
   },
   {

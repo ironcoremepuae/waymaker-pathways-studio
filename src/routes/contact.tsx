@@ -66,9 +66,15 @@ const ENQUIRY_TYPES = [
     detail: "Collaborations, pilots, ecosystem building, and aligned growth initiatives.",
   },
   {
+    icon: CheckCircle2,
+    label: "Assessment & Development Tools",
+    detail:
+      "Discover strengths, identify growth opportunities, and receive evidence-informed insights for individuals, teams, and organizations.",
+  },
+  {
     icon: MessageCircle,
-    label: "General Enquiry",
-    detail: "Start with a broader conversation and we'll help route it well.",
+    label: "Not Sure Where to Start?",
+    detail: "We'll help you find the right program, service, or conversation based on your goals.",
   },
 ] as const;
 
@@ -162,12 +168,12 @@ function Page() {
 
       <Section
         eyebrow="Best reasons to contact us"
-        title="Choose the kind of conversation you need."
+        title="Choose the path that fits your goals."
         center
       >
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {ENQUIRY_TYPES.map((type, i) => (
-            <Reveal key={type.label} delay={i * 40}>
+            <Reveal key={type.label} delay={i * 40} className="h-full">
               <button
                 type="button"
                 onClick={() => {
@@ -177,7 +183,7 @@ function Page() {
                     block: "start",
                   });
                 }}
-                className={`card-lift gradient-border w-full rounded-2xl border p-6 text-left shadow-soft transition-all ${
+                className={`card-lift gradient-border flex h-full w-full flex-col rounded-2xl border p-6 text-left shadow-soft transition-all ${
                   selectedType === type.label
                     ? "border-[color:var(--teal-deep)] bg-[color:var(--teal-light)]"
                     : "border-[color:var(--border)] bg-white"

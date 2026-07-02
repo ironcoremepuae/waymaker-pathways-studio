@@ -64,11 +64,11 @@ const FAQS = [
   },
   {
     q: "What is Sanjo Mathew’s role in WayMaker Skills™?",
-    a: "He shapes the philosophy, developmental direction, and strategic vision behind the organization’s frameworks, programs, and long-term growth.",
+    a: "She shapes the philosophy, developmental direction, and strategic vision behind the organization’s frameworks, programs, and long-term growth.",
   },
   {
-    q: "What areas of work shape his approach?",
-    a: "His work brings together human development, psychology, leadership, life skills, communication, mentoring, and experiential learning.",
+    q: "What areas of work shape her approach?",
+    a: "Her work brings together human development, psychology, leadership, life skills, communication, mentoring, and experiential learning.",
   },
 ];
 
@@ -107,7 +107,7 @@ function FounderPage() {
       <PageHero
         eyebrow="Founder of WayMaker Skills™"
         title="Sanjo Mathew"
-        subtitle="The founder’s vision behind a human development organization built to grow capability, clarity, and purposeful action."
+        subtitle="Founder of WayMaker Skills™, a human development organization helping individuals, educators, leaders, and organizations transform potential into purposeful capability."
         badges={["Founder", "Human development", "Leadership", "Life skills"]}
       >
         <a
@@ -138,7 +138,8 @@ function FounderPage() {
                 <h2 className="mt-6 font-display text-3xl text-white">Sanjo Mathew</h2>
                 <p className="mt-1 text-sm text-white/80">Founder, WayMaker Skills™</p>
                 <p className="mt-6 text-sm leading-relaxed text-white/85">
-                  Personal profile and founder-focused writing continue on{" "}
+                  For Sanjo Mathew's personal profile, books, articles, and thought leadership,
+                  visit{" "}
                   <a
                     className="underline underline-offset-4"
                     href={CONTACT.founderSite}
@@ -147,7 +148,6 @@ function FounderPage() {
                   >
                     sanjo.in
                   </a>
-                  .
                 </p>
               </div>
             </div>
@@ -157,25 +157,30 @@ function FounderPage() {
             <Reveal>
               <h2 className="mb-2 text-3xl md:text-4xl">Founder’s vision</h2>
               <p>
-                WayMaker Skills™ was founded from the conviction that human potential needs more
-                intentional development. Academic knowledge, technical training, and career progress
-                matter, but they do not replace the deeper capabilities that shape how a person
-                leads, communicates, reflects, responds, and grows.
+                WayMaker Skills™ was founded on a simple belief: human potential flourishes when
+                development is intentional.
               </p>
             </Reveal>
             <Reveal delay={80}>
               <p>
-                Sanjo Mathew’s work brings together human development, psychology, leadership, life
-                skills, communication, mentoring, and experiential learning. Through WayMaker
-                Skills™, that work becomes a coherent organizational platform rather than only a
-                personal voice.
+                Academic knowledge and technical expertise are important, but they are only part of
+                what people need to thrive. Confidence, judgment, communication, leadership,
+                resilience, and purposeful action are developed intentionally—not acquired by
+                information alone.
               </p>
             </Reveal>
             <Reveal delay={160}>
               <p>
-                The result is a company designed to serve schools, organizations, parents,
-                professionals, leaders, and young people through frameworks and programs that move
-                beyond information toward usable capability.
+                Drawing on psychology, education, leadership, behavioural science, and experiential
+                learning, Sanjo Mathew created WayMaker Skills™ as a platform where these
+                disciplines work together to develop practical human capability.
+              </p>
+            </Reveal>
+            <Reveal delay={240}>
+              <p>
+                Today, WayMaker Skills™ serves schools, organizations, leaders, families, and
+                individuals through integrated frameworks, learning experiences, and development
+                programs that transform knowledge into practical capability.
               </p>
             </Reveal>
           </div>
@@ -208,8 +213,9 @@ function FounderPage() {
             </div>
             <h3 className="mt-2 font-display text-2xl text-[color:var(--teal-dark)]">sanjo.in</h3>
             <p className="mt-3 leading-relaxed text-[color:var(--muted-ink)]">
-              sanjo.in is Sanjo Mathew’s personal profile website. It represents his founder
-              identity, personal content, and individual public presence.
+              sanjo.in is Sanjo Mathew's personal platform for his profile, books, articles,
+              speaking, and thought leadership. It reflects his individual work as the founder of
+              WayMaker Skills™.
             </p>
           </div>
           <div className="rounded-3xl bg-teal-gradient p-8 text-white shadow-elegant">
@@ -218,8 +224,8 @@ function FounderPage() {
             </div>
             <h3 className="mt-2 font-display text-2xl text-white">WayMaker Skills™</h3>
             <p className="mt-3 leading-relaxed text-white/85">
-              This website is the organization platform for WayMaker Skills™. It presents the
-              company’s programs, methodologies, frameworks, and collaboration pathways.
+              This is the official platform for WayMaker Skills™, bringing together our frameworks,
+              development programs, learning experiences, and organizational partnerships.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <CTAButton to={ROUTES.programs} variant="gold">
@@ -235,8 +241,8 @@ function FounderPage() {
 
       <Section>
         <QuoteBlock
-          quote="Human development becomes powerful when people are given not only insight, but a pathway to live that insight with clarity and responsibility."
-          author="Sanjo Mathew"
+          quote="Human development becomes powerful when insight is transformed into intentional action."
+          author="Dr. Sanjo Cine Mathew"
           role="Founder, WayMaker Skills™"
         />
       </Section>

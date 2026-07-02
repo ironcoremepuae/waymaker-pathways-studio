@@ -5,12 +5,16 @@ import {
   Brain,
   Briefcase,
   Compass,
+  Eye,
   FlaskConical,
   GraduationCap,
   HeartHandshake,
   Layers,
+  LineChart,
+  Lightbulb,
   School,
   Sparkles,
+  Target,
   Users,
   UsersRound,
 } from "lucide-react";
@@ -33,26 +37,72 @@ const INTEGRATES = [
   { icon: BookOpen, title: "Experiential Learning" },
 ];
 
-const PROGRAM_PROCESS = [
+const GROWTH_SHAPE_STEPS = [
   {
-    title: "Notice the current reality",
-    desc: "Increase awareness of patterns, context, strengths, and constraints.",
+    icon: Lightbulb,
+    title: "Discover",
+    desc: "Gain fresh perspectives and deeper self-understanding.",
   },
   {
-    title: "Own the growth task",
-    desc: "Build responsibility, mindset, and willingness to act differently.",
+    icon: Brain,
+    title: "Develop",
+    desc: "Build practical capabilities through guided experiences.",
   },
   {
-    title: "Visualize a better response",
-    desc: "Create a clearer internal picture of the desired change and direction.",
+    icon: ArrowRight,
+    title: "Apply",
+    desc: "Translate learning into confident everyday action.",
   },
   {
-    title: "Act in the real world",
-    desc: "Move the insight into behavior, decision-making, communication, and practice.",
+    icon: Eye,
+    title: "Reflect",
+    desc: "Strengthen growth through feedback and continuous improvement.",
+  },
+];
+
+const EXPERIENCE_OUTCOMES = [
+  {
+    icon: Compass,
+    title: "Clarity",
+    desc: "Understand yourself and your direction.",
   },
   {
-    title: "Repeat and deepen",
-    desc: "Growth strengthens when the cycle is revisited with reflection and application.",
+    icon: Briefcase,
+    title: "Capability",
+    desc: "Develop practical life and workplace skills.",
+  },
+  {
+    icon: ArrowRight,
+    title: "Confidence",
+    desc: "Apply learning with purpose and ownership.",
+  },
+  {
+    icon: Sparkles,
+    title: "Growth",
+    desc: "Create sustainable change that lasts.",
+  },
+];
+
+const WAYMAKER_DIFFERENCE = [
+  {
+    icon: BookOpen,
+    title: "Evidence-Informed",
+    desc: "Learning grounded in research and best practices.",
+  },
+  {
+    icon: Target,
+    title: "Practical",
+    desc: "Designed for real-life application, not just theory.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Human-Centred",
+    desc: "Focused on people, relationships, and meaningful growth.",
+  },
+  {
+    icon: LineChart,
+    title: "Sustainable",
+    desc: "Building capabilities that continue beyond the program.",
   },
 ];
 
@@ -125,14 +175,14 @@ function NovaPage() {
       <PageHero
         eyebrow="NOVA™ Methodology"
         title="From awareness to action. From potential to practical growth."
-        subtitle="NOVA™ is the WayMaker Skills™ methodology for helping people notice more clearly, own growth more intentionally, visualize direction, and act with purpose."
+        subtitle="NOVA™ is the proprietary human development methodology that powers every WayMaker Skills™ experience. Designed to unlock human potential and build practical capability, it equips individuals, teams, and organizations to navigate challenges, accelerate growth, and create meaningful impact."
         badges={["Notice", "Own", "Visualize", "Act", "Evidence-informed"]}
       >
         <CTAButton to={ROUTES.programs} variant="primary">
           Explore Programs <ArrowRight className="h-4 w-4" />
         </CTAButton>
         <CTAButton to={ROUTES.contact} variant="secondary">
-          Discuss a Program
+          Discover NOVA™
         </CTAButton>
       </PageHero>
 
@@ -176,10 +226,55 @@ function NovaPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="In practice"
-        title="How NOVA™ shows up inside a program."
+        title="How Meaningful Growth takes Shape."
         center
       >
-        <Timeline steps={PROGRAM_PROCESS} />
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="text-lg leading-relaxed text-[color:var(--muted-ink)]">
+            Every transformation begins with greater awareness and grows through purposeful
+            learning, practical application, and continuous reflection. WayMaker Skills™ creates
+            experiences that help individuals develop the capabilities needed to thrive in life,
+            learning, and work.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {GROWTH_SHAPE_STEPS.map(({ icon: Icon, title, desc }, index) => (
+            <FeatureCard key={title} icon={Icon} title={title} delay={index * 60}>
+              {desc}
+            </FeatureCard>
+          ))}
+        </div>
+
+        <div className="mt-14">
+          <div className="text-center">
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--teal-deep)]">
+              What You'll Experience
+            </div>
+          </div>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {EXPERIENCE_OUTCOMES.map(({ icon: Icon, title, desc }, index) => (
+              <FeatureCard key={title} icon={Icon} title={title} delay={index * 60}>
+                {desc}
+              </FeatureCard>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14">
+          <div className="text-center">
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--teal-deep)]">
+              The WayMaker Difference
+            </div>
+          </div>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {WAYMAKER_DIFFERENCE.map(({ icon: Icon, title, desc }, index) => (
+              <FeatureCard key={title} icon={Icon} title={title} delay={index * 60}>
+                {desc}
+              </FeatureCard>
+            ))}
+          </div>
+        </div>
       </Section>
 
       <Section eyebrow="Where it applies" title="Designed for every life stage." center>
