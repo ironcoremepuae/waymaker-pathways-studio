@@ -12,9 +12,8 @@ import { AudienceCards, OutcomeGrid } from "@/components/site/Blocks";
 import { CTAButton, FinalCTA } from "@/components/site/CTA";
 import { FAQList, faqJsonLd } from "@/components/site/FAQ";
 import { Layout } from "@/components/site/Layout";
-import { Reveal } from "@/components/site/Reveal";
+import { LQCapabilitiesShowcase } from "@/components/site/LQCapabilitiesShowcase";
 import { PageHero, Section } from "@/components/site/Section";
-import { LQ_DIMENSIONS } from "@/data/site";
 import { ROUTES } from "@/data/routes";
 import { breadcrumbLd, jsonLd, pageMeta } from "@/lib/seo";
 
@@ -124,38 +123,7 @@ function LQPage() {
         </div>
       </Section>
 
-      <Section
-        className="bg-[color:var(--ivory)]"
-        eyebrow="The five dimensions"
-        title="Five lenses, one capable human."
-        center
-      >
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
-          {LQ_DIMENSIONS.map((dimension, index) => (
-            <Reveal key={dimension.code} delay={index * 70}>
-              <article className="card-lift gradient-border h-full rounded-2xl border border-[color:var(--border)] bg-white p-6 shadow-soft">
-                <div className="text-xs font-semibold tracking-widest text-[color:var(--gold)]">
-                  DIMENSION 0{index + 1}
-                </div>
-                <h3 className="mt-1 font-display text-3xl text-[color:var(--teal-dark)]">
-                  {dimension.code}
-                </h3>
-                <div className="text-sm font-semibold text-[color:var(--teal-deep)]">
-                  {dimension.name}
-                </div>
-                <ul className="mt-4 space-y-2 text-sm text-[color:var(--charcoal)]">
-                  {dimension.skills.map((skill) => (
-                    <li key={skill} className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[color:var(--gold)]" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+      <LQCapabilitiesShowcase showCta={false} />
 
       <Section eyebrow="What it becomes" title="The capabilities LQ™ supports in practice." center>
         <OutcomeGrid items={OUTCOMES} />

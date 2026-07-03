@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import type { ComponentProps } from "react";
+import type { CSSProperties, ComponentProps } from "react";
+import novaImage from "@/assets/nova.png";
 import wamiMascot from "@/assets/wami-logo.png";
 import wamiWordmark from "@/assets/wami-text.png";
 import { Layout } from "@/components/site/Layout";
@@ -12,8 +13,6 @@ import { pageMeta, jsonLd } from "@/lib/seo";
 import {
   PROGRAMS,
   AUDIENCES,
-  LQ_DIMENSIONS,
-  NOVA_STEPS,
   FAQS_GENERAL,
   GROWTH_PATHS,
   OUTCOMES,
@@ -71,12 +70,12 @@ export const Route = createFileRoute("/")({
 const HERO_PHRASES = ["Future Skills", "Leadership", "Emotional Intelligence", "Purpose", "Growth"];
 
 const HERO_BADGES = [
-  { icon: Crown, label: "Leadership", className: "left-[2%] top-[14%] hero-badge-a" },
-  { icon: Rocket, label: "Growth", className: "right-[16%] top-[7%] hero-badge-f" },
-  { icon: HeartHandshake, label: "Emotional IQ", className: "right-[-1%] top-[34%] hero-badge-b" },
-  { icon: Target, label: "Purpose", className: "right-[8%] bottom-[20%] hero-badge-c" },
-  { icon: Sparkles, label: "Future Skills", className: "left-[1%] bottom-[27%] hero-badge-d" },
-  { icon: ShieldCheck, label: "Confidence", className: "left-[22%] bottom-[8%] hero-badge-e" },
+  { icon: Crown, label: "Leadership", angle: 320, distance: "0.98" },
+  { icon: Rocket, label: "Growth", angle: 40, distance: "0.98" },
+  { icon: HeartHandshake, label: "Emotional IQ", angle: 90, distance: "1" },
+  { icon: Target, label: "Purpose", angle: 150, distance: "0.96" },
+  { icon: ShieldCheck, label: "Confidence", angle: 210, distance: "0.96" },
+  { icon: Sparkles, label: "Future Skills", angle: 270, distance: "1" },
 ];
 
 const HERO_IMPACT_CARDS = [
@@ -95,6 +94,88 @@ const HERO_IMPACT_CARDS = [
     text: "Skills for school, work, and life",
     icon: Rocket,
   },
+];
+
+const NOVA_HELP_ITEMS = [
+  "Self-awareness",
+  "Emotional resilience",
+  "Decision clarity",
+  "Human connection",
+  "Purposeful action",
+];
+
+const LQ_CAPABILITY_ROWS = [
+  [
+    {
+      icon: Crown,
+      title: "Leadership Development",
+      desc: "Inspire, influence, and create impact.",
+    },
+    {
+      icon: MessagesSquare,
+      title: "Communication Excellence",
+      desc: "Express, listen, and connect with clarity.",
+    },
+    {
+      icon: HeartHandshake,
+      title: "Emotional Intelligence",
+      desc: "Understand, manage, and leverage emotions.",
+    },
+    {
+      icon: Brain,
+      title: "Critical Thinking",
+      desc: "Analyze deeply and think with clarity.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Problem Solving",
+      desc: "Solve problems and make better decisions.",
+    },
+  ],
+  [
+    {
+      icon: Sparkles,
+      title: "Creativity & Innovation",
+      desc: "Generate ideas and drive meaningful innovation.",
+    },
+    {
+      icon: Users,
+      title: "Collaboration & Teamwork",
+      desc: "Work together and achieve greater outcomes.",
+    },
+    {
+      icon: Globe2,
+      title: "Adaptability",
+      desc: "Embrace change and thrive in uncertainty.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Resilience",
+      desc: "Bounce back, grow, and stay future-ready.",
+    },
+    {
+      icon: Target,
+      title: "Strategic Thinking",
+      desc: "See the big picture and create smart strategies.",
+    },
+  ],
+  [
+    {
+      icon: HeartHandshake,
+      title: "Relationship Management",
+      desc: "Build trust and nurture meaningful relationships.",
+    },
+    {
+      icon: Star,
+      title: "Professional Excellence",
+      desc: "Deliver quality, take ownership, and grow continuously.",
+    },
+    {
+      icon: Rocket,
+      title: "Future-Ready Skills",
+      desc: "Stay relevant and prepared for what’s next.",
+    },
+  ],
 ];
 
 const WHY = [
@@ -118,53 +199,45 @@ const WHAT_WE_DO = [
   {
     icon: Compass,
     title: "Leadership Development",
-    desc: "From self-leadership to leading teams and systems.",
-    badge: "Capability",
-    span: "lg:col-span-2 lg:row-span-2",
+    desc: "Develop leaders who inspire, influence, and create lasting impact.",
+    badge: "Leadership",
     featured: true,
   },
   {
     icon: HeartHandshake,
     title: "Emotional Intelligence",
     desc: "Awareness, regulation, empathy, resilience.",
-    badge: "Behavior",
+    badge: "Capability",
   },
   {
     icon: MessagesSquare,
     title: "Communication Excellence",
     desc: "Clarity, listening, presence, influence.",
-    badge: "Skill",
+    badge: "Capability",
   },
   {
     icon: Sparkles,
     title: "Future Skills",
     desc: "Adaptability, innovation, and lifelong learning for a changing world.",
-    badge: "Mindset",
-    span: "lg:col-span-2",
+    badge: "Future Readiness",
   },
   {
     icon: Lightbulb,
     title: "Coaching & Mentoring",
-    desc: "Personalized growth journeys.",
-    badge: "1:1",
+    desc: "Personalized guidance for meaningful growth.",
+    badge: "Development",
   },
   {
     icon: ShieldCheck,
     title: "Well-being & Resilience",
-    desc: "Sustainable performance.",
-    badge: "Health",
+    desc: "Build inner strength and sustain high performance.",
+    badge: "Well-being",
   },
   {
     icon: Microscope,
     title: "Assessments & Tools",
     desc: "Evidence-based assessments that transform insight into growth.",
-    badge: "Insight",
-  },
-  {
-    icon: Microscope,
-    title: "Applied Intelligence Frameworks",
-    desc: "Practical models that connect thinking, behavior, and performance.",
-    badge: "Insight",
+    badge: "Assessment",
   },
 ];
 
@@ -278,33 +351,37 @@ function HomePage() {
 
             <div className="home-hero-logo-card">
               <div className="home-hero-logo-glow" aria-hidden="true" />
-              <img
-                src={LOGO}
-                alt="WayMaker Skills logo"
-                width={480}
-                height={480}
-                className="home-hero-logo"
-              />
+              <div className="home-hero-logo-crop">
+                <img
+                  src={LOGO}
+                  alt="WayMaker Skills logo"
+                  width={480}
+                  height={480}
+                  className="home-hero-logo"
+                />
+              </div>
             </div>
 
             <div className="home-hero-shadow" aria-hidden="true" />
 
-            {HERO_BADGES.map(({ icon: Icon, label, className }) => (
-              <div key={label} className={"home-hero-floating-badge " + className}>
-                <Icon className="h-4 w-4 text-[color:var(--teal-deep)]" aria-hidden />
-                <span>{label}</span>
-              </div>
-            ))}
-
-            <div className="mt-7 grid grid-cols-3 gap-2 sm:hidden">
-              {HERO_BADGES.slice(0, 6).map(({ icon: Icon, label }) => (
+            <div className="home-hero-badge-ring" aria-hidden="true">
+              {HERO_BADGES.map(({ icon: Icon, label, angle, distance }, index) => (
                 <div
                   key={label}
-                  className="rounded-2xl border border-white/75 bg-white/78 p-3 text-center shadow-soft backdrop-blur"
+                  className="home-hero-badge-slot"
+                  style={
+                    {
+                      "--badge-angle": `${angle}deg`,
+                      "--badge-distance": distance,
+                      "--badge-delay": `${index * -0.7}s`,
+                    } as CSSProperties
+                  }
                 >
-                  <Icon className="mx-auto h-4 w-4 text-[color:var(--teal-deep)]" aria-hidden />
-                  <div className="mt-1 text-[11px] font-semibold text-[color:var(--teal-dark)]">
-                    {label}
+                  <div className="home-hero-badge-upright">
+                    <div className="home-hero-floating-badge">
+                      <Icon className="h-4 w-4 text-[color:var(--teal-deep)]" aria-hidden />
+                      <span>{label}</span>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -391,44 +468,98 @@ function HomePage() {
         title="A Complete Human Development Ecosystem."
         center
       >
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[180px]">
-          {WHAT_WE_DO.map((c, i) => (
-            <Reveal key={c.title} delay={i * 50} className={c.span ?? ""}>
-              <div
-                className={`card-lift gradient-border group h-full rounded-2xl border border-[color:var(--border)] p-6 shadow-soft flex flex-col justify-between ${c.featured ? "bg-teal-gradient text-white" : "bg-white"}`}
-              >
-                <div className="flex items-start justify-between">
-                  <div
-                    className={`h-11 w-11 rounded-xl flex items-center justify-center ${c.featured ? "bg-white/15 text-[color:var(--gold-soft)]" : "bg-[color:var(--teal-light)] text-[color:var(--teal-deep)] group-hover:bg-teal-gradient group-hover:text-white transition-colors"}`}
-                  >
-                    <c.icon className="h-5 w-5" />
-                  </div>
-                  <span
-                    className={`text-[10px] tracking-[0.18em] uppercase font-semibold rounded-full px-2.5 py-1 ${c.featured ? "bg-white/15 text-white" : "bg-[color:var(--ivory)] text-[color:var(--teal-deep)] border border-[color:var(--border)]"}`}
-                  >
-                    {c.badge}
-                  </span>
-                </div>
-                <div>
-                  <h3
-                    className={`font-display text-2xl ${c.featured ? "text-white" : "text-[color:var(--teal-dark)]"}`}
-                  >
-                    {c.title}
-                  </h3>
-                  <p
-                    className={`mt-1.5 text-sm leading-relaxed ${c.featured ? "text-white/85" : "text-[color:var(--muted-ink)]"}`}
-                  >
-                    {c.desc}
-                  </p>
-                  <div
-                    className={`mt-3 inline-flex items-center gap-1 text-xs font-semibold opacity-0 group-hover:opacity-100 group-hover:gap-2 transition-all ${c.featured ? "text-[color:var(--gold-soft)]" : "text-[color:var(--teal-deep)]"}`}
-                  >
-                    Learn more <ArrowRight className="h-3 w-3" />
-                  </div>
-                </div>
+        <div className="home-ecosystem-grid">
+          <Reveal delay={0} className="home-ecosystem-featured">
+            <div className="home-ecosystem-card home-ecosystem-card-featured">
+              <div className="home-ecosystem-copy">
+                <span className="home-ecosystem-badge home-ecosystem-badge-featured">
+                  {WHAT_WE_DO[0].badge}
+                </span>
+                <h3 className="home-ecosystem-featured-title">{WHAT_WE_DO[0].title}</h3>
+                <span className="home-ecosystem-divider" aria-hidden="true" />
+                <p className="home-ecosystem-featured-desc">{WHAT_WE_DO[0].desc}</p>
               </div>
-            </Reveal>
-          ))}
+
+              <div className="home-ecosystem-visual" aria-hidden="true">
+                <div className="home-ecosystem-sky" />
+                <div className="home-ecosystem-ring home-ecosystem-ring-outer" />
+                <div className="home-ecosystem-ring home-ecosystem-ring-middle" />
+                <div className="home-ecosystem-ring home-ecosystem-ring-inner" />
+                <div className="home-ecosystem-core">
+                  <img src={LOGO} alt="" className="home-ecosystem-core-logo" />
+                </div>
+                <div className="home-ecosystem-path" />
+                <div className="home-ecosystem-figure" />
+                <div className="home-ecosystem-horizon home-ecosystem-horizon-back" />
+                <div className="home-ecosystem-horizon home-ecosystem-horizon-front" />
+
+                {[
+                  { label: "Vision", className: "home-ecosystem-node-top", icon: Eye },
+                  { label: "Influence", className: "home-ecosystem-node-right-top", icon: Users },
+                  { label: "Purpose", className: "home-ecosystem-node-right-bottom", icon: Target },
+                  { label: "Growth", className: "home-ecosystem-node-bottom", icon: Sparkles },
+                  {
+                    label: "Emotional Intelligence",
+                    className: "home-ecosystem-node-left-bottom",
+                    icon: HeartHandshake,
+                  },
+                  {
+                    label: "Integrity",
+                    className: "home-ecosystem-node-left-top",
+                    icon: ShieldCheck,
+                  },
+                ].map(({ label, className, icon: Icon }) => (
+                  <div key={label} className={`home-ecosystem-node ${className}`}>
+                    <span className="home-ecosystem-node-icon">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    <span className="home-ecosystem-node-label">{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          {WHAT_WE_DO.slice(1).map((c, i) => {
+            const visualClass =
+              c.title === "Future Skills"
+                ? "home-ecosystem-card-wave"
+                : c.title === "Coaching & Mentoring"
+                  ? "home-ecosystem-card-mentoring"
+                  : c.title === "Well-being & Resilience"
+                    ? "home-ecosystem-card-lotus"
+                    : c.title === "Assessments & Tools"
+                      ? "home-ecosystem-card-radar"
+                      : "";
+            const layoutClass =
+              c.title === "Future Skills"
+                ? "home-ecosystem-wide"
+                : i < 2
+                  ? "home-ecosystem-compact"
+                  : "home-ecosystem-third";
+
+            return (
+              <Reveal
+                key={c.title}
+                delay={(i + 1) * 50}
+                className={layoutClass}
+              >
+                <div className={`home-ecosystem-card home-ecosystem-card-light ${visualClass}`}>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="home-ecosystem-icon-wrap">
+                      <c.icon className="h-5 w-5" />
+                    </div>
+                    <span className="home-ecosystem-badge">{c.badge}</span>
+                  </div>
+
+                  <div className="relative z-10">
+                    <h3 className="home-ecosystem-card-title">{c.title}</h3>
+                    <p className="home-ecosystem-card-desc">{c.desc}</p>
+                  </div>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </Section>
 
@@ -487,75 +618,154 @@ function HomePage() {
               </CTAButton>
             </div>
           </div>
-          <div className="relative">
-            {/* Connector line */}
-            <div
-              className="hidden md:block absolute left-8 top-10 bottom-10 w-px bg-gradient-to-b from-[color:var(--gold)]/0 via-[color:var(--gold)]/50 to-[color:var(--gold)]/0"
-              aria-hidden
-            />
-            <div className="space-y-4">
-              {NOVA_STEPS.map((s, i) => (
-                <Reveal key={s.code} delay={i * 120}>
-                  <div className="flex gap-5 items-start">
-                    <div className="relative shrink-0">
-                      <div className="h-16 w-16 rounded-2xl bg-[color:var(--gold)] text-[color:var(--teal-dark)] flex items-center justify-center shadow-gold">
-                        <span className="font-display text-3xl font-bold">{s.code}</span>
+          <Reveal>
+            <div className="glass-dark rounded-[2rem] border border-white/10 p-6 md:p-8">
+              <div className="rounded-[1.5rem] bg-white/5 p-4 md:p-6">
+                <img
+                  src={novaImage}
+                  alt="NOVA methodology visual"
+                  className="mx-auto w-full max-w-2xl object-contain"
+                />
+              </div>
+              <div className="mt-8">
+                <h3 className="font-display text-3xl text-white">What NOVA™ Helps Develop</h3>
+                <div className="mt-5 space-y-3">
+                  {NOVA_HELP_ITEMS.map((item, i) => (
+                    <Reveal key={item} delay={i * 90}>
+                      <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                        <CheckCircle2 className="h-5 w-5 shrink-0 text-[color:var(--gold)]" />
+                        <span className="text-lg text-white/85">{item}</span>
                       </div>
-                    </div>
-                    <div className="glass-dark rounded-2xl p-5 flex-1">
-                      <div className="font-display text-2xl text-white">{s.name}</div>
-                      <p className="text-white/75 text-sm mt-1 leading-relaxed">{s.desc}</p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </Section>
 
-      {/* LQ — ORBIT */}
-      <Section
-        eyebrow="LQ™ Framework"
-        title="Five dimensions of life intelligence."
-        center
-        subtitle="Knowledge alone does not determine success. The ability to apply intelligence in real-life situations does."
-      >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {LQ_DIMENSIONS.map((d, i) => (
-            <Reveal key={d.code} delay={i * 80}>
-              <div className="card-lift gradient-border group rounded-2xl border border-[color:var(--border)] bg-white p-6 shadow-soft h-full relative overflow-hidden">
-                <div
-                  className="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-[color:var(--gold)]/0 group-hover:bg-[color:var(--gold)]/15 blur-2xl transition"
-                  aria-hidden
-                />
-                <div className="relative">
-                  <div className="text-[10px] tracking-[0.22em] font-semibold text-[color:var(--gold)]">
-                    0{i + 1}
-                  </div>
-                  <div className="font-display text-3xl text-[color:var(--teal-dark)] mt-1">
-                    {d.code}
-                  </div>
-                  <div className="text-xs text-[color:var(--muted-ink)] mt-0.5 uppercase tracking-wider">
-                    {d.name}
-                  </div>
-                  <ul className="mt-4 space-y-1.5 text-sm text-[color:var(--charcoal)]">
-                    {d.skills.map((s) => (
-                      <li key={s} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-[color:var(--teal-deep)] mt-0.5 shrink-0" />
-                        <span>{s}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+      {/* LQ */}
+      <Section className="relative overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(214,166,56,0.14),transparent_28%),linear-gradient(180deg,_#fffdfa_0%,_#faf8f1_50%,_#f3f8f3_100%)]">
+        <div
+          className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,_rgba(8,80,84,0.08),transparent_70%)]"
+          aria-hidden
+        />
+        <div
+          className="absolute left-[-8rem] top-24 h-72 w-72 rounded-full bg-[color:var(--gold-soft)]/20 blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="absolute right-[-8rem] top-20 h-80 w-80 rounded-full bg-[color:var(--teal-light)]/45 blur-3xl"
+          aria-hidden
+        />
+
+        <div className="relative">
+          <Reveal>
+            <div className="mx-auto max-w-4xl text-center">
+              <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[color:var(--teal-deep)]">
+                LQ™ Framework
               </div>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <CTAButton to={ROUTES.lq} variant="secondary">
-            Explore LQ™ Framework
-          </CTAButton>
+              <h2 className="mt-4 text-4xl leading-tight text-[color:var(--teal-dark)] md:text-6xl">
+                Building Human Capabilities That Matter.
+              </h2>
+              <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-[color:var(--gold)]/70" />
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[color:var(--muted-ink)]">
+                The LQ™ Framework develops the human capabilities that drive success across
+                education, leadership, and the workplace. It builds the underlying capacities that
+                enable lasting performance, adaptability, and purposeful growth.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="relative mt-12 space-y-4 xl:pb-20">
+            {LQ_CAPABILITY_ROWS.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className={[
+                  "grid gap-4",
+                  row.length === 5 ? "md:grid-cols-2 xl:grid-cols-5" : "md:grid-cols-3 xl:max-w-4xl",
+                  rowIndex === 2 ? "xl:pr-48" : "",
+                ].join(" ")}
+              >
+                {row.map((item, itemIndex) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <Reveal key={item.title} delay={(rowIndex * 5 + itemIndex) * 70}>
+                      <div className="card-lift group relative h-full overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/85 p-6 shadow-[0_18px_50px_rgba(7,55,66,0.08)] backdrop-blur-sm">
+                        <div
+                          className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-[color:var(--gold)]/60 to-transparent"
+                          aria-hidden
+                        />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(214,166,56,0.12),transparent_38%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                        <div className="relative">
+                          <div className="flex justify-center">
+                            <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[color:var(--border)] bg-[linear-gradient(180deg,_rgba(255,255,255,0.95),_rgba(235,245,241,0.95))] shadow-inner">
+                              <Icon className="h-7 w-7 text-[color:var(--teal-deep)]" />
+                            </div>
+                          </div>
+                          <h3 className="mt-5 text-center font-display text-2xl leading-tight text-[color:var(--teal-dark)]">
+                            {item.title}
+                          </h3>
+                          <p className="mt-3 text-center text-sm leading-relaxed text-[color:var(--muted-ink)]">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+                    </Reveal>
+                  );
+                })}
+              </div>
+            ))}
+
+            <svg
+              viewBox="0 0 520 220"
+              className="pointer-events-none absolute bottom-[-2.75rem] right-[-2rem] hidden h-[18rem] w-[32rem] opacity-95 xl:block"
+              aria-hidden
+            >
+              <defs>
+                <linearGradient id="lq-mountain-a" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="#d8efe5" />
+                  <stop offset="100%" stopColor="#b8d8cb" />
+                </linearGradient>
+                <linearGradient id="lq-mountain-b" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="#e6f3ec" />
+                  <stop offset="100%" stopColor="#cfe5da" />
+                </linearGradient>
+                <linearGradient id="lq-path" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stopColor="#fff8e4" />
+                  <stop offset="100%" stopColor="#f2d98a" />
+                </linearGradient>
+              </defs>
+              <path d="M8 212 L110 130 L184 206 Z" fill="url(#lq-mountain-b)" />
+              <path d="M84 212 L200 98 L306 212 Z" fill="url(#lq-mountain-a)" />
+              <path d="M246 212 L354 118 L462 212 Z" fill="url(#lq-mountain-b)" />
+              <path d="M332 212 L432 136 L514 212 Z" fill="#e8f4ee" />
+              <path
+                d="M236 214 C250 178 280 156 294 126 C306 100 294 70 282 42"
+                fill="none"
+                stroke="url(#lq-path)"
+                strokeWidth="20"
+                strokeLinecap="round"
+              />
+              <path
+                d="M236 214 C250 178 280 156 294 126 C306 100 294 70 282 42"
+                fill="none"
+                stroke="#fffdf6"
+                strokeWidth="8"
+                strokeLinecap="round"
+              />
+              <path d="M281 32 L281 55" stroke="#c9941d" strokeWidth="3" strokeLinecap="round" />
+              <path d="M281 32 L302 39 L281 46 Z" fill="#d6a638" />
+            </svg>
+          </div>
+
+          <div className="relative mt-10 text-center">
+            <CTAButton to={ROUTES.lq} className="btn-shine">
+              Explore the LQ™ Framework <ArrowRight className="h-4 w-4" />
+            </CTAButton>
+          </div>
         </div>
       </Section>
 
@@ -705,18 +915,26 @@ function HomePage() {
       {/* WAMI */}
       <Section className="home-wami-section relative overflow-hidden bg-[linear-gradient(135deg,#F3FBFF_0%,#FFF8E6_54%,#FFFFFF_100%)]">
         <span
-          className="wami-star wami-star--yellow wami-star--md wami-star--float left-[7%] top-[16%]"
+          className="wami-star wami-star--yellow wami-star--md wami-star--float home-wami-star--1 left-[7%] top-[16%]"
           aria-hidden="true"
         />
         <span
-          className="wami-star wami-star--blue wami-star--sm wami-star--twinkle right-[12%] top-[18%]"
+          className="wami-star wami-star--blue wami-star--sm wami-star--twinkle home-wami-star--2 right-[12%] top-[18%]"
           aria-hidden="true"
         />
         <span
-          className="wami-star wami-star--red wami-star--sm wami-star--drift left-[46%] bottom-[16%]"
+          className="wami-star wami-star--red wami-star--sm wami-star--drift home-wami-star--3 left-[46%] bottom-[16%]"
           aria-hidden="true"
         />
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.95fr)] lg:gap-14">
+        <span
+          className="wami-star wami-star--yellow wami-star--sm wami-star--twinkle home-wami-star--4 left-[16%] bottom-[12%]"
+          aria-hidden="true"
+        />
+        <span
+          className="wami-star wami-star--blue wami-star--md wami-star--float home-wami-star--5 right-[29%] top-[31%]"
+          aria-hidden="true"
+        />
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.98fr)_minmax(24rem,1.02fr)] lg:gap-12 xl:grid-cols-[minmax(0,0.94fr)_minmax(28rem,1.06fr)] xl:gap-14">
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D7F0FF] bg-white/85 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#064AAD] shadow-soft">
               <Star className="h-3.5 w-3.5 fill-[#FFD21F] text-[#064AAD]" aria-hidden />
@@ -725,7 +943,7 @@ function HomePage() {
             <img
               src={wamiWordmark}
               alt="WAMI\u2122 The Way Maker Star"
-              className="mt-5 h-auto w-full max-w-[12rem]"
+              className="home-wami-wordmark mt-5 h-auto w-full max-w-[12rem]"
             />
             <h2 className="mt-4 max-w-2xl text-4xl leading-tight text-[#064AAD] md:text-5xl">
               Meet WAMI&#8482; &mdash; The WayMaker Star for children's life skills
@@ -758,33 +976,33 @@ function HomePage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <div className="relative mx-auto w-full max-w-[28rem]">
+            <div className="relative mx-auto w-full max-w-[31rem] lg:max-w-[34rem] lg:justify-self-end xl:max-w-[36rem]">
               <div
-                className="absolute inset-x-4 bottom-3 top-10 rounded-[2.5rem] border-2 border-white bg-[linear-gradient(180deg,#FFD21F_0%,#EAF7FF_100%)] shadow-[0_30px_70px_-42px_rgba(6,74,173,0.45)]"
+                className="absolute inset-x-2 bottom-3 top-10 rounded-[2.5rem] border-2 border-white bg-[linear-gradient(180deg,#FFD21F_0%,#EAF7FF_100%)] shadow-[0_30px_70px_-42px_rgba(6,74,173,0.45)] sm:inset-x-3 lg:inset-x-4"
                 aria-hidden
               />
               <span
-                className="wami-star wami-star--yellow wami-star--lg wami-star--float left-4 top-3"
+                className="wami-star wami-star--yellow wami-star--lg wami-star--float home-wami-star--6 left-4 top-3"
                 aria-hidden="true"
               />
               <span
-                className="wami-star wami-star--red wami-star--md wami-star--twinkle right-8 top-8"
+                className="wami-star wami-star--red wami-star--md wami-star--twinkle home-wami-star--7 right-8 top-8"
                 aria-hidden="true"
               />
               <span
-                className="wami-star wami-star--white wami-star--md wami-star--drift right-5 bottom-20"
+                className="wami-star wami-star--white wami-star--md wami-star--drift home-wami-star--8 right-5 bottom-20"
                 aria-hidden="true"
               />
               <img
                 src={wamiMascot}
                 alt="WAMI\u2122 star mascot"
-                className="relative z-10 mx-auto h-auto w-full max-w-[24rem] drop-shadow-[0_24px_34px_rgba(6,74,173,0.22)]"
+                className="home-wami-mascot relative z-10 mx-auto h-auto w-full max-w-[22rem] sm:max-w-[24rem] lg:max-w-[26rem] xl:max-w-[28rem] drop-shadow-[0_24px_34px_rgba(6,74,173,0.22)]"
               />
-              <div className="relative z-20 -mt-4 grid grid-cols-2 gap-2.5 px-4 pb-4 sm:grid-cols-4">
+              <div className="relative z-20 -mt-3 grid grid-cols-2 gap-2.5 px-3 pb-4 sm:px-4 md:-mt-4 md:grid-cols-4 md:px-5">
                 {["Confidence", "Creativity", "Communication", "Character"].map((chip) => (
                   <span
                     key={chip}
-                    className="rounded-full border border-white/80 bg-white/90 px-3 py-1.5 text-center text-xs font-bold text-[#064AAD] shadow-soft"
+                    className="rounded-full border border-white/80 bg-white/90 px-3 py-2 text-center text-[0.72rem] leading-tight font-bold text-[#064AAD] shadow-soft sm:text-xs md:text-[0.8rem]"
                   >
                     {chip}
                   </span>

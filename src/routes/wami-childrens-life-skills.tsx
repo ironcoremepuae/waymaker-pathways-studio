@@ -265,19 +265,19 @@ const WAMI_WORLD: IconCard[] = [
 
 const FAQS = [
   {
-    q: "What is WAMI\u2122?",
-    a: "WAMI\u2122 is the children's life skills world within WayMaker Skills\u2122. It uses stories, games, activities, and challenges to help children build practical human capability.",
+    q: "What is WAMI™?",
+    a: "WAMI™ is the children's life skills world within WayMaker Skills™. It uses stories, games, activities, and challenges to help children build practical human capability.",
   },
   {
-    q: "Who is WAMI\u2122 for?",
-    a: "WAMI\u2122 is for children, as well as the parents, schools, and learning communities that support their growth.",
+    q: "Who is WAMI™ for?",
+    a: "WAMI™ is for children, as well as the parents, schools, and learning communities that support their growth.",
   },
   {
-    q: "Can WAMI\u2122 be used in schools?",
-    a: "Yes. WAMI\u2122 can support school pathways, child-focused classroom experiences, and wider youth development partnerships.",
+    q: "Can WAMI™ be used in schools?",
+    a: "Yes. WAMI™ can support school pathways, child-focused classroom experiences, and wider youth development partnerships.",
   },
   {
-    q: "What kinds of skills does WAMI\u2122 help build?",
+    q: "What kinds of skills does WAMI™ help build?",
     a: "It helps build confidence, creativity, communication, character, curiosity, collaboration, emotional awareness, and problem-solving.",
   },
 ];
@@ -322,21 +322,21 @@ const TONE_STYLES: Record<
 export const Route = createFileRoute("/wami-childrens-life-skills")({
   head: () => ({
     ...pageMeta({
-      title: "WAMI\u2122 Children's Life Skills | WayMaker Skills\u2122",
+      title: "WAMI™ Children's Life Skills | WayMaker Skills™",
       description:
-        "WAMI\u2122 is the WayMaker Skills\u2122 children's life skills world with stories, games, activities, and challenges that help children build confidence, creativity, communication, character, and practical life skills.",
+        "WAMI™ is the WayMaker Skills™ children's life skills world with stories, games, activities, and challenges that help children build confidence, creativity, communication, character, and practical life skills.",
       path: ROUTES.wami,
     }),
     scripts: [
       jsonLd(
         breadcrumbLd([
           { name: "Home", path: ROUTES.home },
-          { name: "WAMI\u2122", path: ROUTES.wami },
+          { name: "WAMI™", path: ROUTES.wami },
         ]),
       ),
       jsonLd(
         serviceLd(
-          "WAMI\u2122 Children's Life Skills",
+          "WAMI™ Children's Life Skills",
           "Children's life skills experiences built through stories, games, activities, creative tasks, and reflection.",
           ROUTES.wami,
         ),
@@ -397,7 +397,7 @@ function WamiPage() {
                 <WamiReveal delay={70}>
                   <img
                     src={wamiWordmark}
-                    alt="WAMI\u2122 The Way Maker Star"
+                    alt="WAMI™ The Way Maker Star"
                     className="mt-6 h-auto w-full max-w-[15rem] sm:max-w-[18rem]"
                   />
                 </WamiReveal>
@@ -460,7 +460,7 @@ function WamiPage() {
                   />
                   <img
                     src={wamiMascot}
-                    alt="WAMI\u2122 star mascot"
+                    alt="WAMI™ star mascot"
                     className="relative z-10 mx-auto h-auto w-full max-w-[30rem] drop-shadow-[0_26px_35px_rgba(6,74,173,0.24)] floaty [animation-duration:7.4s]"
                   />
                   {FLOATING_LABELS.map((label, index) => (
@@ -487,9 +487,9 @@ function WamiPage() {
         </section>
 
         <WamiSection
-          label="What is WAMI\u2122?"
+          label="What is WAMI™?"
           title="A joyful world where children practise real-life skills through stories and play."
-          subtitle="WAMI\u2122 helps children grow through stories, activities, games, challenges, reflection, and character-building experiences that feel bright, safe, and memorable."
+          subtitle="WAMI™ helps children grow through stories, activities, games, challenges, reflection, and character-building experiences that feel bright, safe, and memorable."
           stars={STAR_FIELDS.intro}
         >
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
@@ -510,7 +510,7 @@ function WamiPage() {
                 <div className="mt-6 rounded-[1.6rem] border border-[color:var(--wami-sky-strong)] bg-[color:var(--wami-sky)]/75 p-5">
                   <img
                     src={wamiWordmark}
-                    alt="WAMI\u2122 The Way Maker Star"
+                    alt="WAMI™ The Way Maker Star"
                     className="h-auto w-full max-w-[11rem]"
                   />
                   <p className="mt-3 text-sm leading-relaxed text-[color:var(--wami-ink)]/80">
@@ -543,9 +543,9 @@ function WamiPage() {
 
         <WamiSection
           className="bg-white/65"
-          label="How WAMI\u2122 comes alive"
+          label="How WAMI™ comes alive"
           title="Colourful activity tiles children can keep coming back to."
-          subtitle="Every part of WAMI\u2122 is designed to feel playful on the surface and meaningful underneath."
+          subtitle="Every part of WAMI™ is designed to feel playful on the surface and meaningful underneath."
           center
           stars={STAR_FIELDS.activity}
         >
@@ -559,9 +559,9 @@ function WamiPage() {
         </WamiSection>
 
         <WamiSection
-          label="Skills WAMI\u2122 helps children build"
+          label="Skills WAMI™ helps children build"
           title="Core child development outcomes with brighter energy and stronger meaning."
-          subtitle="WAMI\u2122 keeps the tone joyful while helping children build capabilities parents and schools care about."
+          subtitle="WAMI™ keeps the tone joyful while helping children build capabilities parents and schools care about."
         >
           <div className="relative overflow-hidden rounded-[2.4rem] border-2 border-[color:var(--wami-blue)]/10 bg-[linear-gradient(145deg,#FFFFFF_0%,#EAF7FF_58%,#FFF8E6_100%)] p-6 shadow-[0_36px_80px_-48px_rgba(6,74,173,0.38)] md:p-8 lg:p-10">
             <div
@@ -591,7 +591,7 @@ function WamiPage() {
           className="bg-[linear-gradient(180deg,rgba(255,248,230,0.8)_0%,rgba(255,255,255,0.72)_100%)]"
           label="For parents and schools"
           title="Two pathways, one joyful learning world."
-          subtitle="WAMI\u2122 stays child-friendly while still feeling trustworthy for adults who are shaping learning environments."
+          subtitle="WAMI™ stays child-friendly while still feeling trustworthy for adults who are shaping learning environments."
           center
           id="parents-and-schools"
           stars={STAR_FIELDS.audience}
@@ -600,7 +600,7 @@ function WamiPage() {
             <WamiReveal>
               <AudiencePanel
                 title="For parents"
-                text="WAMI\u2122 offers child-friendly ways to reinforce confidence, communication, values, creativity, and reflection at home."
+                text="WAMI™ offers child-friendly ways to reinforce confidence, communication, values, creativity, and reflection at home."
                 cta="Explore parent support"
                 to={ROUTES.contact}
                 tone="yellow"
@@ -610,7 +610,7 @@ function WamiPage() {
             <WamiReveal delay={90}>
               <AudiencePanel
                 title="For schools"
-                text="WAMI\u2122 can support child-focused life skills work through school pathways, classroom experiences, and broader youth development partnerships."
+                text="WAMI™ can support child-focused life skills work through school pathways, classroom experiences, and broader youth development partnerships."
                 cta="Discuss school programs"
                 to={ROUTES.schoolsYouth}
                 tone="blue"
@@ -621,9 +621,9 @@ function WamiPage() {
         </WamiSection>
 
         <WamiSection
-          label="Inside the WAMI\u2122 world"
+          label="Inside the WAMI™ world"
           title="A journey of stories, games, creativity, and reflection."
-          subtitle="The WAMI\u2122 world is designed to feel like a path children can follow one playful step at a time."
+          subtitle="The WAMI™ world is designed to feel like a path children can follow one playful step at a time."
           center
           stars={STAR_FIELDS.world}
         >
@@ -647,8 +647,8 @@ function WamiPage() {
         <WamiSection
           className="pb-14"
           label="FAQ"
-          title="WAMI\u2122 questions"
-          subtitle="A cheerful overview for parents, schools, and partners exploring the WAMI\u2122 world."
+          title="WAMI questions"
+          subtitle="A cheerful overview for parents, schools, and partners exploring the WAMI™ world."
           center
           stars={STAR_FIELDS.faq}
         >
@@ -681,7 +681,7 @@ function WamiPage() {
                 <div className="max-w-2xl">
                   <img
                     src={wamiWordmark}
-                    alt="WAMI\u2122 The Way Maker Star"
+                    alt="WAMI™ The Way Maker Star"
                     className="h-auto w-full max-w-[10rem] brightness-0 invert"
                   />
                   <h2 className="mt-5 text-4xl leading-tight text-white md:text-5xl">
@@ -707,7 +707,7 @@ function WamiPage() {
                   />
                   <img
                     src={wamiMascot}
-                    alt="WAMI\u2122 star mascot"
+                    alt="WAMI™ star mascot"
                     className="relative z-10 mx-auto h-auto w-full max-w-[18rem] translate-y-1 drop-shadow-[0_18px_30px_rgba(0,0,0,0.22)] lg:max-w-[19rem]"
                   />
                 </div>
@@ -920,7 +920,7 @@ function AudiencePanel({
         </div>
         <img
           src={wamiWordmark}
-          alt="WAMI\u2122 The Way Maker Star"
+          alt="WAMI™ The Way Maker Star"
           className={cn("h-auto w-24", isBlue && "brightness-0 invert")}
         />
       </div>

@@ -43,7 +43,7 @@ export function Header() {
               Human Development
             </div>
           </div>
-          <div className="relative">
+          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center">
             <div
               className="absolute inset-0 bg-[color:var(--gold)]/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition"
               aria-hidden
@@ -53,7 +53,7 @@ export function Header() {
               alt="WayMaker Skills logo"
               width={44}
               height={44}
-              className="relative h-11 w-11 transition-transform group-hover:scale-105"
+              className="relative h-10 w-10 object-contain transition-transform group-hover:scale-105"
             />
           </div>
         </Link>
@@ -83,22 +83,22 @@ export function Header() {
                     />
                   </button>
                   {isOpen && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 animate-fade-in">
-                      <div className="glass shadow-elegant rounded-2xl p-3 grid gap-1 w-[28rem]">
+                    <div className="absolute top-full left-1/2 z-50 -translate-x-1/2 pt-3 animate-fade-in">
+                      <div className="relative isolate w-[28rem] overflow-hidden rounded-2xl border border-[rgba(15,95,99,0.08)] bg-[rgba(255,255,255,0.995)] p-3 shadow-[0_28px_64px_-28px_rgba(15,95,99,0.28)]">
                         {item.children.map((c) => (
                           <Link
                             key={c.to}
                             to={c.to}
-                            className="group block rounded-xl px-3 py-2.5 hover:bg-[color:var(--teal-light)] transition"
+                            className="group block rounded-xl px-3 py-2.5 hover:bg-[rgba(234,246,245,0.98)] transition"
                           >
                             <div className="flex items-center justify-between">
-                              <div className="text-sm font-semibold text-[color:var(--teal-dark)] group-hover:text-[color:var(--teal-deep)]">
+                              <div className="text-sm font-semibold text-[color:var(--teal-deep)] group-hover:text-[color:var(--teal-dark)]">
                                 {c.label}
                               </div>
                               <ArrowRight className="h-3.5 w-3.5 text-[color:var(--gold)] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
                             </div>
                             {c.desc && (
-                              <div className="text-xs text-[color:var(--muted-ink)] mt-0.5 leading-snug">
+                              <div className="mt-0.5 text-xs leading-snug text-[color:var(--charcoal)]/82">
                                 {c.desc}
                               </div>
                             )}
