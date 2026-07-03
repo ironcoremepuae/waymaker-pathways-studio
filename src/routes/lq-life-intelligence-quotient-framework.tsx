@@ -137,7 +137,9 @@ function LQPage() {
       </div>
 
       <div className="mt-6">
-        <h3 className="text-3xl leading-tight text-[color:var(--teal-dark)]">The five dimensions</h3>
+        <h3 className="text-3xl leading-tight text-[color:var(--teal-dark)]">
+          The five dimensions
+        </h3>
         <ul className="mt-5 space-y-3">
           {LQ_DIMENSIONS.map((dimension) => (
             <li
@@ -166,9 +168,8 @@ function LQPage() {
           The ability to apply intelligence effectively in real-life situations is what enables
           individuals to navigate complexity, lead confidently, build relationships, and create
           meaningful impact. The LQ™ Framework is Way Maker Skills™' signature model for developing
-          Applied Intelligence. Built around five interconnected dimensions, it provides a
-          practical framework for understanding how individuals learn, lead, communicate, perform,
-          and adapt.
+          Applied Intelligence. Built around five interconnected dimensions, it provides a practical
+          framework for understanding how individuals learn, lead, communicate, perform, and adapt.
         </p>
 
         <CTAButton to={ROUTES.programs} variant="primary">
@@ -188,9 +189,9 @@ function LQPage() {
       <Section eyebrow="Why LQ™ matters" title="Knowledge alone does not determine Effectiveness.">
         <div className="max-w-3xl text-lg leading-relaxed text-[color:var(--charcoal)]">
           LQ™ gives WayMaker Skills™ a practical map for applied intelligence. It helps explain why
-          people may know what to do and still struggle in real contexts. The framework broadens
-          the picture to include emotional awareness, communication, action, and adaptability
-          alongside thinking.
+          people may know what to do and still struggle in real contexts. The framework broadens the
+          picture to include emotional awareness, communication, action, and adaptability alongside
+          thinking.
         </div>
       </Section>
 
