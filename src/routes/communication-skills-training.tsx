@@ -60,6 +60,11 @@ const TOPICS = [
     title: "Influence",
     desc: "Building trust and moving people through credibility.",
   },
+  {
+    icon: Sparkles,
+    title: "Confidence",
+    desc: "A quieter form of self-trust grounded in awareness.",
+  },
 ];
 
 const OUTCOMES = [
@@ -135,7 +140,7 @@ function CommunicationPage() {
         </CTAButton>
       </PageHero>
 
-      <Section eyebrow="Why it matters" title="Communication is a core life and leadership skill.">
+      <Section eyebrow="Why it matters" title="Communication is a core Life and Leadership Skill.">
         <div className="max-w-3xl text-lg leading-relaxed text-[color:var(--charcoal)]">
           Communication shapes how people work, learn, lead, collaborate, and relate. It is not
           limited to speaking in public. It includes listening, explaining, asking, influencing,
@@ -146,7 +151,7 @@ function CommunicationPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="What we develop"
-        title="Communication capabilities that transfer into real life."
+        title="Communication capabilities that transfer into Real Life."
         center
       >
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -158,7 +163,7 @@ function CommunicationPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Outcomes" title="What people carry forward." center>
+      <Section eyebrow="Outcomes" title="What People Carry Forward." center>
         <OutcomeGrid items={OUTCOMES} />
       </Section>
 
@@ -166,7 +171,7 @@ function CommunicationPage() {
         <QuoteBlock quote="Stronger communication starts before the mouth. It begins with clearer thought, steadier emotion, and more intentional presence." />
       </Section>
 
-      <Section eyebrow="FAQ" title="Communication training questions." center>
+      <Section eyebrow="FAQ" title="Communication training Questions." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>

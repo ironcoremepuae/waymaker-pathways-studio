@@ -154,7 +154,7 @@ function CoachingPage() {
     <Layout>
       <PageHero
         eyebrow="Coaching and Mentoring"
-        title="Guided growth for clarity, confidence, and purposeful action."
+        title="Guided growth for Clarity, Confidence, and Purposeful Action."
         subtitle="WayMaker Skills™ coaching and mentoring creates structured space for reflection, direction, and practical next steps."
         badges={["1:1 support", "Group formats", "Clarity", "Growth in action"]}
       >
@@ -165,7 +165,7 @@ function CoachingPage() {
 
       <Section
         eyebrow="Who it is for"
-        title="Built for people who want more intentional growth."
+        title="Built for people who want more Intentional Growth."
         center
       >
         <AudienceCards items={WHO} />
@@ -174,7 +174,7 @@ function CoachingPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Areas of support"
-        title="What coaching and mentoring can work on."
+        title="What Mentoring can Work On."
         center
       >
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -186,7 +186,7 @@ function CoachingPage() {
         </div>
       </Section>
 
-      <Section eyebrow="The process" title="A reflective path that leads to action." center>
+      <Section eyebrow="The process" title="A Reflective Path that Leads to Action." center>
         <Timeline steps={PROCESS} />
       </Section>
 
@@ -194,13 +194,13 @@ function CoachingPage() {
         <QuoteBlock quote="Coaching is valuable when reflection becomes clear action instead of staying as private insight." />
       </Section>
 
-      <Section eyebrow="FAQ" title="Coaching and mentoring questions." center>
+      <Section eyebrow="FAQ" title="Coaching and Mentoring Questions." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>
       </Section>
 
-      <FinalCTA title="Start a coaching conversation." />
+      <FinalCTA title="Start a Coaching Conversation." />
       <div className="h-16" />
     </Layout>
   );

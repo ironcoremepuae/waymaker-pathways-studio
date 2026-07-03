@@ -125,7 +125,7 @@ function EmotionalIntelligencePage() {
     <Layout>
       <PageHero
         eyebrow="Emotional Intelligence Training"
-        title="Inner skills shape outer success."
+        title="Inner Skills shape Outer Success."
         subtitle="WayMaker Skills™ emotional intelligence training helps people build self-awareness, emotional maturity, resilience, and healthier relationships."
         badges={["Self-awareness", "Regulation", "Empathy", "Resilience"]}
       >
@@ -139,7 +139,7 @@ function EmotionalIntelligencePage() {
 
       <Section
         eyebrow="Why it matters"
-        title="Emotional intelligence is the quiet engine of effective behavior."
+        title="Emotional Intelligence is the quiet engine of Effective Behavior."
       >
         <div className="max-w-3xl text-lg leading-relaxed text-[color:var(--charcoal)]">
           Emotional intelligence influences how people respond to pressure, handle conflict, build
@@ -152,7 +152,7 @@ function EmotionalIntelligencePage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="What we develop"
-        title="Capabilities that support healthier, more effective behavior."
+        title="Capabilities that support Healthier, more Effective Behavior."
         center
       >
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -164,7 +164,7 @@ function EmotionalIntelligencePage() {
         </div>
       </Section>
 
-      <Section eyebrow="Outcomes" title="What people carry forward." center>
+      <Section eyebrow="Outcomes" title="What People Carry Forward." center>
         <OutcomeGrid items={OUTCOMES} />
       </Section>
 
@@ -172,7 +172,7 @@ function EmotionalIntelligencePage() {
         <QuoteBlock quote="Awareness changes the quality of response. Better response changes the quality of life, work, and leadership." />
       </Section>
 
-      <Section eyebrow="FAQ" title="Emotional intelligence training questions." center>
+      <Section eyebrow="FAQ" title="Emotional Intelligence Training Questions." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>

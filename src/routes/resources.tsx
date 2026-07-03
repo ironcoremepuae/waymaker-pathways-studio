@@ -35,7 +35,7 @@ function Page() {
     <Layout>
       <PageHero
         eyebrow="Resources & Insights"
-        title="A knowledge hub for human development."
+        title="A Knowledge Hub for Human Development."
         subtitle={`Read practical, original insights from ${BRAND} on life skills, leadership, emotional intelligence, communication, parenting, resilience, and future-ready growth.`}
         badges={["Articles", "Frameworks", "Audience insights", "Practical guidance"]}
       >
@@ -44,11 +44,7 @@ function Page() {
         </CTAButton>
       </PageHero>
 
-      <Section
-        eyebrow="Why this hub exists"
-        title="Useful thinking, not placeholder content."
-        center
-      >
+      <Section eyebrow="Why this hub exists" title="The Thinking Edge." center>
         <div className="mx-auto max-w-4xl space-y-4 text-center text-lg leading-relaxed text-[color:var(--charcoal)]">
           <p>{`The Resources section exists to make the ideas behind ${BRAND} more visible and more useful. It is where partners, parents, educators, professionals, and leaders can explore the thinking that shapes our programs.`}</p>
           <p>
@@ -63,7 +59,7 @@ function Page() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Categories"
-        title="Browse by topic."
+        title="Browse by Topic."
         center
       >
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -82,7 +78,7 @@ function Page() {
         </div>
       </Section>
 
-      <Section eyebrow="Featured articles" title="Read the latest insights." center>
+      <Section eyebrow="Featured articles" title="Read the Latest Insights." center>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {RESOURCE_ARTICLES.map((article, i) => (
             <Reveal key={article.slug} delay={i * 50}>
@@ -122,7 +118,7 @@ function Page() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="How to use these resources"
-        title="Use them as a starting point for the right conversation."
+        title="Use them as a Starting Point for the Right Conversation."
         center
       >
         <div className="grid gap-5 md:grid-cols-3">
@@ -142,8 +138,8 @@ function Page() {
       </Section>
 
       <FinalCTA
-        title="Looking for a program behind the ideas?"
-        text={`Tell us your audience and goals, and we'll help you find the right ${BRAND} pathway.`}
+        title="Looking for a Program behind the ideas?"
+        text={`Tell us your audience and goals, and we will help you find the right ${BRAND} pathway.`}
       />
       <div className="h-16" />
     </Layout>

@@ -201,12 +201,12 @@ export const AUDIENCES = [
     cta: "Support Child Growth",
     to: ROUTES.wami,
   },
-  {
-    title: "Educators",
-    desc: "Empowering teachers with practical tools for impactful learning.",
-    cta: "Empower Educators",
-    to: ROUTES.schoolsYouth,
-  },
+  // {
+  //   title: "Educators",
+  //   desc: "Empowering teachers with practical tools for impactful learning.",
+  //   cta: "Empower Educators",
+  //   to: ROUTES.schoolsYouth,
+  // },
   {
     title: "Teachers & Educators",
     desc: "Human development capability for the classroom.",

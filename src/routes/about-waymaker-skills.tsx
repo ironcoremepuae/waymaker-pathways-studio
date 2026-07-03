@@ -59,7 +59,7 @@ const ECOSYSTEM = [
   {
     tag: "Programs",
     title: "Human Development Programs",
-    desc: "Programs for schools, organizations, leaders, parents, and individuals.",
+    desc: "Learning experiences designed to develop human capability across schools, workplaces, leadership, families, and communities.",
     to: ROUTES.programs,
   },
   {
@@ -175,7 +175,7 @@ function AboutPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Human development"
-        title="We develop human capability through applied intelligence."
+        title="We develop Human Capability through Applied Intelligence."
       >
         <div className="space-y-5 text-lg leading-relaxed text-[color:var(--charcoal)]">
           <p>
@@ -232,7 +232,7 @@ function AboutPage() {
 
       <Section
         eyebrow="What makes us different"
-        title="A coherent ecosystem, not disconnected sessions."
+        title="A Coherent Ecosystem, not Disconnected Sessions."
         center
       >
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -255,19 +255,19 @@ function AboutPage() {
 
       <Section>
         <QuoteBlock
-          quote="When human development becomes intentional, confidence, leadership, clarity, and contribution stop being accidental."
+          quote="When human development becomes Intentional, Extraordinary lives become Possible."
           author="WayMaker Skills™"
         />
       </Section>
 
-      <Section eyebrow="FAQ" title="Common questions about the organization." center>
+      <Section eyebrow="FAQ" title="Common Questions about the Organization." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>
       </Section>
 
       <FinalCTA
-        title="Build the right human development pathway."
+        title="Build the Right Human Development Pathway."
         text="If you are shaping learners, teams, leaders, or communities, we can design the next step together."
       />
       <div className="h-16" />

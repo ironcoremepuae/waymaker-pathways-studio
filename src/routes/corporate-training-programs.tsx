@@ -130,7 +130,7 @@ function CorporateTrainingPage() {
     <Layout>
       <PageHero
         eyebrow="Corporate Training Programs"
-        title="Build capable teams, confident leaders, and healthier workplace behavior."
+        title="Build Capable Teams, Confident Leaders, and Healthier Workplace Behavior."
         subtitle="WayMaker Skills™ designs corporate training programs that strengthen leadership, communication, emotional intelligence, resilience, and team effectiveness."
         badges={["Leadership", "Communication", "EI", "Customizable delivery"]}
       >
@@ -142,7 +142,7 @@ function CorporateTrainingPage() {
         </CTAButton>
       </PageHero>
 
-      <Section eyebrow="Capability areas" title="What we help organizations develop." center>
+      <Section eyebrow="Capability areas" title="What we help Organizations Develop." center>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {SECTIONS.map((item, index) => (
             <FeatureCard key={item.title} icon={item.icon} title={item.title} delay={index * 40}>
@@ -155,16 +155,13 @@ function CorporateTrainingPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="What changes"
-        title="Business-relevant outcomes without empty claims."
+        title="Business-relevant Outcomes."
         center
       >
         <OutcomeGrid items={OUTCOMES} />
       </Section>
 
-      <Section
-        eyebrow="Why this matters"
-        title="Programs built around behavior, not just event delivery."
-      >
+      <Section eyebrow="Why this matters" title="Programs built around Behavior.">
         <div className="grid gap-6 md:grid-cols-2 text-lg leading-relaxed text-[color:var(--charcoal)]">
           <p>
             Workplace capability is shaped by how people think, communicate, regulate pressure,
@@ -182,14 +179,14 @@ function CorporateTrainingPage() {
         <QuoteBlock quote="Organizations improve when the human behaviors behind performance become more intentional." />
       </Section>
 
-      <Section eyebrow="FAQ" title="Corporate program questions." center>
+      <Section eyebrow="FAQ" title="Corporate Program Questions." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>
       </Section>
 
       <FinalCTA
-        title="Plan a corporate capability journey."
+        title="Plan a Corporate Capability Journey."
         text="Tell us the team, leadership level, or business context you want to support, and we can shape the right program."
       />
       <div className="h-16" />

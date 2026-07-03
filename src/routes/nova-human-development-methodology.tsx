@@ -24,13 +24,13 @@ import {
   UsersRound,
 } from "lucide-react";
 import type { CSSProperties } from "react";
-import { AudienceCards, Timeline } from "@/components/site/Blocks";
+import { AudienceCards } from "@/components/site/Blocks";
 import { FeatureCard } from "@/components/site/Card";
 import { CTAButton, FinalCTA } from "@/components/site/CTA";
 import { FAQList, faqJsonLd } from "@/components/site/FAQ";
 import { Layout } from "@/components/site/Layout";
 import { Section } from "@/components/site/Section";
-import { LOGO, NOVA_STEPS } from "@/data/site";
+import { LOGO } from "@/data/site";
 import { ROUTES } from "@/data/routes";
 import { breadcrumbLd, jsonLd, pageMeta } from "@/lib/seo";
 
@@ -138,7 +138,7 @@ const APPLIES = [
 const FAQS = [
   {
     q: "What does NOVA\u2122 stand for?",
-    a: "NOVA\u2122 stands for Notice, Own, Visualize, and Act. It is the human development methodology used by WayMaker Skills\u2122.",
+    a: "It is the human development methodology used by WayMaker Skills\u2122.",
   },
   {
     q: "How is NOVA\u2122 used in programs?",
@@ -239,16 +239,16 @@ function NovaPage() {
                 className="nova-hero-title nova-hero-animate mt-6"
                 style={{ animationDelay: "80ms" } as CSSProperties}
               >
-                From awareness
+                From Awareness
                 <br />
-                to action.
+                to Action.
               </h1>
 
               <p
                 className="nova-hero-subtitle nova-hero-animate mt-4"
                 style={{ animationDelay: "150ms" } as CSSProperties}
               >
-                From potential to practical growth.
+                From Potential to Practical Growth.
               </p>
 
               <p
@@ -440,7 +440,7 @@ function NovaPage() {
       <Section
         id="nova-overview"
         eyebrow={"What NOVA\u2122 is"}
-        title="A repeatable human development pathway."
+        title="A Repeatable Human Development Pathway."
       >
         <div className="grid gap-8 text-lg leading-relaxed text-[color:var(--charcoal)] md:grid-cols-2">
           <p>
@@ -458,36 +458,15 @@ function NovaPage() {
 
       <Section
         className="bg-[color:var(--ivory)]"
-        eyebrow="The four stages"
-        title="Notice. Own. Visualize. Act."
+        eyebrow="NOVA"
+        title="The WayMaker Approach"
         center
       >
-        <Timeline
-          steps={NOVA_STEPS.map((step) => ({ code: step.code, title: step.name, desc: step.desc }))}
-        />
-      </Section>
-
-      <Section
-        eyebrow={"What NOVA\u2122 integrates"}
-        title="A multidisciplinary foundation."
-        center
-      >
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {INTEGRATES.map((item, index) => (
-            <FeatureCard key={item.title} icon={item.icon} title={item.title} delay={index * 60}>
-              Insights and practices from {item.title.toLowerCase()} shape how the learning journey
-              is designed.
-            </FeatureCard>
-          ))}
+        <div className="text-center">
+          <h3 className="text-3xl font-semibold tracking-tight text-[color:var(--teal-dark)] sm:text-4xl">
+            How Meaningful Growth takes Shape.
+          </h3>
         </div>
-      </Section>
-
-      <Section
-        className="bg-[color:var(--ivory)]"
-        eyebrow="In practice"
-        title="How Meaningful Growth takes Shape."
-        center
-      >
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-lg leading-relaxed text-[color:var(--muted-ink)]">
             Every transformation begins with greater awareness and grows through purposeful
@@ -536,7 +515,22 @@ function NovaPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Where it applies" title="Designed for every life stage." center>
+      <Section
+        eyebrow={"What NOVA\u2122 integrates"}
+        title="A Multidisciplinary Foundation."
+        center
+      >
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {INTEGRATES.map((item, index) => (
+            <FeatureCard key={item.title} icon={item.icon} title={item.title} delay={index * 60}>
+              Insights and practices from {item.title.toLowerCase()} shape how the learning journey
+              is designed.
+            </FeatureCard>
+          ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Where it applies" title="Designed for every Life Stage." center>
         <AudienceCards items={APPLIES} />
       </Section>
 
@@ -547,7 +541,7 @@ function NovaPage() {
       </Section>
 
       <FinalCTA
-        title={"Build a NOVA\u2122-based development journey."}
+        title={"Build a NOVA\u2122-based Development Journey."}
         text={
           "From classrooms to corporate teams, NOVA\u2122 gives growth a clear pathway instead of leaving change to chance."
         }

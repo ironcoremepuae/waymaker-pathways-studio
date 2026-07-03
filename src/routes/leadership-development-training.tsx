@@ -64,16 +64,6 @@ const TOPICS = [
     title: "Execution",
     desc: "Moving from intention into consistent leadership practice.",
   },
-  {
-    icon: Sparkles,
-    title: "Influence",
-    desc: "Helping people move through credibility, not pressure.",
-  },
-  {
-    icon: Layers,
-    title: "Future-ready leadership",
-    desc: "Leading through complexity, change, and uncertainty.",
-  },
 ];
 
 const OUTCOMES = [
@@ -137,7 +127,7 @@ function LeadershipPage() {
     <Layout>
       <PageHero
         eyebrow="Leadership Development Training"
-        title="Develop leaders who can lead themselves and grow others."
+        title="Develop Leaders who can Lead themselves and Grow others."
         subtitle="WayMaker Skills™ leadership development supports maturity, communication, judgment, accountability, and responsible influence."
         badges={["Self-leadership", "People leadership", "Accountability", "Future-ready"]}
       >
@@ -149,10 +139,7 @@ function LeadershipPage() {
         </CTAButton>
       </PageHero>
 
-      <Section
-        eyebrow="What leadership means here"
-        title="Leadership is a way of being, not only a position."
-      >
+      <Section eyebrow="What leadership means here" title="Leadership is a way of Being.">
         <div className="max-w-3xl text-lg leading-relaxed text-[color:var(--charcoal)]">
           We see leadership as a human capability before it becomes an organizational title. That
           means better leadership grows from clearer self-awareness, better communication, stronger
@@ -163,7 +150,7 @@ function LeadershipPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="What we develop"
-        title="Capabilities that define modern leaders."
+        title="Capabilities that define Modern Leaders."
         center
       >
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -175,7 +162,7 @@ function LeadershipPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Outcomes" title="What leaders carry forward." center>
+      <Section eyebrow="Outcomes" title="What Leaders Carry Forward." center>
         <OutcomeGrid items={OUTCOMES} />
       </Section>
 
@@ -183,7 +170,7 @@ function LeadershipPage() {
         <QuoteBlock quote="Leadership becomes credible when the person behind the role becomes steadier, clearer, and more responsible." />
       </Section>
 
-      <Section eyebrow="FAQ" title="Leadership training questions." center>
+      <Section eyebrow="FAQ" title="Leadership Training Questions." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>

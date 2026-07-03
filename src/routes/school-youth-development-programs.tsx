@@ -127,11 +127,6 @@ const PARENT = [
 
 const FORMATS = [
   {
-    icon: Calendar,
-    title: "Assemblies",
-    desc: "Focused school-wide sessions around key human development themes.",
-  },
-  {
     icon: GraduationCap,
     title: "Student workshops",
     desc: "Age-aware sessions that build confidence, communication, and life skills.",
@@ -145,11 +140,6 @@ const FORMATS = [
     icon: HeartHandshake,
     title: "Parent sessions",
     desc: "Conversations and guidance for aligned home support.",
-  },
-  {
-    icon: Star,
-    title: "Leadership journeys",
-    desc: "Programs for prefects, student leaders, or future-ready cohorts.",
   },
   {
     icon: Sparkles,
@@ -210,7 +200,7 @@ function SchoolsYouthPage() {
     <Layout>
       <PageHero
         eyebrow="School & Youth Development Programs"
-        title="Building confident, resilient, future-ready learners."
+        title="Building Confident, Resilient, Future-ready Learners."
         subtitle="WayMaker Skills™ supports students, teachers, parents, and school leaders through practical human development programs."
         badges={["Students", "Teachers", "Parents", "Whole-school partnerships"]}
       >
@@ -222,14 +212,14 @@ function SchoolsYouthPage() {
         </CTAButton>
       </PageHero>
 
-      <Section eyebrow="Who we support" title="A whole-school approach." center>
+      <Section eyebrow="Who we support" title="A Whole-school Approach." center>
         <AudienceCards items={AUDIENCE} />
       </Section>
 
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Student development"
-        title="Capabilities young people need beyond academics."
+        title="Capabilities young people need beyond Academics."
         center
       >
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -243,7 +233,7 @@ function SchoolsYouthPage() {
 
       <Section
         eyebrow="Teacher development"
-        title="Equipping educators for human development."
+        title="Equipping Educators for Human Development."
         center
       >
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -258,7 +248,7 @@ function SchoolsYouthPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Parent engagement"
-        title="Extending growth beyond the classroom."
+        title="Extending Growth beyond the Classroom."
         center
       >
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -270,11 +260,11 @@ function SchoolsYouthPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Formats" title="Flexible school program formats." center>
+      <Section eyebrow="Formats" title="Flexible School Program Formats." center>
         <AudienceCards items={FORMATS} />
       </Section>
 
-      <Section eyebrow="FAQ" title="School partnership questions." center>
+      <Section eyebrow="FAQ" title="School Partnership Questions." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>

@@ -150,7 +150,7 @@ function Page() {
     <Layout>
       <PageHero
         eyebrow="Contact"
-        title={`Start a conversation with ${BRAND}.`}
+        title={`Start a Conversation with ${BRAND}`}
         subtitle="Tell us about your audience, goals, and context. We'll help shape the right human development pathway."
         badges={[
           "Schools • Corporate • Individuals",
@@ -168,7 +168,7 @@ function Page() {
 
       <Section
         eyebrow="Best reasons to contact us"
-        title="Choose the path that fits your goals."
+        title="Choose the Path that Fits your Goals."
         center
       >
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -305,8 +305,7 @@ function Page() {
                     )}
                   </div>
                   <p className="text-xs text-[color:var(--muted-ink)]">
-                    Your information will only be used to respond to your enquiry. This form
-                    currently demonstrates front-end validation only.
+                    Your information will only be used to respond to your enquiry.
                   </p>
                   <button
                     type="submit"
@@ -334,9 +333,9 @@ function Page() {
                   <div className="flex items-center gap-3">
                     <Phone className="h-4 w-4" /> {CONTACT.phone}
                   </div>
-                  <div className="flex items-center gap-3">
+                  {/* <div className="flex items-center gap-3">
                     <MapPin className="h-4 w-4" /> {CONTACT.location}
-                  </div>
+                  </div> */}
                   <div className="flex items-center gap-3">
                     <Globe className="h-4 w-4" /> {BRAND} company website
                   </div>
@@ -360,7 +359,7 @@ function Page() {
         </div>
       </Section>
 
-      <Section eyebrow="FAQ" title="Common questions" center>
+      <Section eyebrow="FAQ" title="Common Questions" center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>

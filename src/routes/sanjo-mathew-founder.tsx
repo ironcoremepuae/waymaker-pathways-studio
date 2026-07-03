@@ -9,6 +9,8 @@ import {
   Sparkles,
   Target,
 } from "lucide-react";
+import sanjoPortrait from "@/assets/sanjo-cine-mathew-portrait.jpeg";
+import sanjoLogo from "@/assets/sanjo-logo.png";
 import { QuoteBlock } from "@/components/site/Blocks";
 import { FeatureCard } from "@/components/site/Card";
 import { CTAButton, FinalCTA } from "@/components/site/CTA";
@@ -55,15 +57,15 @@ const PHILOSOPHY = [
 
 const FAQS = [
   {
-    q: "Who is Sanjo Mathew?",
-    a: "Sanjo Mathew is the founder of WayMaker Skills™ and the person behind its human development vision, frameworks, and learning direction.",
+    q: "Who is Dr. Sanjo Cine Mathew?",
+    a: "Sanjo Cine Mathew is the founder of WayMaker Skills™ and the person behind its human development vision, frameworks, and learning direction.",
   },
   {
-    q: "Is Sanjo Mathew’s personal website the same as WayMaker Skills™?",
-    a: "No. sanjo.in is Sanjo Mathew’s personal brand and profile website. WayMaker Skills™ is the company website and organizational platform.",
+    q: "Is Dr. Sanjo Cine Mathew’s personal website the same as WayMaker Skills™?",
+    a: "No. sanjo.in is Dr. Sanjo Cine Mathew’s personal brand and profile website. WayMaker Skills™ is the company website and organizational platform.",
   },
   {
-    q: "What is Sanjo Mathew’s role in WayMaker Skills™?",
+    q: "What is Dr. Sanjo Cine Mathew’s role in WayMaker Skills™?",
     a: "She shapes the philosophy, developmental direction, and strategic vision behind the organization’s frameworks, programs, and long-term growth.",
   },
   {
@@ -106,9 +108,26 @@ function FounderPage() {
     <Layout>
       <PageHero
         eyebrow="Founder of WayMaker Skills™"
-        title="Sanjo Mathew"
+        title="Dr. Sanjo Cine Mathew"
         subtitle="Founder of WayMaker Skills™, a human development organization helping individuals, educators, leaders, and organizations transform potential into purposeful capability."
         badges={["Founder", "Human development", "Leadership", "Life skills"]}
+        aside={
+          <div className="relative flex justify-center lg:justify-end">
+            <div
+              className="absolute inset-x-4 top-12 bottom-18 rounded-full bg-[color:var(--gold)]/20 blur-3xl"
+              aria-hidden
+            />
+            <div
+              className="absolute inset-x-10 bottom-2 h-16 rounded-full bg-[color:var(--teal-deep)]/18 blur-2xl"
+              aria-hidden
+            />
+            <img
+              src={sanjoLogo}
+              alt="Sanjo founder logo"
+              className="relative z-10 h-auto w-full max-w-[17rem] sm:max-w-[20rem] lg:max-w-[23rem] drop-shadow-[0_28px_36px_rgba(15,95,99,0.24)]"
+            />
+          </div>
+        }
       >
         <a
           href={CONTACT.founderSite}
@@ -132,10 +151,14 @@ function FounderPage() {
                 aria-hidden
               />
               <div className="relative">
-                <div className="flex h-28 w-28 items-center justify-center rounded-2xl bg-[color:var(--gold)] text-5xl text-[color:var(--teal-dark)] shadow-gold">
-                  SM
+                <div className="h-40 w-32 overflow-hidden rounded-[1.75rem] border border-white/20 bg-white/10 shadow-gold backdrop-blur-sm">
+                  <img
+                    src={sanjoPortrait}
+                    alt="Portrait of Dr. Sanjo Cine Mathew"
+                    className="h-full w-full object-cover object-top"
+                  />
                 </div>
-                <h2 className="mt-6 font-display text-3xl text-white">Sanjo Mathew</h2>
+                <h2 className="mt-6 font-display text-3xl text-white">Dr. Sanjo Cine Mathew</h2>
                 <p className="mt-1 text-sm text-white/80">Founder, WayMaker Skills™</p>
                 <p className="mt-6 text-sm leading-relaxed text-white/85">
                   For Sanjo Mathew's personal profile, books, articles, and thought leadership,
@@ -165,7 +188,7 @@ function FounderPage() {
               <p>
                 Academic knowledge and technical expertise are important, but they are only part of
                 what people need to thrive. Confidence, judgment, communication, leadership,
-                resilience, and purposeful action are developed intentionally—not acquired by
+                resilience, and purposeful action are developed intentionally, not acquired by
                 information alone.
               </p>
             </Reveal>
@@ -190,7 +213,7 @@ function FounderPage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Leadership philosophy"
-        title="The principles that shape the founder’s work."
+        title="The Principles that Shape the Founder's Work."
         center
       >
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -204,7 +227,7 @@ function FounderPage() {
 
       <Section
         eyebrow="Company and personal platform"
-        title="Two distinct platforms, one clear boundary."
+        title="Two Distinct Platforms, one Clear Boundary."
       >
         <div className="grid gap-5 md:grid-cols-2">
           <div className="rounded-3xl border border-[color:var(--border)] bg-white p-8 shadow-soft">
@@ -241,13 +264,13 @@ function FounderPage() {
 
       <Section>
         <QuoteBlock
-          quote="Human development becomes powerful when insight is transformed into intentional action."
+          quote="Human Development becomes Powerful when Insight is Transformed into Intentional Action."
           author="Dr. Sanjo Cine Mathew"
           role="Founder, WayMaker Skills™"
         />
       </Section>
 
-      <Section eyebrow="FAQ" title="Founder questions." center>
+      <Section eyebrow="FAQ" title="Founder Questions." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>

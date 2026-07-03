@@ -399,7 +399,7 @@ function HomePage() {
       {/* CHOOSE YOUR GROWTH PATH */}
       <Section
         eyebrow="Choose Your Growth Path"
-        title="Find the right WayMaker Skills™ experience."
+        title="Find the Right WayMaker Skills™ Experience."
         subtitle="One framework, many doorways. Pick the audience you're shaping."
         center
       >
@@ -562,7 +562,7 @@ function HomePage() {
       {/* DIFFERENCE */}
       <Section
         eyebrow="The WayMaker Difference"
-        title="Built on principles, designed for impact."
+        title="Built on Principles, Designed for Impact."
         center
       >
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -601,7 +601,7 @@ function HomePage() {
               The NOVA™ Human Development Methodology
             </h2>
             <p className="mt-5 text-white/80 text-2xl leading-relaxed">
-              From awareness to meaningful growth.
+              From Awareness to Meaningful Growth.
             </p>
             <p className="mt-5 text-white/80 text-lg leading-relaxed">
               NOVA™ is the human development methodology behind WayMaker Skills™ programs, helping
@@ -663,7 +663,7 @@ function HomePage() {
                 LQ™ Framework
               </div>
               <h2 className="mt-4 text-4xl leading-tight text-[color:var(--teal-dark)] md:text-6xl">
-                Building Human Capabilities That Matter.
+                Building Human Capabilities that Matter.
               </h2>
               <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-[color:var(--gold)]/70" />
               <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[color:var(--muted-ink)]">
@@ -771,7 +771,7 @@ function HomePage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Who We Serve"
-        title="Designed for the people who shape lives."
+        title="Designed for the People who Shape Lives."
         center
       >
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -796,7 +796,7 @@ function HomePage() {
       </Section>
 
       {/* FEATURED PROGRAMS */}
-      <Section eyebrow="Featured Programs" title="Where transformation begins." center>
+      <Section eyebrow="Featured Programs" title="Where Transformation Begins." center>
         <div className="flex flex-wrap gap-2 justify-center mb-8">
           {[
             "All",
@@ -856,7 +856,7 @@ function HomePage() {
       <Section
         className="bg-gradient-to-b from-white to-[color:var(--teal-light)]"
         eyebrow="Outcomes We Help Build"
-        title="What growth looks like, in practice."
+        title="What Growth looks like, in Practice."
         center
         subtitle="Capabilities you can see in real life, real work, and real relationships."
       >
@@ -875,7 +875,7 @@ function HomePage() {
       {/* HOW ENGAGEMENT WORKS */}
       <Section
         eyebrow="How Engagement Works"
-        title="A five-step partnership."
+        title="A Five-step Partnership."
         center
         subtitle="From discovery to lasting capability — clear, collaborative, accountable."
       >
@@ -944,7 +944,7 @@ function HomePage() {
               className="home-wami-wordmark mt-5 h-auto w-full max-w-[12rem]"
             />
             <h2 className="mt-4 max-w-2xl text-4xl leading-tight text-[#064AAD] md:text-5xl">
-              Meet WAMI&#8482; &mdash; The WayMaker Star for children's life skills
+              Meet WAMI&#8482; <br /> The WayMaker Star for Children's Life Skills
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[color:var(--muted-ink)]">
               WAMI&#8482; brings stories, games, activities, and joyful challenges together to help
@@ -1011,7 +1011,7 @@ function HomePage() {
         </div>
       </Section>
       {/* FOUNDER */}
-      <Section eyebrow="Founder" title="A vision rooted in human potential.">
+      <Section eyebrow="Founder" title="A Vision Rooted in Human Potential.">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-stretch">
           <Reveal>
             <div className="relative rounded-3xl bg-teal-gradient p-8 text-white shadow-elegant overflow-hidden h-full">
@@ -1043,7 +1043,7 @@ function HomePage() {
           <Reveal delay={120}>
             <div className="rounded-3xl bg-white border border-[color:var(--border)] p-8 shadow-soft h-full">
               <p className="text-lg text-[color:var(--charcoal)] leading-relaxed">
-                Founded by <strong>Sanjo Mathew</strong>, WayMaker Skills™ brings together
+                Founded by <strong>Dr. Sanjo Cine Mathew</strong>, WayMaker Skills™ brings together
                 psychology, education, leadership, mentoring, coaching, and experiential learning to
                 create meaningful human development experiences for individuals and organizations.
               </p>
@@ -1074,7 +1074,7 @@ function HomePage() {
       <Section
         className="bg-[color:var(--ivory)]"
         eyebrow="Resources"
-        title="Ideas worth growing with."
+        title="Ideas worth Growing with."
         center
       >
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1105,7 +1105,7 @@ function HomePage() {
       </Section>
 
       {/* FAQ */}
-      <Section eyebrow="FAQ" title="Common questions, answered." center>
+      <Section eyebrow="FAQ" title="Common Questions, Answered." center>
         <div className="max-w-3xl mx-auto">
           <FAQList items={FAQS_GENERAL} />
         </div>

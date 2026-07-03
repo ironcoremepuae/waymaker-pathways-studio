@@ -238,7 +238,7 @@ function ProgramsPage() {
         </div>
       </Section>
 
-      <Section eyebrow="Formats" title="Flexible by design." center>
+      <Section eyebrow="Formats" title="Flexible by Design." center>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {FORMATS.map((format, index) => (
             <Reveal key={format.title} delay={index * 40}>
@@ -265,7 +265,7 @@ function ProgramsPage() {
         <Timeline steps={PROCESS} />
       </Section>
 
-      <Section eyebrow="FAQ" title="Program questions." center>
+      <Section eyebrow="FAQ" title="Program Questions." center>
         <div className="mx-auto max-w-3xl">
           <FAQList items={FAQS} />
         </div>

@@ -9,20 +9,33 @@ type LinkTo = ComponentProps<typeof Link>["to"];
 /* ---------- Timeline ---------- */
 export function Timeline({ steps }: { steps: { code?: string; title: string; desc: string }[] }) {
   return (
-    <ol className="relative max-w-3xl mx-auto border-l-2 border-[color:var(--teal-deep)]/25 pl-8 space-y-10">
+    <ol className="mx-auto flex max-w-3xl flex-col">
       {steps.map((s, i) => (
-        <Reveal key={s.title} delay={i * 80} as="li" className="relative">
-          <div className="absolute -left-[2.4rem] top-0 h-12 w-12 rounded-full bg-teal-gradient text-white flex items-center justify-center font-display text-xl shadow-elegant">
-            {s.code ?? i + 1}
+        <Reveal
+          key={s.title}
+          delay={i * 80}
+          as="li"
+          className="relative grid grid-cols-[3rem,1fr] items-start gap-6 pb-10 last:pb-0"
+        >
+          <div className="relative flex justify-center">
+            {i < steps.length - 1 ? (
+              <div
+                aria-hidden
+                className="absolute left-1/2 top-12 bottom-[-2.5rem] w-px -translate-x-1/2 bg-[color:var(--teal-deep)]/20"
+              />
+            ) : null}
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-teal-gradient font-display text-xl text-white shadow-elegant">
+              {s.code ?? i + 1}
+            </div>
           </div>
-          <div className="ml-2">
-            <div className="text-xs tracking-widest uppercase text-[color:var(--gold)] font-semibold">
+          <div className="pt-1">
+            <div className="text-xs font-semibold uppercase tracking-widest text-[color:var(--gold)]">
               Step {i + 1}
             </div>
-            <h3 className="font-display text-2xl md:text-3xl text-[color:var(--teal-dark)] mt-1">
+            <h3 className="mt-1 font-display text-2xl text-[color:var(--teal-dark)] md:text-3xl">
               {s.title}
             </h3>
-            <p className="mt-2 text-[color:var(--muted-ink)] text-base md:text-lg leading-relaxed">
+            <p className="mt-2 text-base leading-relaxed text-[color:var(--muted-ink)] md:text-lg">
               {s.desc}
             </p>
           </div>

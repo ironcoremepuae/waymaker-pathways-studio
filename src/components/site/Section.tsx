@@ -50,6 +50,7 @@ export function PageHero({
   subtitle,
   badges,
   children,
+  aside,
   variant = "default",
 }: {
   eyebrow?: string;
@@ -57,6 +58,7 @@ export function PageHero({
   subtitle?: string;
   badges?: string[];
   children?: ReactNode;
+  aside?: ReactNode;
   variant?: "default" | "playful";
 }) {
   const bg =
@@ -77,7 +79,9 @@ export function PageHero({
         className="absolute inset-0 dot-pattern opacity-[0.18] pointer-events-none"
         aria-hidden
       />
-      <div className="container-prose relative">
+      <div
+        className={`container-prose relative ${aside ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.78fr)] lg:gap-12" : ""}`}
+      >
         <div className="max-w-4xl">
           {eyebrow && (
             <Reveal>
@@ -117,6 +121,13 @@ export function PageHero({
             </Reveal>
           )}
         </div>
+        {aside && (
+          <Reveal delay={140}>
+            <div className="relative mx-auto mt-12 w-full max-w-[17rem] sm:max-w-[20rem] lg:mt-0 lg:max-w-[24rem] lg:justify-self-end">
+              {aside}
+            </div>
+          </Reveal>
+        )}
       </div>
     </section>
   );

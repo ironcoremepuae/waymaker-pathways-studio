@@ -403,7 +403,7 @@ function WamiPage() {
                 </WamiReveal>
                 <WamiReveal delay={130}>
                   <h1 className="mt-5 max-w-xl text-5xl leading-[0.98] text-[color:var(--wami-blue)] sm:text-6xl lg:text-7xl">
-                    Meet WAMI&#8482;, the WayMaker Star for growing humans.
+                    Meet WAMI&#8482;, the WayMaker Star for Growing Humans.
                   </h1>
                 </WamiReveal>
                 <WamiReveal delay={190}>
@@ -488,7 +488,7 @@ function WamiPage() {
 
         <WamiSection
           label="What is WAMI™?"
-          title="A joyful world where children practise real-life skills through stories and play."
+          title="A Joyful World where Children practise Real-Life Skills through Stories and Play."
           subtitle="WAMI™ helps children grow through stories, activities, games, challenges, reflection, and character-building experiences that feel bright, safe, and memorable."
           stars={STAR_FIELDS.intro}
         >
@@ -560,7 +560,7 @@ function WamiPage() {
 
         <WamiSection
           label="Skills WAMI™ helps children build"
-          title="Core child development outcomes with brighter energy and stronger meaning."
+          title="Core Child Development Outcomes with Brighter energy and Stronger meaning."
           subtitle="WAMI™ keeps the tone joyful while helping children build capabilities parents and schools care about."
         >
           <div className="relative overflow-hidden rounded-[2.4rem] border-2 border-[color:var(--wami-blue)]/10 bg-[linear-gradient(145deg,#FFFFFF_0%,#EAF7FF_58%,#FFF8E6_100%)] p-6 shadow-[0_36px_80px_-48px_rgba(6,74,173,0.38)] md:p-8 lg:p-10">
@@ -590,7 +590,7 @@ function WamiPage() {
         <WamiSection
           className="bg-[linear-gradient(180deg,rgba(255,248,230,0.8)_0%,rgba(255,255,255,0.72)_100%)]"
           label="For parents and schools"
-          title="Two pathways, one joyful learning world."
+          title="Two Pathways, One Joyful Learning World."
           subtitle="WAMI™ stays child-friendly while still feeling trustworthy for adults who are shaping learning environments."
           center
           id="parents-and-schools"
@@ -622,7 +622,7 @@ function WamiPage() {
 
         <WamiSection
           label="Inside the WAMI™ world"
-          title="A journey of stories, games, creativity, and reflection."
+          title="A Journey of Stories, Games, Creativity, and Reflection."
           subtitle="The WAMI™ world is designed to feel like a path children can follow one playful step at a time."
           center
           stars={STAR_FIELDS.world}
@@ -647,7 +647,7 @@ function WamiPage() {
         <WamiSection
           className="pb-14"
           label="FAQ"
-          title="WAMI questions"
+          title=" Questions about WAMI™"
           subtitle="A cheerful overview for parents, schools, and partners exploring the WAMI™ world."
           center
           stars={STAR_FIELDS.faq}
@@ -679,13 +679,15 @@ function WamiPage() {
               <WamiStarField stars={STAR_FIELDS.cta} className="z-[1]" />
               <div className="relative grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
                 <div className="max-w-2xl">
-                  <img
-                    src={wamiWordmark}
-                    alt="WAMI™ The Way Maker Star"
-                    className="h-auto w-full max-w-[10rem] brightness-0 invert"
-                  />
+                  <div className="inline-flex rounded-[1.1rem] bg-white/96 px-4 py-3 shadow-[0_18px_36px_-24px_rgba(0,0,0,0.35)]">
+                    <img
+                      src={wamiWordmark}
+                      alt="WAMI™ The Way Maker Star"
+                      className="h-auto w-full max-w-[10rem]"
+                    />
+                  </div>
                   <h2 className="mt-5 text-4xl leading-tight text-white md:text-5xl">
-                    Bring WAMI&#8482; to your learning community.
+                    Bring WAMI&#8482; to your Learning Community.
                   </h2>
                   <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/86">
                     Whether you are a parent, school, or partner, WAMI&#8482; can help children
@@ -918,11 +920,14 @@ function AudiencePanel({
         >
           <Icon className="h-5 w-5" aria-hidden />
         </div>
-        <img
-          src={wamiWordmark}
-          alt="WAMI™ The Way Maker Star"
-          className={cn("h-auto w-24", isBlue && "brightness-0 invert")}
-        />
+        <div
+          className={cn(
+            "rounded-[1rem] px-3 py-2",
+            isBlue && "bg-white/96 shadow-[0_14px_28px_-20px_rgba(0,0,0,0.35)]",
+          )}
+        >
+          <img src={wamiWordmark} alt="WAMI™ The Way Maker Star" className="h-auto w-24" />
+        </div>
       </div>
       <h3
         className={cn(
