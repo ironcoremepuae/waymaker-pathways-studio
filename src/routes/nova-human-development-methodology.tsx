@@ -450,8 +450,8 @@ function NovaPage() {
           </p>
           <p>
             That makes NOVA&#8482; useful across different contexts. The audience may change, but
-            the need stays consistent: people need a simple, disciplined way to move from
-            reflection into capability.
+            the need stays consistent: people need a simple, disciplined way to move from reflection
+            into capability.
           </p>
         </div>
       </Section>

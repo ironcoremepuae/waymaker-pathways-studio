@@ -539,11 +539,7 @@ function HomePage() {
                   : "home-ecosystem-third";
 
             return (
-              <Reveal
-                key={c.title}
-                delay={(i + 1) * 50}
-                className={layoutClass}
-              >
+              <Reveal key={c.title} delay={(i + 1) * 50} className={layoutClass}>
                 <div className={`home-ecosystem-card home-ecosystem-card-light ${visualClass}`}>
                   <div className="flex items-start justify-between gap-4">
                     <div className="home-ecosystem-icon-wrap">
@@ -684,7 +680,9 @@ function HomePage() {
                 key={rowIndex}
                 className={[
                   "grid gap-4",
-                  row.length === 5 ? "md:grid-cols-2 xl:grid-cols-5" : "md:grid-cols-3 xl:max-w-4xl",
+                  row.length === 5
+                    ? "md:grid-cols-2 xl:grid-cols-5"
+                    : "md:grid-cols-3 xl:max-w-4xl",
                   rowIndex === 2 ? "xl:pr-48" : "",
                 ].join(" ")}
               >

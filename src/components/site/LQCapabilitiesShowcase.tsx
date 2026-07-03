@@ -130,9 +130,9 @@ export function LQCapabilitiesShowcase({
             </h2>
             <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-[color:var(--gold)]/70" />
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[color:var(--muted-ink)]">
-              The LQ™ Framework develops the human capabilities that drive success across
-              education, leadership, and the workplace. It builds the underlying capacities that
-              enable lasting performance, adaptability, and purposeful growth.
+              The LQ™ Framework develops the human capabilities that drive success across education,
+              leadership, and the workplace. It builds the underlying capacities that enable lasting
+              performance, adaptability, and purposeful growth.
             </p>
           </div>
         </Reveal>
